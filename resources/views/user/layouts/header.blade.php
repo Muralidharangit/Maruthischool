@@ -45,7 +45,7 @@
           <div class="search_wrapper">
             <div class="search_top d-flex justify-content-between align-items-center">
               <div class="search_logo">
-                <a href="index.html">
+                <a href="{{ route('index') }}">
                   <img src="{{ asset('user/assets/images/logo/logo.png') }}" alt="Maruthi School Logo" class="tw-h-12">
                 </a>
               </div>
@@ -171,39 +171,39 @@
       <div class="d-flex align-items-center justify-content-between tw-gap-3 flex-wrap">
         <div class="d-flex align-items-center tw-gap-5 flex-wrap py-2">
           <div class="d-flex align-items-center tw-gap-1">
-            <span class="tw-text-305 text-neutral-950 tw-mt-1">
+            <span class="tw-text-305 text-white tw-mt-1">
               <i class="ph-fill ph-envelope"></i>
             </span>
-            <span class="fw-bold text-neutral-950 tw-text-4">
+            <span class="fw-bold text-white tw-text-4">
               info@maruthischool.edu.in
             </span>
           </div>
           <div class="d-flex align-items-center tw-gap-1">
-            <span class="tw-text-305 text-neutral-950 tw-mt-1">
+            <span class="tw-text-305 text-white tw-mt-1">
               <i class="ph-fill ph-map-pin"></i>
             </span>
-            <span class="fw-bold text-neutral-950 tw-text-4">
+            <span class="fw-bold text-white tw-text-4">
               Lawspet, Puducherry
             </span>
           </div>
         </div>
         <div class="d-flex align-items-center tw-gap-6">
           <div class="d-flex align-items-center tw-gap-4 py-2 border-end pe-4">
-            <a href="#" class="text-neutral-950 hover-text-main-two-600 tw-duration-300 tw-text-lg">
+            <a href="#" class="text-white hover-text-main-two-600 tw-duration-300 tw-text-lg">
               <i class="ph-fill ph-facebook-logo"></i>
             </a>
-            <a href="#" class="text-neutral-950 hover-text-main-two-600 tw-duration-300 tw-text-lg">
+            <a href="#" class="text-white hover-text-main-two-600 tw-duration-300 tw-text-lg">
               <i class="ph-fill ph-twitter-logo"></i>
             </a>
-            <a href="#" class="text-neutral-950 hover-text-main-two-600 tw-duration-300 tw-text-lg">
+            <a href="#" class="text-white hover-text-main-two-600 tw-duration-300 tw-text-lg">
               <i class="ph-fill ph-instagram-logo"></i>
             </a>
-            <a href="#" class="text-neutral-950 hover-text-main-two-600 tw-duration-300 tw-text-lg">
+            <a href="#" class="text-white hover-text-main-two-600 tw-duration-300 tw-text-lg">
               <i class="ph-fill ph-linkedin-logo"></i>
             </a>
           </div>
           <div class="py-2">
-            <span class="fw-bold text-neutral-950 tw-text-4">
+            <span class="fw-bold text-white tw-text-4">
              Call No. +91 94423 99777
             </span>
           </div>

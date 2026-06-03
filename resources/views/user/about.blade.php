@@ -67,57 +67,75 @@
             designed to bring out the best in each child through quality education, modern facilities, and holistic
             development.
           </p>
-          <div class="d-flex align-items-center tw-gap-4 animation-item flex-sm-nowrap flex-wrap tw-mb-10"
+          <div class="p-4 bg-white rounded-4 border border-neutral-100 shadow-sm d-flex align-items-center tw-gap-4 tw-mb-6 hover-card-premium"
             data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">
             <span
-              class="tw-w-88-px tw-h-88-px rounded-circle bg-main-three-600 d-flex align-items-center justify-content-center flex-shrink-0 tw-text-40-px text-white">
+              class="tw-w-20 tw-h-20 rounded-3 bg-main-three-600 d-flex align-items-center justify-content-center flex-shrink-0 tw-text-4xl text-white icon-box shadow-sm">
               <i class="ph-fill ph-users-four animate__bounce"></i>
             </span>
             <div>
-              <h2 class="h5 fw-semibold text-neutral-500 tw-mb-3">Experienced Faculty</h2>
-              <p class="fw-normal tw-text-405 text-neutral-400">Highly experienced and dedicated teachers focused on
-                academic excellence and student growth.</p>
+              <h3 class="h5 fw-bold text-neutral-900 mb-2">Experienced Faculty</h3>
+              <p class="fw-normal tw-text-md text-neutral-600 mb-0">Highly experienced and dedicated teachers focused on academic excellence and student growth.</p>
             </div>
           </div>
 
-          <div class="d-flex align-items-center tw-gap-5 flex-wrap tw-mb-8" data-aos="fade-up" data-aos-duration="800"
-            data-aos-delay="400">
-            <div class="d-flex flex-column tw-gap-5">
-              <div class="d-flex align-items-center tw-gap-4">
+          <div class="row g-4 tw-mb-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <!-- Item 1 -->
+            <div class="col-sm-6">
+              <div class="p-3 bg-white rounded-3 border border-neutral-100 shadow-sm d-flex align-items-center tw-gap-4 hover-card-premium">
                 <span
-                  class="tw-w-16 tw-h-16 bg-main-50 text-main-600 rounded-circle d-flex align-items-center justify-content-center tw-text-3xl flex-shrink-0 shadow-sm border border-main-100">
+                  class="tw-w-14 tw-h-14 bg-main-50 text-main-600 rounded-3 d-flex align-items-center justify-content-center tw-text-2xl flex-shrink-0 border border-main-100 icon-box">
                   <i class="ph-fill ph-certificate"></i>
                 </span>
-                <span class="fw-bold tw-text-lg text-neutral-800">CBSE Affiliated Curriculum</span>
-              </div>
-              <div class="d-flex align-items-center tw-gap-4">
-                <span
-                  class="tw-w-16 tw-h-16 bg-main-three-50 text-main-three-600 rounded-circle d-flex align-items-center justify-content-center tw-text-3xl flex-shrink-0 shadow-sm border border-main-three-100">
-                  <i class="ph-fill ph-chalkboard"></i>
-                </span>
-                <span class="fw-bold tw-text-lg text-neutral-800">Modern Smart Classrooms</span>
+                <span class="fw-bold tw-text-md text-neutral-800">CBSE Affiliated Curriculum</span>
               </div>
             </div>
-            <div class="d-flex flex-column tw-gap-5">
-              <div class="d-flex align-items-center tw-gap-4">
+            <!-- Item 2 -->
+            <div class="col-sm-6">
+              <div class="p-3 bg-white rounded-3 border border-neutral-100 shadow-sm d-flex align-items-center tw-gap-4 hover-card-premium">
                 <span
-                  class="tw-w-16 tw-h-16 bg-main-two-50 text-main-two-600 rounded-circle d-flex align-items-center justify-content-center tw-text-3xl flex-shrink-0 shadow-sm border border-main-two-100">
+                  class="tw-w-14 tw-h-14 bg-main-two-50 text-main-two-600 rounded-3 d-flex align-items-center justify-content-center tw-text-2xl flex-shrink-0 border border-main-two-100 icon-box">
                   <i class="ph-fill ph-flask"></i>
                 </span>
-                <span class="fw-bold tw-text-lg text-neutral-800">Science & Computer Labs</span>
+                <span class="fw-bold tw-text-md text-neutral-800">Science & Computer Labs</span>
               </div>
-              <div class="d-flex align-items-center tw-gap-4">
+            </div>
+            <!-- Item 3 -->
+            <div class="col-sm-6">
+              <div class="p-3 bg-white rounded-3 border border-neutral-100 shadow-sm d-flex align-items-center tw-gap-4 hover-card-premium">
                 <span
-                  class="tw-w-16 tw-h-16 bg-warning-50 text-warning-600 rounded-circle d-flex align-items-center justify-content-center tw-text-3xl flex-shrink-0 shadow-sm border border-warning-100">
+                  class="tw-w-14 tw-h-14 bg-main-three-50 text-main-three-600 rounded-3 d-flex align-items-center justify-content-center tw-text-2xl flex-shrink-0 border border-main-three-100 icon-box">
+                  <i class="ph-fill ph-chalkboard"></i>
+                </span>
+                <span class="fw-bold tw-text-md text-neutral-800">Modern Smart Classrooms</span>
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="col-sm-6">
+              <div class="p-3 bg-white rounded-3 border border-neutral-100 shadow-sm d-flex align-items-center tw-gap-4 hover-card-premium">
+                <span
+                  class="tw-w-14 tw-h-14 bg-warning-50 text-warning-600 rounded-3 d-flex align-items-center justify-content-center tw-text-2xl flex-shrink-0 border border-warning-100 icon-box">
                   <i class="ph-fill ph-soccer-ball"></i>
                 </span>
-                <span class="fw-bold tw-text-lg text-neutral-800">Sports & Cultural Activities</span>
+                <span class="fw-bold tw-text-md text-neutral-800">Sports & Cultural Activities</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-6" data-aos="zoom-in" data-aos-duration="1500">
-          <img src="user/assets/images/thumbs/school-classroom.png" alt="Classroom" class="w-100 tw-rounded-xl shadow-lg">
+        <div class="col-xl-6 position-relative" data-aos="zoom-in" data-aos-duration="1500">
+          <div class="image-hover-zoom overflow-hidden rounded-4 shadow-lg border border-neutral-100">
+            <img src="user/assets/images/thumbs/school-students-group.png" alt="Classroom" class="w-100 img-fluid">
+          </div>
+          <!-- Floating Badge -->
+          <div class="position-absolute bottom-0 start-0 bg-white p-3 m-4 rounded-3 shadow-lg border border-success d-flex align-items-center gap-3 floating-school-badge" style="max-width: 240px; backdrop-filter: blur(8px); background: rgba(255,255,255,0.92) !important;">
+            <div class="tw-w-12 tw-h-12 bg-main-50 text-main-600 rounded-circle d-flex align-items-center justify-content-center fs-3 flex-shrink-0">
+              <i class="fa fa-award"></i>
+            </div>
+            <div>
+              <h4 class="small mb-1 fw-bold text-neutral-950">Affiliated to CBSE</h4>
+              <p class="mb-0 text-neutral-500" style="font-size: 0.8rem;">Puducherry's Premier Institution</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -173,7 +191,7 @@
       <div class="d-flex align-items-center justify-content-between">
         <img src="user/assets/images/shape/student-review-two-shape1.png" alt="shape"
           class="animation-upDown d-xl-block d-none">
-        <div class="text-center tw-mb-15">
+        <div class="text-center tw-mb-15 mx-auto">
           <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-white rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-5"
             data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
             <span
@@ -197,109 +215,111 @@
           class="animation-scalation d-xl-block d-none">
       </div>
 
-
-      <div class="d-flex align-items-center tw-gap-11 flex-sm-nowrap flex-wrap">
-        <button type="button" id="student-two-button-prev"
-          class="tw-w-13 tw-h-13 bg-white tw-student-two-shadow d-flex align-items-center justify-content-center text-main-600 tw-text-505 rounded-circle hover-bg-main-600 hover-text-white tw-duration-300 flex-shrink-0">
-          <i class="ph-bold ph-arrow-left"></i>
-        </button>
+      <!-- Testimonials Slider Wrapper -->
+      <div class="testimonials-wrapper-relative">
         <div class="swiper student-two-slider">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-              <div class="position-relative">
-                <div
-                  class="tw-p-10 bg-white tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1">
-                  <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px">
-                    "My children have been studying at Maruthi School since Pre-KG. The teachers are incredibly
-                    dedicated, and the CBSE curriculum is delivered with great care. I've seen remarkable growth in my
-                    kids academically and personally."
-                  </h2>
-                  <div class="tw-mt-6 d-flex align-items-center tw-gap-3">
-                    <div class="">
-                      <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
-                        Rajesh Kumar
-                      </span>
-                      <span class="fw-normal tw-text-4 text-neutral-400">
-                        Parent of Class 8 Student
-                      </span>
-                    </div>
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="tw-p-10 bg-white tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1 text-center h-100">
+                <i class="fa fa-quote-left text-main-600 fs-3 mb-4 opacity-50"></i>
+                <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px mb-4">
+                  "My children have been studying at Maruthi School since Pre-KG. The teachers are incredibly
+                  dedicated, and the CBSE curriculum is delivered with great care. I've seen remarkable growth in my
+                  kids academically and personally."
+                </h2>
+                <div class="d-flex justify-content-center align-items-center">
+                  <div>
+                    <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
+                      Rajesh Kumar
+                    </span>
+                    <span class="fw-normal tw-text-4 text-neutral-400">
+                      Parent of Class 8 Student
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-              <div class="position-relative">
-                <div
-                  class="tw-p-10 bg-white tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1">
-                  <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px">
-                    "The school's focus on both academics and extracurricular activities is outstanding. My daughter
-                    excels in sports and studies equally, thanks to the balanced approach at Maruthi School. Best CBSE
-                    school in Puducherry!"
-                  </h2>
-                  <div class="tw-mt-6 d-flex align-items-center tw-gap-3">
-                    <div class="">
-                      <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
-                        Priya Lakshmi
-                      </span>
-                      <span class="fw-normal tw-text-4 text-neutral-400">
-                        Parent of Class 10 Student
-                      </span>
-                    </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="tw-p-10 bg-white tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1 text-center h-100">
+                <i class="fa fa-quote-left text-main-600 fs-3 mb-4 opacity-50"></i>
+                <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px mb-4">
+                  "The school's focus on both academics and extracurricular activities is outstanding. My daughter
+                  excels in sports and studies equally, thanks to the balanced approach at Maruthi School. Best CBSE
+                  school in Puducherry!"
+                </h2>
+                <div class="d-flex justify-content-center align-items-center">
+                  <div>
+                    <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
+                      Priya Lakshmi
+                    </span>
+                    <span class="fw-normal tw-text-4 text-neutral-400">
+                      Parent of Class 10 Student
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-              <div class="position-relative">
-                <div
-                  class="tw-p-10 bg-white tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1">
-                  <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px">
-                    "Maruthi School gave me the foundation I needed for my career. The science labs, computer
-                    facilities, and the mentorship from teachers shaped who I am today. Forever grateful to this
-                    institution."
-                  </h2>
-                  <div class="tw-mt-6 d-flex align-items-center tw-gap-3">
-                    <div class="">
-                      <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
-                        Arun Prakash
-                      </span>
-                      <span class="fw-normal tw-text-4 text-neutral-400">
-                        Alumni – Batch of 2018
-                      </span>
-                    </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="tw-p-10 bg-white tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1 text-center h-100">
+                <i class="fa fa-quote-left text-main-600 fs-3 mb-4 opacity-50"></i>
+                <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px mb-4">
+                  "Maruthi School gave me the foundation I needed for my career. The science labs, computer
+                  facilities, and the mentorship from teachers shaped who I am today. Forever grateful to this
+                  institution."
+                </h2>
+                <div class="d-flex justify-content-center align-items-center">
+                  <div>
+                    <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
+                      Arun Prakash
+                    </span>
+                    <span class="fw-normal tw-text-4 text-neutral-400">
+                      Alumni – Batch of 2018
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-              <div class="position-relative">
-                <div
-                  class="tw-p-10 bg-white tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1">
-                  <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px">
-                    "The school provides a safe, nurturing environment where children can thrive. The cultural exchange
-                    programs and sports events give students exposure beyond textbooks. Highly recommend Maruthi
-                    School!"
-                  </h2>
-                  <div class="tw-mt-6 d-flex align-items-center tw-gap-3">
-                    <div class="">
-                      <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
-                        Meenakshi Devi
-                      </span>
-                      <span class="fw-normal tw-text-4 text-neutral-400">
-                        Parent of Class 5 Student
-                      </span>
-                    </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="tw-p-10 bg-white tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1 text-center h-100">
+                <i class="fa fa-quote-left text-main-600 fs-3 mb-4 opacity-50"></i>
+                <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px mb-4">
+                  "The school provides a safe, nurturing environment where children can thrive. The cultural exchange
+                  programs and sports events give students exposure beyond textbooks. Highly recommend Maruthi
+                  School!"
+                </h2>
+                <div class="d-flex justify-content-center align-items-center">
+                  <div>
+                    <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
+                      Meenakshi Devi
+                    </span>
+                    <span class="fw-normal tw-text-4 text-neutral-400">
+                      Parent of Class 5 Student
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <button type="button" id="student-two-button-next"
-          class="tw-w-13 tw-h-13 bg-white tw-student-two-shadow d-flex align-items-center justify-content-center text-main-600 tw-text-505 rounded-circle hover-bg-main-600 hover-text-white tw-duration-300 flex-shrink-0">
-          <i class="ph-bold ph-arrow-right"></i>
-        </button>
+
+        <!-- Navigation Buttons -->
+        <div class="testimonials-nav-container">
+          <button type="button" id="student-two-button-prev"
+            class="btn rounded-circle d-flex align-items-center justify-content-center hover-text-white tw-duration-300 testimonials-nav-btn prev-btn">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <button type="button" id="student-two-button-next"
+            class="btn rounded-circle d-flex align-items-center justify-content-center hover-text-white tw-duration-300 testimonials-nav-btn next-btn">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -307,13 +327,7 @@
   <!-- ========================= courses section start =========================== -->
   <section class="admissions-cta-redesign position-relative overflow-hidden">
     <!-- Floating Decorative Icons -->
-    <div class="cta-decor-icons" aria-hidden="true">
-      <div class="cta-icon-item ci-1"><i class="ph-fill ph-graduation-cap"></i></div>
-      <div class="cta-icon-item ci-2"><i class="ph-fill ph-book-open"></i></div>
-      <div class="cta-icon-item ci-3"><i class="ph-fill ph-pencil-simple"></i></div>
-      <div class="cta-icon-item ci-4"><i class="ph-fill ph-trophy"></i></div>
-    </div>
-
+  
     <div class="container position-relative z-1">
       <div class="row align-items-center gy-4">
         <div class="col-lg-7 text-lg-start text-center" data-aos="fade-right" data-aos-duration="1000">

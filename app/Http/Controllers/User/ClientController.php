@@ -21,8 +21,9 @@ class ClientController extends Controller
       
         // $sliders = Slider::all(); // Fetch all records from sliders table
         $sliders = Slider::where('status', 1)->orderBy('order', 'asc')->get(); // Fetch sliders in ascending order
+        $categories = Category::with('images')->get();
 
-        return view('user.index', compact('sliders')); // Pass data to the view
+        return view('user.index', compact('sliders', 'categories')); // Pass data to the view
     }
 
     public function about()

@@ -12,7 +12,6 @@
 
     <!-- SITE TITLE -->
     <title>Achievements | Maruthi Senior Secondary School Puducherry</title>
-    @include('user.layouts(')
     @include('user.layouts.links')
 </head>
 
@@ -146,12 +145,7 @@
 
     <!-- START ADMISSIONS CTA -->
     <section class="admissions-cta-redesign position-relative overflow-hidden">
-        <div class="cta-decor-icons" aria-hidden="true">
-            <div class="cta-icon-item ci-1"><i class="ph-fill ph-graduation-cap"></i></div>
-            <div class="cta-icon-item ci-2"><i class="ph-fill ph-book-open"></i></div>
-            <div class="cta-icon-item ci-3"><i class="ph-fill ph-pencil-simple"></i></div>
-            <div class="cta-icon-item ci-4"><i class="ph-fill ph-trophy"></i></div>
-        </div>
+       
         <div class="container position-relative z-1">
             <div class="row align-items-center gy-4">
                 <div class="col-lg-7 text-lg-start text-center">

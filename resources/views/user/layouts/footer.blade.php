@@ -19,11 +19,11 @@
       <div class="py-60">
         <div class="row gy-4">
           <div class="col-xl-4 col-lg-4 col-sm-6">
-            <a href="index.html" class="logo d-flex align-items-center tw-gap-3 mb-4">
+            <a href="{{ route('index') }}" class="logo d-flex align-items-center tw-gap-3 mb-4">
             <img src="{{ asset('user/assets/images/logo/maruthi-logo-seal.png') }}" alt="Maruthi School Logo"
                 class="tw-h-16 bg-white tw-p-2 rounded-circle" style="height:72px;width:72px;object-fit:contain;">
               <div>
-                <h1 class="h4 fw-bold text-white tw-mb-0 logo-school-name">MARUTHI</h1>
+                <h1 class="h4 fw-bold text-white tw-mb-0 ">MARUTHI</h1>
                 <span class="text-white" style="font-size:0.7rem;opacity:0.8;letter-spacing:0.1em;">SENIOR SECONDARY
                   SCHOOL</span>
               </div>
@@ -159,31 +159,31 @@
               <div>
                 <div class="d-flex align-items-start tw-gap-3 flex-wrap tw-mb-3">
                   <span class="tw-text-8 text-main-600 ">
-                    <i class="ph ph-map-pin"></i>
+                    <i class="ph ph-map-pin text-white"></i>
                   </span>
                   <div>
 
-                    <span class="fw-bold text-white tw-text-4">Maruthi Nagar, Lawspet, <br> Puducherry €“ 605008</span>
+                    <span class="fw-bold text-white tw-text-4">Maruthi Nagar, Lawspet, <br> Puducherry - 605008</span>
                   </div>
                 </div>
                 <div class="d-flex align-items-center tw-gap-3 flex-wrap tw-mb-3">
                   <span class="tw-text-8 text-main-600 ">
-                    <i class="ph ph-headset"></i>
+                    <i class="ph ph-headset text-white"></i>
                   </span>
                   <div>
 
-                    <a href="tel:+919442399777" class="fw-bold text-neutral-950 text-white tw-text-405">+91 94423
+                    <a href="tel:+919442399777" class="fw-bold  text-white ">+91 94423
                       99777</a>
                   </div>
                 </div>
                 <div class="d-flex align-items-center tw-gap-3 flex-wrap">
                   <span class="tw-text-8 text-main-600 ">
-                    <i class="ph ph-envelope-open"></i>
+                    <i class="ph ph-envelope-open text-white"></i>
                   </span>
                   <div>
 
                     <a href="mailto:info@maruthischool.edu.in"
-                      class="fw-bold text-neutral-950 text-white tw-text-405">info@maruthischool.edu.in</a>
+                      class="fw-bold text-white text-white">info@maruthischool.edu.in</a>
                   </div>
                 </div>
               </div>

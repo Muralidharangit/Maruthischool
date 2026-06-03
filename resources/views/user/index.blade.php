@@ -5,1136 +5,961 @@
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="Templatemanja" name="author">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Educone Is Online Courses HTML5 Template.">
-    <meta name="keywords"
-        content="academy, course, education, elearning, learning, education html template, university template, college template, school template, online education template, tution center template">
+    <meta name="description" content="Maruthi Senior Secondary School Puducherry - CBSE Affiliated.">
+    <meta name="keywords" content="school, cbse, puducherry, education, maruthi school">
 
     <!-- SITE TITLE -->
     <title>Maruthi Senior Secondary School Puducherry | CBSE Affiliated | Pre-KG to Class 12</title>
     @include('user.layouts.links')
-   
 </head>
 
-<body class="body-fullpage">
+<body>
 
-   {{-- loader AND SCROLL starts --}}
-      @include('user.layouts.loader')
-  {{-- loader AND SCROLL ends --}}
+    {{-- loader starts --}}
+    @include('user.layouts.loader')
+    {{-- loader ends --}}
 
+    {{-- START HEADER --}}
+    @include('user.layouts.header')
+    {{-- END HEADER --}}
 
-
-
-  {{-- =============================== --}}
-    <!-- START HEADER -->
-        @include('user.layouts.header')
-    <!-- END HEADER -->
-  {{-- =============================== --}}
-
-  <!-- ================== Banner section start =================== -->
-  <section class="p-0 z-2 overflow-hidden position-relative" id="hero-section">
-    <div class="swiper banner-slider">
-      <div class="swiper-wrapper">
-
-        <!-- Slide 1: Campus / General -->
-        <div class="swiper-slide">
-          <div class="banner-fullbg-slide">
-            <div class="banner-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/banner-campus.png') }}');"></div>
-            <div class="banner-overlay"></div>
-            <div class="banner-float-icons" aria-hidden="true">
-              <span class="bfi bfi-1"><i class="ph-fill ph-book-open"></i></span>
-              <span class="bfi bfi-2"><i class="ph-fill ph-graduation-cap"></i></span>
-              <span class="bfi bfi-3"><i class="ph-fill ph-certificate"></i></span>
-              <span class="bfi bfi-4"><i class="ph-fill ph-pencil-simple"></i></span>
-            </div>
-            <div class="container max-w-1360-px position-relative banner-content-container">
-              <div class="banner-content-wrap">
-                <div class="banner-badge-pill" data-aos="fade-down" data-aos-duration="700">
-                  <span class="banner-badge-icon-circle"><i class="ph-fill ph-star-four"></i></span>
-                  <span class="banner-badge-text">CBSE Affiliated &middot; Aff No. 2930027</span>
-                </div>
-                <h1 class="banner-hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
-                  Excellence in <span class="banner-title-highlight">CBSE Education</span><br>Since 1997
-                </h1>
-                <p class="banner-hero-desc" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                  Maruthi Senior Secondary School is a premier CBSE-affiliated institution in Puducherry, committed to holistic development and academic excellence from Pre-KG to Class 12.
-                </p>
-                <div class="banner-stats-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="420">
-                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-users-three"></i></span><span class="bsc-text">20K+ Alumni</span></div>
-                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-chalkboard-teacher"></i></span><span class="bsc-text">50+ Faculty</span></div>
-                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-trophy"></i></span><span class="bsc-text">25+ Years</span></div>
-                </div>
-                <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="540">
-                  <a href="{{ route('contact') }}" class="banner-custom-pill-btn">
-                    <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
-                    <span class="btn-text">Apply Now</span>
-                  </a>
-                  <a href="{{ route('about') }}" class="banner-custom-pill-btn banner-custom-pill-btn-outline">
-                    <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
-                    <span class="btn-text">About Us</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- ==================== ADMISSION MARQUEE TICKER ==================== -->
+    <div class="marquee-ticker">
+        <div class="marquee-container">
+            <span class="marquee-item"><i class="fa fa-bullhorn"></i> Admissions Open for Academic Year 2026-27</span>
+            <span class="marquee-item"><i class="fa fa-certificate"></i> CBSE Affiliated Curriculum (Pre-KG to Class XII)</span>
+            <span class="marquee-item"><i class="fa fa-clock"></i> Limited Seats Available - Apply Today!</span>
+            <!-- Duplicated for seamless looping -->
+            <span class="marquee-item"><i class="fa fa-bullhorn"></i> Admissions Open for Academic Year 2026-27</span>
+            <span class="marquee-item"><i class="fa fa-certificate"></i> CBSE Affiliated Curriculum (Pre-KG to Class XII)</span>
+            <span class="marquee-item"><i class="fa fa-clock"></i> Limited Seats Available - Apply Today!</span>
         </div>
-
-        <!-- Slide 2: Sports -->
-        <div class="swiper-slide">
-          <div class="banner-fullbg-slide">
-            <div class="banner-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/banner-sports.png') }}');"></div>
-            <div class="banner-overlay banner-overlay-gold"></div>
-            <div class="banner-float-icons" aria-hidden="true">
-              <span class="bfi bfi-1"><i class="ph-fill ph-soccer-ball"></i></span>
-              <span class="bfi bfi-2"><i class="ph-fill ph-trophy"></i></span>
-              <span class="bfi bfi-3"><i class="ph-fill ph-music-notes"></i></span>
-              <span class="bfi bfi-4"><i class="ph-fill ph-medal"></i></span>
-            </div>
-            <div class="container max-w-1360-px position-relative banner-content-container">
-              <div class="banner-content-wrap">
-                <div class="banner-badge-pill" data-aos="fade-down" data-aos-duration="700">
-                  <span class="banner-badge-icon-circle"><i class="ph-fill ph-trophy"></i></span>
-                  <span class="banner-badge-text">Holistic Development</span>
-                </div>
-                <h1 class="banner-hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
-                  Nurturing Talent <span class="banner-title-highlight">Beyond Academics</span>
-                </h1>
-                <p class="banner-hero-desc" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                  From sports arenas to cultural stages, we encourage students to discover their passions and excel in every field of their choice.
-                </p>
-                <div class="banner-stats-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="420">
-                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-soccer-ball"></i></span><span class="bsc-text">Sports Arena</span></div>
-                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-music-notes"></i></span><span class="bsc-text">Cultural Events</span></div>
-                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-medal"></i></span><span class="bsc-text">State Champions</span></div>
-                </div>
-                <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="540">
-                  <a href="{{ route('contact') }}" class="banner-custom-pill-btn">
-                    <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
-                    <span class="btn-text">Apply Now</span>
-                  </a>
-                  <a href="{{ route('about') }}" class="banner-custom-pill-btn banner-custom-pill-btn-outline">
-                    <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
-                    <span class="btn-text">About Us</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3: Smart Classrooms -->
-        <div class="swiper-slide">
-          <div class="banner-fullbg-slide">
-            <div class="banner-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/banner-classroom.png') }}');"></div>
-            <div class="banner-overlay banner-overlay-teal"></div>
-            <div class="banner-float-icons" aria-hidden="true">
-              <span class="bfi bfi-1"><i class="ph-fill ph-desktop"></i></span>
-              <span class="bfi bfi-2"><i class="ph-fill ph-chalkboard"></i></span>
-              <span class="bfi bfi-3"><i class="ph-fill ph-flask"></i></span>
-              <span class="bfi bfi-4"><i class="ph-fill ph-atom"></i></span>
-            </div>
-            <div class="container max-w-1360-px position-relative banner-content-container">
-              <div class="banner-content-wrap">
-                <div class="banner-badge-pill" data-aos="fade-down" data-aos-duration="700">
-                  <span class="banner-badge-icon-circle"><i class="ph-fill ph-chalkboard"></i></span>
-                  <span class="banner-badge-text">Modern Infrastructure</span>
-                </div>
-                <h1 class="banner-hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
-                  State-of-the-Art <span class="banner-title-highlight">Smart Classrooms</span>
-                </h1>
-                <p class="banner-hero-desc" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                  We provide interactive learning environments equipped with modern technology to ensure our students stay ahead in a rapidly evolving digital world.
-                </p>
-                <div class="banner-stats-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="420">
-                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-desktop"></i></span><span class="bsc-text">Smart Boards</span></div>
-                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-wifi-high"></i></span><span class="bsc-text">Digital Labs</span></div>
-                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-flask"></i></span><span class="bsc-text">Science Labs</span></div>
-                </div>
-                <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="540">
-                  <a href="{{ route('contact') }}" class="banner-custom-pill-btn">
-                    <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
-                    <span class="btn-text">Apply Now</span>
-                  </a>
-                  <a href="{{ route('about') }}" class="banner-custom-pill-btn banner-custom-pill-btn-outline">
-                    <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
-                    <span class="btn-text">About Us</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Pagination -->
-      <div class="banner-pagination swiper-pagination"></div>
-
-      <!-- Navigation -->
-      <div class="swiper-button-prev banner-button-prev"></div>
-      <div class="swiper-button-next banner-button-next"></div>
     </div>
-  </section>
-  <!-- ================== Banner section end =================== -->
+    <!-- ==================== END ADMISSION MARQUEE TICKER ==================== -->
 
-  <!-- ======================== Marquee section start =========================== -->
-  <div class="marquee ">
-    <div class="marquee_left d-flex align-items-center overflow-hidden">
-      <span class="text-neutral-500 tw-text-88-px text-stroke">Admissions Open -</span>
-      <span class="text-neutral-500 tw-text-88-px text-stroke">Pre-KG to Class 12 -</span>
-      <span class="text-neutral-500 tw-text-88-px text-stroke">CBSE Affiliated - </span>
-      <span class="text-neutral-500 tw-text-88-px text-stroke">25+ Years of Excellence -</span>
-    </div>
-  </div>
-  <!-- ======================== Marquee section end =========================== -->
+    <!-- ==================== HERO BANNER (CAROUSEL SLIDER) ==================== -->
+    <section class="hero-swiper-container">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide hero-slide-item" style="background-image: url('{{ asset('user/assets/images/thumbs/banner-campus.png') }}');">
+                    <div class="container max-w-1360-px h-100">
+                        <div class="row align-items-center h-100">
+                            <div class="col-lg-7 col-md-10 text-start">
+                                <div class="hero-text-block">
+                                    <div class="hero-badge">
+                                        <i class="fa fa-certificate"></i> CBSE Affiliated &middot; Aff No. 2930027
+                                    </div>
+                                    <h1 class="hero-title text-start">
+                                        Excellence in <span>CBSE Education</span> Since 1997
+                                    </h1>
+                                    <p class="hero-desc text-start">
+                                        Maruthi Senior Secondary School is a premier CBSE-affiliated institution in Puducherry, committed to holistic development and academic excellence.
+                                    </p>
+                                    <div class="hero-stats-row">
+                                        <div class="hero-stat-chip">
+                                            <i class="fa fa-users"></i> 20K+ Alumni
+                                        </div>
+                                        <div class="hero-stat-chip">
+                                            <i class="fa fa-chalkboard-teacher"></i> 50+ Expert Faculty
+                                        </div>
+                                        <div class="hero-stat-chip">
+                                            <i class="fa fa-award"></i> 25+ Years Legacy
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-start gap-3 flex-wrap">
+                                        <a href="{{ route('contact') }}" class="btn-school-primary">Apply Online</a>
+                                        <a href="{{ route('about') }}" class="btn-school-outline border-white text-white">About Campus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- =================== brand section start =================== -->
-  <!-- ============================== about eduly section start ============================ -->
-  <section class="pb-100 pt-100">
-    <div class="mb-100">
-      <div class="container">
-        <div class="position-relative">
+                <!-- Slide 2 -->
+                <div class="swiper-slide hero-slide-item" style="background-image: url('{{ asset('user/assets/images/thumbs/school-science-lab.png') }}');">
+                    <div class="container max-w-1360-px h-100">
+                        <div class="row align-items-center h-100">
+                            <div class="col-lg-7 col-md-10 text-start">
+                                <div class="hero-text-block">
+                                    <div class="hero-badge">
+                                        <i class="fa fa-flask"></i> Modern Infrastructure
+                                    </div>
+                                    <h1 class="hero-title text-start">
+                                        State-of-the-Art <span>Science & Computer Labs</span>
+                                    </h1>
+                                    <p class="hero-desc text-start">
+                                        Nurturing curiosity and scientific thinking with fully-equipped physics, chemistry, biology, and computer laboratories.
+                                    </p>
+                                    <div class="hero-stats-row">
+                                        <div class="hero-stat-chip">
+                                            <i class="fa fa-microscope"></i> Advanced Equipment
+                                        </div>
+                                        <div class="hero-stat-chip">
+                                            <i class="fa fa-desktop"></i> Smart Classrooms
+                                        </div>
+                                        <div class="hero-stat-chip">
+                                            <i class="fa fa-brain"></i> Hands-on Learning
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-start gap-3 flex-wrap">
+                                        <a href="{{ route('contact') }}" class="btn-school-primary">Apply Online</a>
+                                        <a href="{{ route('about') }}" class="btn-school-outline border-white text-white">Explore Campus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          <div class="row gy-4">
-             <div class="col-xl-6" data-aos="zoom-in" data-aos-duration="1500">
-              <!-- <span class="d-flex justify-content-center">
-                <img src="user/assets/images/thumbs/school-classroom.jpg" alt="Modern Smart Classroom at Maruthi School"
-                  class="w-100 tw-rounded-xl" style="border-radius:18px; box-shadow:0 16px 48px rgba(0,0,0,0.12);">
-              </span> -->
-
-
-                <div class="position-relative hero-img-wrap">
-            <span class="d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-duration="1500">
-              <img src="{{ asset('user/assets/images/thumbs/school-classroom.jpg') }}"
-                alt="Maruthi Senior Secondary School Campus - Students in Garden" class="w-100 hero-main-img">
-            </span>
-            <!-- Floating badge cards on hero image -->
-            <div class="hero-badge hero-badge-cbse" data-aos="fade-left" data-aos-duration="800" data-aos-delay="600">
-              <span class="hero-badge-icon"><i class="ph-fill ph-certificate"></i></span>
-              <div>
-                <span class="hero-badge-title">CBSE Affiliated</span>
-                <span class="hero-badge-sub">Aff No. 2930027</span>
-              </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide hero-slide-item" style="background-image: url('{{ asset('user/assets/images/thumbs/banner-sports.png') }}');">
+                    <div class="container max-w-1360-px h-100">
+                        <div class="row align-items-center h-100">
+                            <div class="col-lg-7 col-md-10 text-start">
+                                <div class="hero-text-block">
+                                    <div class="hero-badge">
+                                        <i class="fa fa-trophy"></i> Holistic Development
+                                    </div>
+                                    <h1 class="hero-title text-start">
+                                        Nurturing <span>Talent and Creativity</span>
+                                    </h1>
+                                    <p class="hero-desc text-start">
+                                        Comprehensive coaching for sports, arts, drama, dance, and music to inspire student confidence and self-expression.
+                                    </p>
+                                    <div class="hero-stats-row">
+                                        <div class="hero-stat-chip">
+                                            <i class="fa fa-running"></i> Sports Arena
+                                        </div>
+                                        <div class="hero-stat-chip">
+                                            <i class="fa fa-palette"></i> Arts & Crafts
+                                        </div>
+                                        <div class="hero-stat-chip">
+                                            <i class="fa fa-music"></i> Performing Arts
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-start gap-3 flex-wrap">
+                                        <a href="{{ route('contact') }}" class="btn-school-primary">Apply Online</a>
+                                        <a href="{{ route('about') }}" class="btn-school-outline border-white text-white">Our Facilities</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- Swiper controls -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <!-- ==================== END HERO BANNER ==================== -->
+
+    <!-- ==================== THREE BENEFITS BANNER ==================== -->
+    <section class="benefits-banner">
+        <div class="container max-w-1360-px">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon-box">
+                            <i class="fa fa-certificate"></i>
+                        </div>
+                        <div class="benefit-text-box">
+                            Get the desired certificate delivered
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon-box">
+                            <i class="fa fa-book-reader"></i>
+                        </div>
+                        <div class="benefit-text-box">
+                            Help you understand yourself better
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon-box">
+                            <i class="fa fa-lightbulb"></i>
+                        </div>
+                        <div class="benefit-text-box">
+                            Give the right advice to help life career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END THREE BENEFITS BANNER ==================== -->
+
+    <!-- ==================== ABOUT SCHOOL OVERLAPPING LAYOUT ==================== -->
+    <section class="section-padding">
+        <div class="container max-w-1360-px">
+            <div class="row gy-5 align-items-center">
+                <!-- Left overlapping images column -->
+                <div class="col-lg-6">
+                    <div class="about-image-wrapper">
+                        <!-- Yellow decoration shape -->
+                        <svg class="decor-zigzag" width="80" height="30" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 0,20 L 20,0 L 40,20 L 60,0 L 80,20 L 100,0" stroke="#f59e0b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                        <!-- Main large image -->
+                        <img src="{{ asset('user/assets/images/thumbs/school-classroom.jpg') }}" alt="Student Learning" class="about-img-main">
+                        
+                        <!-- Overlapping smaller image -->
+                        <img src="{{ asset('user/assets/images/thumbs/school-students-group.png') }}" alt="Group Activities" class="about-img-sub">
+                        
+                        <!-- Dotted shape -->
+                        <svg class="decor-dots" width="80" height="60" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="4" fill="#047857" />
+                            <circle cx="30" cy="10" r="4" fill="#047857" />
+                            <circle cx="50" cy="10" r="4" fill="#047857" />
+                            <circle cx="70" cy="10" r="4" fill="#047857" />
+                            <circle cx="10" cy="30" r="4" fill="#047857" />
+                            <circle cx="30" cy="30" r="4" fill="#047857" />
+                            <circle cx="50" cy="30" r="4" fill="#047857" />
+                            <circle cx="70" cy="30" r="4" fill="#047857" />
+                            <circle cx="10" cy="50" r="4" fill="#047857" />
+                            <circle cx="30" cy="50" r="4" fill="#047857" />
+                            <circle cx="50" cy="50" r="4" fill="#047857" />
+                            <circle cx="70" cy="50" r="4" fill="#047857" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Right content details column -->
+                <div class="col-lg-6">
+                    <span class="section-badge">Welcome</span>
+                    <h2 class="section-title mb-3" style="font-size: 2.3rem; font-weight:800; line-height:1.2;">
+                        Including large benefit when you enroll from our courses
+                    </h2>
+                    <p class="text-muted mb-4" style="font-size:0.95rem; line-height:1.6;">
+                        At Maruthi Senior Secondary School, we create a supportive learning environment focused on character, science, and leadership. We guide our students to discover their potentials and achieve top board scores.
+                    </p>
+
+                    <!-- Feature Row Side-by-Side -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-sm-6">
+                            <div class="about-feature-box">
+                                <div class="about-feature-icon icon-orange">
+                                    <i class="fa fa-book-open"></i>
+                                </div>
+                                <div>
+                                    <h4 class="about-feature-title">Multiple course participation</h4>
+                                    <p class="about-feature-desc">Rigorous CBSE standard curriculum with extracurricular focus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="about-feature-box">
+                                <div class="about-feature-icon icon-blue">
+                                    <i class="fa fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="about-feature-title">Vert fast & so easy to create</h4>
+                                    <p class="about-feature-desc">Smartboards and advanced science/comp lab practical programs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-muted mb-4" style="font-size:0.92rem; line-height:1.6;">
+                        Our institution has a legacy of excellence for more than 25 years. We prepare every child for future professional courses and global standard exams.
+                    </p>
+
+                    <div>
+                        <a href="{{ route('about') }}" class="btn-school-primary" style="padding: 12px 28px !important;">Start Learning Now &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END ABOUT SCHOOL OVERLAPPING LAYOUT ==================== -->
+
+    <!-- ==================== FACILITIES CARD GRID ==================== -->
+    <section class="section-padding-gray bg-main-10">
+        <div class="container max-w-1360-px">
+            <div class="section-header">
+                <span class="section-badge">Campus Facilities</span>
+                <h2 class="section-title">Academic & Extra-Curricular Facilities</h2>
+                <p class="section-desc">Providing the best infrastructure to support interactive and practical learning.</p>
+            </div>
+            <div class="swiper facilities-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Facility 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="school-card">
+                            <div class="school-card-img-wrap">
+                                <img src="{{ asset('user/assets/images/thumbs/school-science-lab.png') }}" alt="Science Labs" class="school-card-img">
+                            </div>
+                            <div class="school-card-body">
+                                <h3 class="school-card-title">Modern Science Labs</h3>
+                                <p class="school-card-desc">Fully equipped physics, chemistry, and biology labs for hands-on experiments.</p>
+                                <a href="{{ route('event_page') }}" class="btn-school-primary mt-auto text-center py-2">Explore Events <i class="fa fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Facility 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="school-card">
+                            <div class="school-card-img-wrap">
+                                <img src="{{ asset('user/assets/images/thumbs/school-classroom.png') }}" alt="Computer Labs" class="school-card-img">
+                            </div>
+                            <div class="school-card-body">
+                                <h3 class="school-card-title">Advanced Computer Labs</h3>
+                                <p class="school-card-desc">High-speed computers and internet access to learn essential digital skills.</p>
+                                <a href="{{ route('event_page') }}" class="btn-school-primary mt-auto text-center py-2">Explore Events <i class="fa fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Facility 3 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="school-card">
+                            <div class="school-card-img-wrap">
+                                <img src="{{ asset('user/assets/images/thumbs/banner-classroom.png') }}" alt="Smart Classrooms" class="school-card-img">
+                            </div>
+                            <div class="school-card-body">
+                                <h3 class="school-card-title">Smart Classrooms</h3>
+                                <p class="school-card-desc">Interactive smart boards that make learning engaging and fun for students.</p>
+                                <a href="{{ route('event_page') }}" class="btn-school-primary mt-auto text-center py-2">Explore Events <i class="fa fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Facility 4 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="school-card">
+                            <div class="school-card-img-wrap">
+                                <img src="{{ asset('user/assets/images/thumbs/school-sports-ground.png') }}" alt="Sports Arena" class="school-card-img">
+                            </div>
+                            <div class="school-card-body">
+                                <h3 class="school-card-title">Sports Arena</h3>
+                                <p class="school-card-desc">Spacious playgrounds and tracks encouraging sports, fitness, and teamwork.</p>
+                                <a href="{{ route('event_page') }}" class="btn-school-primary mt-auto text-center py-2">Explore Events <i class="fa fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Facility 5 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="school-card">
+                            <div class="school-card-img-wrap">
+                                <img src="{{ asset('user/assets/images/thumbs/school-annual-day.png') }}" alt="Cultural Activities" class="school-card-img">
+                            </div>
+                            <div class="school-card-body">
+                                <h3 class="school-card-title">Cultural Activities</h3>
+                                <p class="school-card-desc">Guidance in drama, music, dance, and arts to build confidence and creativity.</p>
+                                <a href="{{ route('event_page') }}" class="btn-school-primary mt-auto text-center py-2">Explore Events <i class="fa fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Facility 6 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="school-card">
+                            <div class="school-card-img-wrap">
+                                <img src="{{ asset('user/assets/images/thumbs/school-library.png') }}" alt="Library" class="school-card-img">
+                            </div>
+                            <div class="school-card-body">
+                                <h3 class="school-card-title">Resourceful Library</h3>
+                                <p class="school-card-desc">Thousands of academic books, references, and fiction to nurture reading habits.</p>
+                                <a href="{{ route('event_page') }}" class="btn-school-primary mt-auto text-center py-2">Explore Events <i class="fa fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination mt-4"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END FACILITIES CARD GRID ==================== -->
+
+    <!-- ==================== LEADERS / TEACHERS SECTION ==================== -->
+    <section class="section-padding">
+        <div class="container max-w-1360-px">
+            <div class="section-header text-center">
+                <span class="section-badge"><i class="fa fa-users me-1"></i> Our Leaders</span>
+                <h2 class="section-title">Meet Our Dedicated Leadership</h2>
+                <p class="section-desc"><i class="fa fa-star text-warning me-1"></i> The experienced visionaries guiding our school towards academic excellence. <i class="fa fa-graduation-cap text-success ms-1"></i></p>
+            </div>
+            <div class="swiper leaders-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Director -->
+                    <div class="swiper-slide h-auto">
+                        <div class="school-card">
+                            <div class="school-card-img-wrap teacher-card-img-wrap">
+                                <img src="{{ asset('user/assets/images/thumbs/director.png') }}" alt="Dr. K. Maruthirajan - Director" class="school-card-img teacher-card-img">
+                            </div>
+                            <div class="school-card-body">
+                                <h3 class="school-card-title">Dr. K. Maruthirajan, <small class="text-muted" style="font-size: 0.85rem; font-weight: 500;">M.A., Ph.D.</small></h3>
+                                <p class="leader-role mb-2"><i class="fa fa-user-shield me-1"></i> Director</p>
+                                <p class="school-card-desc">A visionary educationist leading strategic growth, policy formulation, and global collaborations at Maruthi School.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Correspondent -->
+                    <div class="swiper-slide h-auto">
+                        <div class="school-card">
+                            <div class="school-card-img-wrap teacher-card-img-wrap">
+                                <img src="{{ asset('user/assets/images/thumbs/co-founder.png') }}" alt="Shri. V. Annamalai - Correspondent" class="school-card-img teacher-card-img">
+                            </div>
+                            <div class="school-card-body">
+                                <h3 class="school-card-title">Shri. V. Annamalai, <small class="text-muted" style="font-size: 0.85rem; font-weight: 500;">B.E., M.B.A.</small></h3>
+                                <p class="leader-role mb-2"><i class="fa fa-handshake me-1"></i> Correspondent</p>
+                                <p class="school-card-desc">Co-founded the institution in 1997 with a vision to bring quality, accessible CBSE education to Puducherry.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Principal -->
+                    <div class="swiper-slide h-auto">
+                        <div class="school-card">
+                            <div class="school-card-img-wrap teacher-card-img-wrap">
+                                <img src="{{ asset('user/assets/images/thumbs/principal.png') }}" alt="Dr. S. Murugesan - Principal" class="school-card-img teacher-card-img">
+                            </div>
+                            <div class="school-card-body">
+                                <h3 class="school-card-title">Dr. S. Murugesan, <small class="text-muted" style="font-size: 0.85rem; font-weight: 500;">M.Sc., M.Ed., Ph.D.</small></h3>
+                                <p class="leader-role mb-2"><i class="fa fa-graduation-cap me-1"></i> Principal</p>
+                                <p class="school-card-desc">With 28+ years of dedicated service in education, guiding Maruthi Senior Secondary School's academic success.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Treasurer -->
+                    <div class="swiper-slide h-auto">
+                        <div class="school-card">
+                            <div class="school-card-img-wrap teacher-card-img-wrap">
+                                <img src="{{ asset('user/assets/images/thumbs/vice-principal.png') }}" alt="Mrs. R. Kavitha - Treasurer" class="school-card-img teacher-card-img">
+                            </div>
+                            <div class="school-card-body">
+                                <h3 class="school-card-title">Mrs. R. Kavitha, <small class="text-muted" style="font-size: 0.85rem; font-weight: 500;">M.Com., M.B.A.</small></h3>
+                                <p class="leader-role mb-2"><i class="fa fa-wallet me-1"></i> Treasurer</p>
+                                <p class="school-card-desc">Managing financial strategies, budgeting, and institutional resources to ensure state-of-the-art facilities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination mt-4"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END LEADERS / TEACHERS SECTION ==================== -->
+
+    <!-- ==================== QUICK STATS SECTION ==================== -->
+    <section class="stats-grid">
+        <div class="container max-w-1360-px">
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="stat-block">
+                        <div class="stat-num">25+</div>
+                        <div class="stat-text">Years Excellence</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-block">
+                        <div class="stat-num">20K+</div>
+                        <div class="stat-text">Proud Alumni</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-block">
+                        <div class="stat-num">50+</div>
+                        <div class="stat-text">Expert Faculty</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-block">
+                        <div class="stat-num">100%</div>
+                        <div class="stat-text">CBSE Board Pass</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END QUICK STATS SECTION ==================== -->
+
+    <!-- ==================== NEWS & EVENTS SECTION ==================== -->
+    <section class="section-padding-gray bg-main-10">
+        <div class="container max-w-1360-px">
+            <div class="section-header">
+                <span class="section-badge">Updates</span>
+                <h2 class="section-title">Latest News & Upcoming Events</h2>
+                <p class="section-desc">Stay informed about the latest achievements, notices, and events at Maruthi School.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Event 1 -->
+                <div class="col-md-4">
+                    <div class="school-card position-relative">
+                        <span class="news-date-badge">12 JUN</span>
+                        <div class="school-card-img-wrap">
+                            <img src="{{ asset('user/assets/images/thumbs/school-annual-day.png') }}" alt="Annual Day" class="school-card-img">
+                        </div>
+                        <div class="school-card-body">
+                            <h3 class="school-card-title">Annual Day Celebrations</h3>
+                            <p class="school-card-desc">Annual day cultural program celebrating student creativity and talents.</p>
+                            <div class="school-card-footer">
+                                <button type="button" class="btn-school-primary w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#eventModal1">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 2 -->
+                <div class="col-md-4">
+                    <div class="school-card position-relative">
+                        <span class="news-date-badge">08 JUN</span>
+                        <div class="school-card-img-wrap">
+                            <img src="{{ asset('user/assets/images/thumbs/school-science-lab.png') }}" alt="Science Day" class="school-card-img">
+                        </div>
+                        <div class="school-card-body">
+                            <h3 class="school-card-title">National Science Day</h3>
+                            <p class="school-card-desc">Students displaying creative physics and chemistry models at the exhibition.</p>
+                            <div class="school-card-footer">
+                                <button type="button" class="btn-school-primary w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#eventModal2">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 3 -->
+                <div class="col-md-4">
+                    <div class="school-card position-relative">
+                        <span class="news-date-badge">04 JUN</span>
+                        <div class="school-card-img-wrap">
+                            <img src="{{ asset('user/assets/images/thumbs/school-students-group.png') }}" alt="French Visit" class="school-card-img">
+                        </div>
+                        <div class="school-card-body">
+                            <h3 class="school-card-title">French Cultural Exchange</h3>
+                            <p class="school-card-desc">Welcoming students from partner schools for global educational interaction.</p>
+                            <div class="school-card-footer">
+                                <button type="button" class="btn-school-primary w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#eventModal3">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END NEWS & EVENTS SECTION ==================== -->
+
+      <!-- ==================== GALLERY IMAGE CARDS SECTION ==================== -->
+    <section class="section-padding">
+        <div class="container max-w-1360-px">
+            <div class="section-header">
+                <span class="section-badge">Gallery</span>
+                <h2 class="section-title">School Campus Highlights</h2>
+                <p class="section-desc">Visual glimpses of learning activities, student life, and school infrastructure.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Gallery 1 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="school-card">
+                        <div class="school-card-img-wrap">
+                            <img src="{{ asset('user/assets/images/thumbs/banner-campus.png') }}" alt="Campus Landscape" class="school-card-img">
+                        </div>
+                        <div class="school-card-body">
+                            <h3 class="school-card-title">School Campus View</h3>
+                            <p class="school-card-desc">The beautiful exterior view of our primary and secondary school campus.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery 2 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="school-card">
+                        <div class="school-card-img-wrap">
+                            <img src="{{ asset('user/assets/images/thumbs/banner-classroom.png') }}" alt="Interactive Learning" class="school-card-img">
+                        </div>
+                        <div class="school-card-body">
+                            <h3 class="school-card-title">Interactive Smart Class</h3>
+                            <p class="school-card-desc">Students attending dynamic sessions using advanced digital smartboards.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="school-card">
+                        <div class="school-card-img-wrap">
+                            <img src="{{ asset('user/assets/images/thumbs/banner-sports.png') }}" alt="Sports Activities" class="school-card-img">
+                        </div>
+                        <div class="school-card-body">
+                            <h3 class="school-card-title">Annual Sports Meet</h3>
+                            <p class="school-card-desc">Students demonstrating sportsmanship and energy in tracks and field sports.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery 4 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="school-card">
+                        <div class="school-card-img-wrap">
+                            <img src="{{ asset('user/assets/images/thumbs/school-classroom.jpg') }}" alt="Students Class" class="school-card-img">
+                        </div>
+                        <div class="school-card-body">
+                            <h3 class="school-card-title">General Classroom Sessions</h3>
+                            <p class="school-card-desc">A standard classroom section focused on collaborative group discussions.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery 5 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="school-card">
+                        <div class="school-card-img-wrap">
+                            <img src="{{ asset('user/assets/images/thumbs/school-library.png') }}" alt="Library Session" class="school-card-img">
+                        </div>
+                        <div class="school-card-body">
+                            <h3 class="school-card-title">Research & Reading Time</h3>
+                            <p class="school-card-desc">Students expanding their horizons in our fully-stocked school library.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery 6 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="school-card">
+                        <div class="school-card-img-wrap">
+                            <img src="{{ asset('user/assets/images/thumbs/school-sports-ground.png') }}" alt="Outdoor Football" class="school-card-img">
+                        </div>
+                        <div class="school-card-body">
+                            <h3 class="school-card-title">Outdoor Games & Playground</h3>
+                            <p class="school-card-desc">Students playing football on the green grass sports field during games period.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="{{ route('gallery') }}" class="btn-school-outline">View Complete Gallery</a>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END GALLERY IMAGE CARDS SECTION ==================== -->
+
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section class="bg-main-10 pt-100 pb-100">
+        <div class="container max-w-1400-px mx-auto">
+            <div class="text-center tw-mb-15 mx-auto">
+                <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-white rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-5"
+                    data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <span class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
+                        <i class="ph-fill ph-star-four"></i>
+                    </span>
+                    <span class="fw-normal tw-text-4 text-main-600">
+                        Parent & Student Testimonials
+                    </span>
+                </div>
+                <h3 class="fw-semibold text-neutral-950 tw-mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    What Parents & Students Say About Us
+                </h3>
+                <p class="fw-normal tw-text-4 text-neutral-500" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    Hear from our community about their experience at Maruthi Senior Secondary School.
+                </p>
+            </div>
+
+
             
-          </div>
-            </div>
-            <div class="col-xl-6">
-              <div
-                class="tw-py-1 tw-ps-105 tw-pe-4 bg-main-50 rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-4"
-                data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                <span
-                  class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
-                  <i class="ph-fill ph-star-four"></i>
-                </span>
-                <span class="fw-normal tw-text-4 text-main-600">
-                  Why Choose Us
-                </span>
-              </div>
-              <h3 class="fw-semibold text-neutral-950 tw-mb-6" data-aos="fade-up" data-aos-duration="800"
-                data-aos-delay="200">
-                A School That Invests in Every Child
-              </h3>
-              <p class="fw-normal tw-text-4 text-neutral-400 tw-mb-4" data-aos="fade-up" data-aos-duration="800"
-                data-aos-delay="300">
-                At Maruthi Senior Secondary School, we believe every student has unique potential. Our environment is
-                designed to bring out the best in each child through quality education, modern facilities, and holistic
-                development.
-              </p>
-              <div class="d-flex align-items-center tw-gap-4 animation-item flex-sm-nowrap flex-wrap tw-mb-10"
-                data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">
 
-                <div>
-                  <h2 class="h5  fw-semibold text-neutral-500 tw-mb-3">
-                    Experienced Faculty
-                  </h2>
-                  <p class="fw-normal tw-text-405 text-neutral-400">
-                    Highly experienced and dedicated teachers focused on academic excellence and student growth across
-                    all subjects.
-                  </p>
+            <!-- Testimonials Slider Wrapper -->
+            <div class="testimonials-wrapper-relative">
+                <div class="swiper student-two-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="tw-p-10 bg-white tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1 text-center h-100">
+                                <i class="fa fa-quote-left text-main-600 fs-3 mb-4 opacity-50"></i>
+                                <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px mb-4">
+                                    "My children have been studying at Maruthi School since Pre-KG. The teachers are incredibly dedicated, and the CBSE curriculum is delivered with great care. I've seen remarkable growth in my kids academically and personally."
+                                </h2>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
+                                            Rajesh Kumar
+                                        </span>
+                                        <span class="fw-normal tw-text-4 text-neutral-400">
+                                            Parent of Class 8 Student
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="tw-p-10 bg-white tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1 text-center h-100">
+                                <i class="fa fa-quote-left text-main-600 fs-3 mb-4 opacity-50"></i>
+                                <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px mb-4">
+                                    "The school's focus on both academics and extracurricular activities is outstanding. My daughter excels in sports and studies equally, thanks to the balanced approach at Maruthi School. Best CBSE school in Puducherry!"
+                                </h2>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
+                                            Priya Lakshmi
+                                        </span>
+                                        <span class="fw-normal tw-text-4 text-neutral-400">
+                                            Parent of Class 10 Student
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="tw-p-10 bg-white tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1 text-center h-100">
+                                <i class="fa fa-quote-left text-main-600 fs-3 mb-4 opacity-50"></i>
+                                <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px mb-4">
+                                    "Maruthi School gave me the foundation I needed for my career. The science labs, computer facilities, and the mentorship from teachers shaped who I am today. Forever grateful to this institution."
+                                </h2>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
+                                            Arun Prakash
+                                        </span>
+                                        <span class="fw-normal tw-text-4 text-neutral-400">
+                                            Alumni – Batch of 2018
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="tw-p-10 bg-white tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1 text-center h-100">
+                                <i class="fa fa-quote-left text-main-600 fs-3 mb-4 opacity-50"></i>
+                                <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px mb-4">
+                                    "The school provides a safe, nurturing environment where children can thrive. The cultural exchange programs and sports events give students exposure beyond textbooks. Highly recommend Maruthi School!"
+                                </h2>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
+                                            Meenakshi Devi
+                                        </span>
+                                        <span class="fw-normal tw-text-4 text-neutral-400">
+                                            Parent of Class 5 Student
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="d-flex align-items-center tw-gap-5 flex-wrap tw-mb-8" data-aos="fade-up"
-                data-aos-duration="800" data-aos-delay="400">
-                <div class="d-flex flex-column flex-lg-row tw-gap-5 ">
-                  <div class="d-flex align-items-center tw-gap-4">
-                    <span
-                      class="tw-w-16 tw-h-16 bg-main-50 text-main-600 rounded-circle d-flex align-items-center justify-content-center tw-text-3xl flex-shrink-0 shadow-sm border border-main-100">
-                      <i class="ph-fill ph-certificate"></i>
-                    </span>
-                    <span class="fw-bold tw-text-lg text-neutral-800">
-                      CBSE Affiliated Curriculum
-                    </span>
-                  </div>
-                  <div class="d-flex align-items-center tw-gap-4">
-                    <span
-                      class="tw-w-16 tw-h-16 bg-main-three-50 text-main-three-600 rounded-circle d-flex align-items-center justify-content-center tw-text-3xl flex-shrink-0 shadow-sm border border-main-three-100">
-                      <i class="ph-fill ph-chalkboard"></i>
-                    </span>
-                    <span class="fw-bold tw-text-lg text-neutral-800">
-                      Modern Smart Classrooms
-                    </span>
-                  </div>
+
+                <!-- Navigation Buttons -->
+                <div class="testimonials-nav-container">
+                    <button type="button" id="student-two-button-prev"
+                        class="btn rounded-circle d-flex align-items-center justify-content-center hover-text-white tw-duration-300 testimonials-nav-btn prev-btn">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <button type="button" id="student-two-button-next"
+                        class="btn rounded-circle d-flex align-items-center justify-content-center hover-text-white tw-duration-300 testimonials-nav-btn next-btn">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
                 </div>
-                <div class="d-flex flex-column flex-lg-row tw-gap-5">
-                  <div class="d-flex align-items-center tw-gap-4">
-                    <span
-                      class="tw-w-16 tw-h-16 bg-main-two-50 text-main-two-600 rounded-circle d-flex align-items-center justify-content-center tw-text-3xl flex-shrink-0 shadow-sm border border-main-two-100">
-                      <i class="ph-fill ph-flask"></i>
-                    </span>
-                    <span class="fw-bold tw-text-lg text-neutral-800">
-                      Science & Computer Labs
-                    </span>
-                  </div>
-                  <div class="d-flex align-items-center tw-gap-4">
-                    <span
-                      class="tw-w-16 tw-h-16 bg-warning-50 text-warning-600 rounded-circle d-flex align-items-center justify-content-center tw-text-3xl flex-shrink-0 shadow-sm border border-warning-100">
-                      <i class="ph-fill ph-soccer-ball"></i>
-                    </span>
-                    <span class="fw-bold tw-text-lg text-neutral-800">
-                      Sports & Cultural Activities
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <a href="{{ route('about') }}" class="btn btn-main" data-aos="fade-up" data-aos-duration="1200">
-                More About Us <i class="ph-bold ph-arrow-right ms-2"></i>
-              </a>
             </div>
-           
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- ============================== about eduly section end ============================ -->
-  <!-- =================== brand section end =================== -->
-
-  <!-- ====================== features section start ======================= -->
-  <section class="bg-main-50 pt-100 pb-140 position-relative">
-    
-  <!-- icons -->
+    </section>
+    <!-- ==================== END TESTIMONIALS SECTION ==================== -->
 
   
 
-    <div class="container">
-      <div class="text-center tw-mb-10">
-        <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-white rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-4"
-          data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-          <span
-            class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
-            <i class="ph-fill ph-star-four"></i>
-          </span>
-          <span class="fw-normal tw-text-4 text-main-600">
-            Our Programs
-          </span>
-        </div>
-        <h3 class="fw-semibold text-neutral-950 tw-mb-6" data-aos="fade-up" data-aos-duration="800"
-          data-aos-delay="200">
-          Academic Programs & Facilities
-        </h3>
-        <p class="fw-normal tw-text-4 text-neutral-400" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-          State-of-the-art facilities and comprehensive programs designed to<br> nurture academic excellence and
-          holistic development in every student.
-        </p>
-      </div>
-
-      <div class="swiper popular-category-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide group">
-            <div
-              class="tw-py-11 tw-px-5 bg-white  group tw-duration-300 text-center animation-item group-item border border-neutral-50"
-              data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-              <span
-                class="tw-w-84-px tw-h-84-px border-main-50 border rounded-circle mx-auto d-flex align-items-center justify-content-center tw-mb-4 text-main-600 group-hover-bg-main-600 tw-duration-300 bg-red-light tw-text-48-px">
-                <i class="ph ph-flask group-hover-item-text-invert-white animate__bounce"></i>
-              </span>
-              <span class="fw-medium tw-text-4 text-neutral-500 max-w-110-px">
-                Science Labs
-              </span>
-            </div>
-          </div>
-          <div class="swiper-slide group">
-            <div
-              class="tw-py-11 tw-px-5 bg-white  group tw-duration-300 text-center animation-item group-item border border-neutral-50"
-              data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
-              <span
-                class="tw-w-84-px tw-h-84-px border-main-50 border rounded-circle mx-auto d-flex align-items-center justify-content-center tw-mb-4 text-main-600 group-hover-bg-main-600 tw-duration-300 bg-purple-light tw-text-48-px">
-                <i class="ph ph-desktop group-hover-item-text-invert-white animate__bounce"></i>
-              </span>
-              <span class="fw-medium tw-text-4 text-neutral-500 max-w-110-px">
-                Computer Labs
-              </span>
-            </div>
-          </div>
-          <div class="swiper-slide group">
-            <div
-              class="tw-py-11 tw-px-5 bg-white  group tw-duration-300 text-center animation-item group-item border border-neutral-50"
-              data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-              <span
-                class="tw-w-84-px tw-h-84-px border-main-50 border rounded-circle mx-auto d-flex align-items-center justify-content-center tw-mb-4 text-main-600 group-hover-bg-main-600 tw-duration-300 bg-warning-light tw-text-48-px">
-                <i class="ph ph-chalkboard-teacher group-hover-item-text-invert-white animate__bounce"></i>
-              </span>
-              <span class="fw-medium tw-text-4 text-neutral-500 max-w-110-px">
-                Smart Classrooms
-              </span>
-            </div>
-          </div>
-          <div class="swiper-slide group">
-            <div
-              class="tw-py-11 tw-px-5 bg-white  group tw-duration-300 text-center animation-item group-item border border-neutral-50"
-              data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
-              <span
-                class="tw-w-84-px tw-h-84-px border-main-50 border rounded-circle mx-auto d-flex align-items-center justify-content-center tw-mb-4 text-main-600 group-hover-bg-main-600 tw-duration-300 bg-main-50 tw-text-48-px">
-                <i class="ph ph-soccer-ball group-hover-item-text-invert-white animate__bounce"></i>
-              </span>
-              <span class="fw-medium tw-text-4 text-neutral-500 max-w-110-px">
-                Sports Arena
-              </span>
-            </div>
-          </div>
-          <div class="swiper-slide group">
-            <div
-              class="tw-py-11 tw-px-5 bg-white  group tw-duration-300 text-center animation-item group-item border border-neutral-50"
-              data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-              <span
-                class="tw-w-84-px tw-h-84-px border-main-50 border rounded-circle mx-auto d-flex align-items-center justify-content-center tw-mb-4 text-main-600 group-hover-bg-main-600 tw-duration-300 bg-cyan-light tw-text-48-px">
-                <i class="ph ph-palette group-hover-item-text-invert-white animate__bounce"></i>
-              </span>
-              <span class="fw-medium tw-text-4 text-neutral-500 max-w-110-px">
-                Cultural Activities
-              </span>
-            </div>
-          </div>
-          <div class="swiper-slide group">
-            <div
-              class="tw-py-11 tw-px-5 bg-white  group tw-duration-300 text-center animation-item group-item border border-neutral-50"
-              data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
-              <span
-                class="tw-w-84-px tw-h-84-px border-main-50 border rounded-circle mx-auto d-flex align-items-center justify-content-center tw-mb-4 text-main-600 group-hover-bg-main-600 tw-duration-300 bg-purple-light tw-text-48-px">
-                <i class="ph ph-book-open group-hover-item-text-invert-white animate__bounce"></i>
-              </span>
-              <span class="fw-medium tw-text-4 text-neutral-500 max-w-110-px">
-                Library
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="popular-category-pagination position-relative tw-mt-8 style-circle-border d-flex justify-content-center">
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ====================== features section end ======================= -->
-
-  <!-- ============================= popular categories section start ============================= -->
-  <section class="tw-pt-15 mt-3 pb-0">
-    <div class="container">
-      <div class="text-center tw-mb-10">
-        <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-main-50 rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-4"
-          data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-          <span
-            class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
-            <i class="ph-fill ph-star-four"></i>
-          </span>
-          <span class="fw-normal tw-text-4 text-main-600">
-            Classes Offered
-          </span>
-        </div>
-        <h3 class="fw-semibold text-neutral-950 tw-mb-6" data-aos="fade-up" data-aos-duration="800"
-          data-aos-delay="200">
-          Classes We Offer at Maruthi
-        </h3>
-        <p class="fw-normal tw-text-4 text-neutral-400" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-          From Pre-KG to Class 12, we provide a comprehensive CBSE curriculum<br> with dedicated attention to every
-          student's growth and development.
-        </p>
-      </div>
-
-    </div>
-  </section>
-  <!-- ============================= popular categories section end ============================= -->
-
-
-
-  <!-- ======================== Promotional banner section start ====================== -->
-  <section class="tw-pt-15 mt-5 pb-100">
-    <div class="container max-w-1360-px">
-      <div class="row gy-4">
-        <div class="col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-          <div class="position-relative z-1 tw-py-12 tw-px-9 tw-rounded-3xl overflow-hidden h-100 bg-main-600">
-            <div class="position-absolute start-0 top-0 w-100 h-100 z-n1">
-              <img src="user/assets/images/thumbs/promo-banner-bg.png" alt="BG" class="w-100 h-100 object-fit-cover">
-            </div>
-            <div class="">
-              <div
-                class="tw-py-1 tw-ps-105 tw-pe-4 bg-white-22 rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-4">
-                <span
-                  class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
-                  <i class="ph-fill ph-star-four"></i>
-                </span>
-                <span class="fw-normal tw-text-4 text-white">
-                  Admissions Open
-                </span>
-              </div>
-              <h2 class="text-white h4 max-w-330-px">Enroll Now for Pre-KG to Class 12 - CBSE Curriculum</h2>
-              <div class="tw-mt-7">
-                <a href="{{ route('about') }}" class="btn btn-main" data-aos="fade-up" data-aos-duration="1200">
-                  More About Us <i class="ph-bold ph-arrow-right ms-2"></i>
-                </a>
-              </div>
-            </div>
-            <div class="position-absolute bottom-0 end-0 tw-me-3 z-n1 d-xl-block d-none">
-              <img src="user/assets/images/thumbs/school-annual-day.png" alt="Happy Students at Maruthi School"
-                class="w-100 tw-rounded-xl">
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-          <div class="position-relative z-1 tw-py-12 tw-px-9 tw-rounded-3xl overflow-hidden h-100 bg-main-three-600">
-            <div class="">
-              <div
-                class="tw-py-1 tw-ps-105 tw-pe-4 bg-black-22 rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-4">
-                <span
-                  class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
-                  <i class="ph-fill ph-star-four"></i>
-                </span>
-                <span class="fw-normal tw-text-4 text-white">
-                  Campus Highlights
-                </span>
-              </div>
-              <h2 class="h4 max-w-330-px text-white">Celebrating 25+ Years of Shaping Future Leaders</h2>
-              <div class="tw-mt-7">
-                <a href="{{ route('about') }}" class="btn btn-main" data-aos="fade-up" data-aos-duration="1200">
-                  More About Us <i class="ph-bold ph-arrow-right ms-2"></i>
-                </a>
-              </div>
-            </div>
-            <div class="position-absolute bottom-0 end-0 tw-me-3 z-n1 d-xl-block d-none">
-              <img src="user/assets/images/thumbs/school-hero-banner.png" alt="Maruthi School Campus"
-                class="w-100 tw-rounded-xl">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ======================== Promotional banner section end ====================== -->
-
-  <div class="pb-110">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="600">
-          <div class="max-w-240-px w-100">
-            <h2 class="fw-medium text-main-600 tw-mb-4 counter">25+</h2>
-            <div class="d-flex align-items-center tw-gap-405">
-              <span class="tw-w-05 tw-h-10 bg-main-600 flex-shrink-0"></span>
-              <p class="fw-normal tw-text-405 text-neutral-500">Years of Academic Excellence</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
-          <div class="max-w-240-px w-100">
-            <h2 class="fw-medium text-main-600 tw-mb-4 counter">20K+</h2>
-            <div class="d-flex align-items-center tw-gap-405">
-              <span class="tw-w-05 tw-h-10 bg-main-600 flex-shrink-0"></span>
-              <p class="fw-normal tw-text-405 text-neutral-500">Proud Alumni Worldwide</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
-          <div class="max-w-240-px w-100">
-            <h2 class="fw-medium text-main-600 tw-mb-4 counter">50+</h2>
-            <div class="d-flex align-items-center tw-gap-405">
-              <span class="tw-w-05 tw-h-10 bg-main-600 flex-shrink-0"></span>
-              <p class="fw-normal tw-text-405 text-neutral-500">Dedicated & Experienced Faculty</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1200">
-          <div class="max-w-240-px w-100">
-            <h2 class="fw-medium text-main-600 tw-mb-4 counter"> 12th</h2>
-            <div class="d-flex align-items-center tw-gap-405">
-              <span class="tw-w-05 tw-h-10 bg-main-600 flex-shrink-0"></span>
-              <p class="fw-normal tw-text-405 text-neutral-500">Classes Offered Under CBSE Curriculum</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ====================== online course section start ========================= -->
-
-
-
-
-
-
-  <!-- ====================== online course section end ========================= -->
-
-
-
-
-
-    <!-- ===================== popular categories section start ========================= -->
-  <section class="leadership-section bg-main-10 py-100 position-relative z-2 overflow-hidden">
-    <!-- Background Decorative Elements -->
-    <div class="leader-bg-shape s-1"></div>
-    <div class="leader-bg-shape s-2"></div>
-    <div class="leader-bg-blob"></div>
-
-    <div class="container position-relative z-1">
-      <!-- Section Header -->
-      <div class="d-flex align-items-end tw-gap-4 justify-content-between flex-wrap tw-mb-10">
-        <div>
-          <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-white rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-4"
-            data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-            <span class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
-              <i class="ph-fill ph-star-four"></i>
-            </span>
-            <span class="fw-normal tw-text-4 text-main-600">Our Leadership</span>
-          </div>
-          <h3 class="fw-semibold text-neutral-950" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-            Meet the Visionaries Behind Maruthi
-          </h3>
-        </div>
-        <!-- Tab Buttons -->
-        <ul class="nav nav-tabs d-flex border-bottom-0 flex-wrap tw-gap-205" id="leaderTab" role="tablist"
-          data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">
-          <li class="nav-item">
-            <button class="nav-link rounded-pill bg-white active" id="principal-tab" data-bs-toggle="tab"
-              data-bs-target="#principal-tab-pane" type="button" role="tab" aria-selected="true">
-              <i class="ph-fill ph-user-circle me-1"></i> Principal
-            </button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link rounded-pill bg-white" id="viceprincipal-tab" data-bs-toggle="tab"
-              data-bs-target="#viceprincipal-tab-pane" type="button" role="tab" aria-selected="false">
-              <i class="ph-fill ph-user-circle me-1"></i> Vice Principal
-            </button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link rounded-pill bg-white" id="cofounder-tab" data-bs-toggle="tab"
-              data-bs-target="#cofounder-tab-pane" type="button" role="tab" aria-selected="false">
-              <i class="ph-fill ph-crown me-1"></i> Co-Founder
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Tab Content -->
-      <div class="tab-content" id="leaderTabContent">
-
-        <!-- Principal -->
-        <div class="tab-pane fade show active" id="principal-tab-pane" role="tabpanel" tabindex="0">
-          <div class="row gy-4 align-items-center">
-            <div class="col-xl-5 col-lg-5" data-aos="zoom-in" data-aos-duration="1200">
-              <div class="leader-photo-wrap">
-                <img src="user/assets/images/thumbs/principal.png" alt="Principal - Maruthi Senior Secondary School"
-                  class="leader-photo">
-                <div class="leader-role-badge">
-                  <i class="ph-fill ph-graduation-cap"></i> Principal
+    <!-- ==================== CALL TO ACTION BANNER ==================== -->
+    <section class="cta-flat">
+        <div class="container max-w-1360-px">
+            <div class="row align-items-center gy-4 text-lg-start text-center">
+                <div class="col-lg-8">
+                    <h2>Admissions Open for Academic Year 2026-27</h2>
+                    <p>Enroll your child in Puducherry's leading CBSE school today and witness their comprehensive growth.</p>
                 </div>
-              </div>
-            </div>
-            <div class="col-xl-7 col-lg-7" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-              <div class="leader-info-block">
-                <h2 class="leader-name">Dr. S. Murugesan</h2>
-                <p class="leader-designation">Principal, Maruthi Senior Secondary School</p>
-                <p class="fw-normal tw-text-4 text-neutral-400 tw-mb-5">
-                  With over 28 years of dedicated service in education, Dr. S. Murugesan has been the guiding force of Maruthi Senior Secondary School. His visionary leadership has transformed the school into one of Puducherry's most respected CBSE institutions.
-                </p>
-                <p class="fw-normal tw-text-4 text-neutral-400 tw-mb-7">
-                  Under his guidance, the school has achieved consistent 100% board results, numerous state-level academic honors, and a culture of holistic student development that blends academics, sports, and character-building.
-                </p>
-                <div class="leader-highlights d-flex flex-wrap gap-3 tw-mb-7">
-                  <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> M.Ed., Ph.D. in Education</div>
-                  <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> 28+ Years Experience</div>
-                  <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> State Award Recipient</div>
-                  <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> CBSE Resource Person</div>
-                </div>
-                <a href="{{ route('contact') }}" class="btn btn-main">
-                  Contact Principal <i class="ph-bold ph-arrow-right ms-2"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Vice Principal -->
-        <div class="tab-pane fade" id="viceprincipal-tab-pane" role="tabpanel" tabindex="0">
-          <div class="row gy-4 align-items-center">
-            <div class="col-xl-5 col-lg-5" data-aos="zoom-in" data-aos-duration="1200">
-              <div class="leader-photo-wrap">
-                <img src="user/assets/images/thumbs/vice-principal.png" alt="Vice Principal - Maruthi Senior Secondary School"
-                  class="leader-photo">
-                <div class="leader-role-badge badge-green">
-                  <i class="ph-fill ph-book-open"></i> Vice Principal
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-7 col-lg-7" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-              <div class="leader-info-block">
-                <h2 class="leader-name">Mrs. R. Kavitha</h2>
-                <p class="leader-designation">Vice Principal, Maruthi Senior Secondary School</p>
-                <p class="fw-normal tw-text-4 text-neutral-400 tw-mb-5">
-                  Mrs. R. Kavitha brings 20 years of excellence in education administration to Maruthi School. A passionate educator and administrator, she oversees academic planning, student welfare programs, and faculty development initiatives.
-                </p>
-                <p class="fw-normal tw-text-4 text-neutral-400 tw-mb-7">
-                  Her commitment to inclusive, student-centered learning has elevated the school's academic outcomes, and she is widely respected by both teachers and students for her empathetic and results-driven approach.
-                </p>
-                <div class="leader-highlights d-flex flex-wrap gap-3 tw-mb-7">
-                  <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> M.Sc., B.Ed.</div>
-                  <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> 20+ Years Experience</div>
-                  <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> Academic Excellence Award</div>
-                  <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> Child Development Expert</div>
-                </div>
-                <a href="{{ route('contact') }}" class="btn btn-main">
-                  Contact Vice Principal <i class="ph-bold ph-arrow-right ms-2"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Co-Founder -->
-        <div class="tab-pane fade" id="cofounder-tab-pane" role="tabpanel" tabindex="0">
-          <div class="row gy-4 align-items-center">
-            <div class="col-xl-5 col-lg-5" data-aos="zoom-in" data-aos-duration="1200">
-              <div class="leader-photo-wrap">
-                <img src="user/assets/images/thumbs/co-founder.png" alt="Co-Founder - Maruthi Senior Secondary School"
-                  class="leader-photo">
-                <div class="leader-role-badge badge-gold">
-                  <i class="ph-fill ph-crown"></i> Co-Founder
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-7 col-lg-7" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-              <div class="leader-info-block">
-                <h2 class="leader-name">Shri. V. Annamalai</h2>
-                <p class="leader-designation">Co-Founder & Correspondent, Maruthi Senior Secondary School</p>
-                <p class="fw-normal tw-text-4 text-neutral-400 tw-mb-5">
-                  Shri. V. Annamalai co-founded Maruthi Senior Secondary School in 1997 with a singular vision: to bring world-class CBSE education to the families of Puducherry. His entrepreneurial spirit and dedication to community welfare have been the cornerstone of the school's founding values.
-                </p>
-                <p class="fw-normal tw-text-4 text-neutral-400 tw-mb-7">
-                  His belief that "education is the greatest gift you can give a child" has shaped everything from the school's culture to its infrastructure. Today, he remains actively involved in guiding the school's long-term vision and community outreach programs.
-                </p>
-                <div class="leader-highlights d-flex flex-wrap gap-3 tw-mb-7">
-                  <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> Founder Vision 1997</div>
-                  <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> 25+ Years Leadership</div>
-                  <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> Community Champion</div>
-                  <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> Educational Philanthropist</div>
-                </div>
-                <a href="{{ route('about') }}" class="btn btn-main">
-                  Our Story <i class="ph-bold ph-arrow-right ms-2"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- end tab-content -->
-    </div>
-  </section>
-  <!-- ===================== popular categories section end ========================= -->
-
-
-
-
-
-  <!-- ============================ teacher section start ========================== -->
-
-  <!-- ============================ teacher section end ========================== -->
-
-  <!-- ====================== categories section start ====================== -->
-
-  <!-- ====================== categories section end ====================== -->
-
-  <!-- ======================= student reviews section start ======================== -->
-
-  <!-- ============================= student reviews section start ======================== -->
-  <section class=" pt-140 pb-100">
-<!-- icons -->
-   
-    <div class="container max-w-1400-px mx-auto">
-      <div class="d-flex align-items-center justify-content-center">
-        <!-- <img src="user/assets/images/shape/student-review-two-shape1.png" alt="shape"
-          class="animation-upDown d-xl-block d-none"> -->
-        <div class="text-center tw-mb-15">
-          <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-white rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-5"
-            data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-            <span
-              class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
-              <i class="ph-fill ph-star-four"></i>
-            </span>
-            <span class="fw-normal tw-text-4 text-main-600">
-              Parent & Student Testimonials
-            </span>
-          </div>
-          <h3 class="fw-semibold text-neutral-950 tw-mb-5" data-aos="fade-up" data-aos-duration="800"
-            data-aos-delay="200">
-            What Parents & Students Say !
-          </h3>
-          <p class="fw-normal tw-text-4 text-neutral-500" data-aos="fade-up" data-aos-duration="800"
-            data-aos-delay="300">
-            Hear from our community about their experience at Maruthi Senior Secondary School.
-          </p>
-        </div>
-        <!-- <img src="user/assets/images/shape/student-review-two-shape2.png" alt="shape"
-          class="animation-scalation d-xl-block d-none"> -->
-      </div>
-
-
-      <div class="d-flex align-items-center tw-gap-11 flex-sm-nowrap flex-wrap">
-        <button type="button" id="student-two-button-prev"
-          class="tw-w-13 tw-h-13 bg-white tw-student-two-shadow d-flex align-items-center justify-content-center text-main-600 tw-text-505 rounded-circle hover-bg-main-600 hover-text-white tw-duration-300 flex-shrink-0">
-          <i class="ph-bold ph-arrow-left"></i>
-        </button>
-        <div class="swiper student-two-slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-              <div class="position-relative">
-                <div
-                  class="tw-p-10 bg-main-10 tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1">
-                  <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px">
-                    "My children have been studying at Maruthi School since Pre-KG. The teachers are incredibly
-                    dedicated, and the CBSE curriculum is delivered with great care. I've seen remarkable growth in my
-                    kids academically and personally."
-                  </h2>
-                  <div class="tw-mt-6 d-flex align-items-center tw-gap-3">
-                    <div class="">
-                      <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
-                        Rajesh Kumar
-                      </span>
-                      <span class="fw-normal tw-text-4 text-neutral-400">
-                        Parent of Class 8 Student
-                      </span>
+                <div class="col-lg-4 text-lg-end text-center">
+                    <div class="d-inline-flex gap-3 flex-wrap">
+                        <a href="{{ route('contact') }}" class="btn-school-primary bg-white text-dark border-white">Apply For Admission</a>
+                        <a href="tel:+919442399777" class="btn-school-outline border-white text-white">Call Us</a>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-
-            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-              <div class="position-relative">
-                <div
-                  class="tw-p-10 bg-main-10 tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1">
-                  <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px">
-                    "The school's focus on both academics and extracurricular activities is outstanding. My daughter
-                    excels in sports and studies equally, thanks to the balanced approach at Maruthi School. Best CBSE
-                    school in Puducherry!"
-                  </h2>
-                  <div class="tw-mt-6 d-flex align-items-center tw-gap-3">
-                    <div class="">
-                      <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
-                        Priya Lakshmi
-                      </span>
-                      <span class="fw-normal tw-text-4 text-neutral-400">
-                        Parent of Class 10 Student
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-              <div class="position-relative">
-                <div
-                  class="tw-p-10 bg-main-10 tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1">
-                  <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px">
-                    "Maruthi School gave me the foundation I needed for my career. The science labs, computer
-                    facilities, and the mentorship from teachers shaped who I am today. Forever grateful to this
-                    institution."
-                  </h2>
-                  <div class="tw-mt-6 d-flex align-items-center tw-gap-3">
-                    <div class="">
-                      <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
-                        Arun Prakash
-                      </span>
-                      <span class="fw-normal tw-text-4 text-neutral-400">
-                        Alumni €“ Batch of 2018
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-              <div class="position-relative">
-                <div
-                  class="tw-p-10 bg-main-10 tw-rounded-xl border-white border border-2 border-white hover-border-main-600 tw-duration-300 tw-mb-1">
-                  <h2 class="h5 fw-medium text-neutral-700 tw-line-height-37-px">
-                    "The school provides a safe, nurturing environment where children can thrive. The cultural exchange
-                    programs and sports events give students exposure beyond textbooks. Highly recommend Maruthi
-                    School!"
-                  </h2>
-                  <div class="tw-mt-6 d-flex align-items-center tw-gap-3">
-                    <div class="">
-                      <span class="fw-semibold tw-text-405 text-neutral-950 tw-mb-1 d-block">
-                        Meenakshi Devi
-                      </span>
-                      <span class="fw-normal tw-text-4 text-neutral-400">
-                        Parent of Class 5 Student
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <button type="button" id="student-two-button-next"
-          class="tw-w-13 tw-h-13 bg-white tw-student-two-shadow d-flex align-items-center justify-content-center text-main-600 tw-text-505 rounded-circle hover-bg-main-600 hover-text-white tw-duration-300 flex-shrink-0">
-          <i class="ph-bold ph-arrow-right"></i>
-        </button>
-      </div>
+    </section>
+    <!-- ==================== END CALL TO ACTION BANNER ==================== -->
+
+    <!-- ==================== BASIC BOOTSTRAP MODALS (NO FANCY ANIMATIONS) ==================== -->
+    <!-- Modal 1: Annual Day -->
+    <div class="modal fade" id="eventModal1" tabindex="-1" aria-labelledby="eventModal1Label" aria-hidden="true" style="transition: none !important;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="eventModal1Label">Annual Day Celebrations</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ asset('user/assets/images/thumbs/school-annual-day.png') }}" class="img-fluid rounded mb-3" alt="Annual Day">
+                    <p class="fw-bold text-primary-school mb-2"><i class="fa fa-calendar me-2"></i>June 12, 2026</p>
+                    <p>Our Annual Day Celebrations are a grand cultural extravaganza showcasing the diverse talents of our students in music, dance, drama, and arts. Parents and distinguished guests are cordially invited to witness this memorable event celebrating student achievements and creative expressions.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-  <!-- ============================= student reviews section end ======================== -->
 
-  <!-- ======================= student reviews section end ======================== -->
-
-
-  <!-- =============================== blog section start ============================= -->
-  <section class="py-100 bg-main-10">
-    <div class="container max-w-1400-px mx-auto">
-      <div class="d-flex align-items-center justify-content-between tw-mb-15 flex-wrap">
-        <div class="">
-          <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-white rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-5"
-            data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-            <span
-              class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
-              <i class="ph-fill ph-star-four"></i>
-            </span>
-            <span class="fw-normal tw-text-4 text-main-600">
-              School News & Events
-            </span>
-          </div>
-          <h3 class="fw-semibold text-neutral-950 tw-mb-5" data-aos="fade-up" data-aos-duration="800"
-            data-aos-delay="350">
-            Latest News & Upcoming Events
-          </h3>
+    <!-- Modal 2: Science Day -->
+    <div class="modal fade" id="eventModal2" tabindex="-1" aria-labelledby="eventModal2Label" aria-hidden="true" style="transition: none !important;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="eventModal2Label">National Science Day</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ asset('user/assets/images/thumbs/school-science-lab.png') }}" class="img-fluid rounded mb-3" alt="Science Day">
+                    <p class="fw-bold text-primary-school mb-2"><i class="fa fa-calendar me-2"></i>June 08, 2026</p>
+                    <p>National Science Day at Maruthi School features a grand science exhibition where students display physics, chemistry, biology, and computer models. The objective is to foster a scientific temper and analytical spirit among students.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-        <p class="fw-normal tw-text-405 text-neutral-500 max-w-500-px" data-aos="fade-up" data-aos-duration="800"
-          data-aos-delay="300">
-          Stay updated with the latest happenings, achievements, and upcoming events at Maruthi Senior Secondary School.
-        </p>
-      </div>
-      <div class="d-flex align-items-center tw-gap-11 flex-sm-nowrap flex-wrap">
-        <button type="button" id="blog-two-button-prev"
-          class="tw-w-13 tw-h-13 bg-white tw-student-two-shadow d-flex align-items-center justify-content-center text-main-600 tw-text-505 rounded-circle hover-bg-main-600 hover-text-white tw-duration-300 flex-shrink-0">
-          <i class="ph-bold ph-arrow-left"></i>
-        </button>
-        <div class="swiper blog-two-slider tw-pb-5">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-              <div class="tw-mt-12">
-                <div class="tw-p-205 bg-white tw-rounded-xl animation-item">
-                  <div class="position-relative tw-mb-5">
-                    <span class="w-100 tw-rounded-xl overflow-hidden">
-                      <img src="user/assets/images/thumbs/school-hero-banner.png" alt="Annual Day Event"
-                        class="w-100 course-item__img tw-duration-300">
-                    </span>
-                    <div
-                      class="tw-py-5 tw-px-6 bg-main-600 tw-rounded-top-bottom-12-px position-absolute top-0 tw-start-0">
-                      <h2 class="h5 tw-text-details-two-32-px d-block fw-bold text-white tw-leading-none">
-                        12
-                      </h2>
-                      <span class="fw-normal tw-text-4 text-white">
-                        JUN
-                      </span>
-                    </div>
-                  </div>
-                  <div class="tw-px-4 tw-pb-3">
-
-                    <span class="w-100 tw-h-px bg-neutral-12-persent tw-mt-4 tw-mb-4"></span>
-                    <a href="javascript:void(0)"
-                      class="fw-semibold tw-text-5 text-neutral-500 tw-mb-6 hover-text-main-600 tw-duration-300">
-                      Annual Day Celebrations €“ A Grand Cultural Extravaganza
-                    </a>
-                    <a href="course-details.html"
-                      class="btn btn-main-two hover-style-four button--stroke active-scale-094 tw-duration-100 tw-py-305 tw-px-6 group active--translate-y-2 tw-p-1 rounded-pill border-main-600 border"
-                      data-block="button">
-                      <span class="button__flair"></span>
-                      <span class="button__label fw-bold tw-text-4">View Details</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-              <div class="">
-                <div class="tw-p-205 bg-white tw-rounded-xl animation-item">
-                  <div class="position-relative tw-mb-5">
-                    <span class="w-100 tw-rounded-xl overflow-hidden">
-                      <img src="user/assets/images/thumbs/school-science-lab.png" alt="Science Day Competition"
-                        class="w-100 course-item__img tw-duration-300">
-                    </span>
-                    <div
-                      class="tw-py-5 tw-px-6 bg-main-600 tw-rounded-top-bottom-12-px position-absolute top-0 tw-start-0">
-                      <h2 class="h5 tw-text-details-two-32-px d-block fw-bold text-white tw-leading-none">
-                        08
-                      </h2>
-                      <span class="fw-normal tw-text-4 text-white">
-                        JUN
-                      </span>
-                    </div>
-                  </div>
-                  <div class="tw-px-4 tw-pb-3">
-
-                    <span class="w-100 tw-h-px bg-neutral-12-persent tw-mt-4 tw-mb-4"></span>
-                    <a href="javascript:void(0)"
-                      class="fw-semibold tw-text-5 text-neutral-500 tw-mb-6 hover-text-main-600 tw-duration-300">
-                      Students Excel at National Science Day Competition
-                    </a>
-                    <a href="course-details.html"
-                      class="btn btn-main-two hover-style-four button--stroke active-scale-094 tw-duration-100 tw-py-305 tw-px-6 group active--translate-y-2 tw-p-1 rounded-pill border-main-600 border"
-                      data-block="button">
-                      <span class="button__flair"></span>
-                      <span class="button__label fw-bold tw-text-4">View Details</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-              <div class="tw-mt-12">
-                <div class="tw-p-205 bg-white tw-rounded-xl animation-item">
-                  <div class="position-relative tw-mb-5">
-                    <span class="w-100 tw-rounded-xl overflow-hidden">
-                      <img src="user/assets/images/thumbs/school-annual-day.png" alt="Cultural Exchange Program"
-                        class="w-100 course-item__img tw-duration-300">
-                    </span>
-                    <div
-                      class="tw-py-5 tw-px-6 bg-main-600 tw-rounded-top-bottom-12-px position-absolute top-0 tw-start-0">
-                      <h2 class="h5 tw-text-details-two-32-px d-block fw-bold text-white tw-leading-none">
-                        04
-                      </h2>
-                      <span class="fw-normal tw-text-4 text-white">
-                        JUN
-                      </span>
-                    </div>
-                  </div>
-                  <div class="tw-px-4 tw-pb-3">
-
-                    <span class="w-100 tw-h-px bg-neutral-12-persent tw-mt-4 tw-mb-4"></span>
-                    <a href="javascript:void(0)"
-                      class="fw-semibold tw-text-5 text-neutral-500 tw-mb-6 hover-text-main-600 tw-duration-300">
-                      International Cultural Exchange €“ French School Visit
-                    </a>
-                    <a href="course-details.html"
-                      class="btn btn-main-two hover-style-four button--stroke active-scale-094 tw-duration-100 tw-py-305 tw-px-6 group active--translate-y-2 tw-p-1 rounded-pill border-main-600 border"
-                      data-block="button">
-                      <span class="button__flair"></span>
-                      <span class="button__label fw-bold tw-text-4">View Details</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">
-              <div class="">
-                <div class="tw-p-205 bg-white tw-rounded-xl animation-item">
-                  <div class="position-relative tw-mb-5">
-                    <span class="w-100 tw-rounded-xl overflow-hidden">
-                      <img src="user/assets/images/thumbs/blog-news-two-img2.png" alt="img"
-                        class="w-100 course-item__img tw-duration-300">
-                    </span>
-                    <div
-                      class="tw-py-5 tw-px-6 bg-main-600 tw-rounded-top-bottom-12-px position-absolute top-0 tw-start-0">
-                      <h2 class="h5 tw-text-details-two-32-px d-block fw-bold text-white tw-leading-none">
-                        08
-                      </h2>
-                      <span class="fw-normal tw-text-4 text-white">
-                        JUN
-                      </span>
-                    </div>
-                  </div>
-                  <div class="tw-px-4 tw-pb-3">
-
-                    <span class="w-100 tw-h-px bg-neutral-12-persent tw-mt-4 tw-mb-4"></span>
-                    <a href="javascript:void(0)"
-                      class="fw-semibold tw-text-5 text-neutral-500 tw-mb-6 hover-text-main-600 tw-duration-300">
-                      How to Avoid the Biggest College Admission Mistakes
-                    </a>
-                    <a href="course-details.html"
-                      class="btn btn-main-two hover-style-four button--stroke active-scale-094 tw-duration-100 tw-py-305 tw-px-6 group active--translate-y-2 tw-p-1 rounded-pill border-main-600 border"
-                      data-block="button">
-                      <span class="button__flair"></span>
-                      <span class="button__label fw-bold tw-text-4">View Details</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button type="button" id="blog-two-button-next"
-          class="tw-w-13 tw-h-13 bg-white tw-student-two-shadow d-flex align-items-center justify-content-center text-main-600 tw-text-505 rounded-circle hover-bg-main-600 hover-text-white tw-duration-300 flex-shrink-0">
-          <i class="ph-bold ph-arrow-right"></i>
-        </button>
-      </div>
-      <div class="tw-mt-9 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="800"
-        data-aos-delay="300">
-        <a href="gallery.html"
-          class="btn btn-main-four hover-style-four button--stroke active-scale-094 tw-duration-100 tw-py-405 tw-px-10 group active--translate-y-2 tw-p-1 tw-pe-8 rounded-pill"
-          data-block="button">
-          <span class="button__flair"></span>
-          <span class="button__label fw-bold tw-text-4">View All Events</span>
-        </a>
-      </div>
     </div>
-  </section>
-  <!-- =============================== blog section end ============================= -->
 
-  <!-- ========================= courses section start =========================== -->
-  <section class="admissions-cta-redesign position-relative overflow-hidden">
-    <!-- Floating Decorative Icons -->
-    
-
-    <div class="container position-relative z-1">
-      <div class="row align-items-center gy-4">
-        <div class="col-lg-7 text-lg-start text-center" data-aos="fade-right" data-aos-duration="1000">
-          <div class="cta-pill-badge mb-3 d-inline-flex align-items-center gap-2">
-            <span class="cta-pulse-dot"></span>
-            <span class="text-white fw-medium">Admissions Open 2026-27</span>
-          </div>
-          <h2 class="cta-title text-white fw-bold mb-4">
-            Start Your Child's Journey <br class="d-none d-md-block"> to <span class="text-highlight">Excellence</span> Today
-          </h2>
-          <p class="cta-description text-white opacity-90 mb-0">
-            Join Puducherry's leading CBSE school. We provide a nurturing environment, <br class="d-none d-lg-block">
-            state-of-the-art facilities, and a legacy of academic success.
-          </p>
+    <!-- Modal 3: French Visit -->
+    <div class="modal fade" id="eventModal3" tabindex="-1" aria-labelledby="eventModal3Label" aria-hidden="true" style="transition: none !important;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="eventModal3Label">French Cultural Exchange</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ asset('user/assets/images/thumbs/school-students-group.png') }}" class="img-fluid rounded mb-3" alt="French Visit">
+                    <p class="fw-bold text-primary-school mb-2"><i class="fa fa-calendar me-2"></i>June 04, 2026</p>
+                    <p>In partnership with international educational organizations, our school welcomes students and teachers from France for an interactive cultural exchange program, highlighting multilingual learning and friendship building.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-5 text-lg-end text-center" data-aos="fade-left" data-aos-duration="1000">
-          <div class="cta-btn-group d-flex flex-column flex-sm-row justify-content-lg-end gap-3 align-items-center">
-            <a href="contact-us.html" class="btn btn-apply-now rounded-pill px-5 py-3 fw-bold">
-              Apply For Admission <i class="ph-bold ph-arrow-right ms-2"></i>
-            </a>
-            <a href="tel:+919442399777" class="btn btn-call-us rounded-pill px-4 py-3 fw-bold border-white text-white border-2">
-              <i class="ph-fill ph-phone me-2"></i> Inquiry
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
-    
-    <!-- Background Accents -->
-    <div class="cta-accent-circle"></div>
-  </section>
-  <!-- ========================= courses section end =========================== -->
+    <!-- ==================== END BASIC BOOTSTRAP MODALS ==================== -->
 
- {{-- Footer starts --}}
-      @include('user.layouts.footer')
-  {{-- Footer ends --}}
-  
-
+    {{-- Footer starts --}}
+    @include('user.layouts.footer')
+    {{-- Footer ends --}}
 
     @include('user.layouts.script')
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Disable AOS animations programmatically
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    disable: true
+                });
+            }
+            // Deactivate and stop Lenis smooth scrolling if active
+            if (typeof Lenis !== 'undefined') {
+                try {
+                    const lenis = new Lenis();
+                    lenis.destroy();
+                } catch(e) {}
+            }
+
+            // Initialize Hero Swiper
+            if (typeof Swiper !== 'undefined') {
+                const heroSwiper = new Swiper('.hero-swiper', {
+                    slidesPerView: 1,
+                    loop: true,
+                    speed: 1000,
+                    autoplay: {
+                        delay: 4500,
+                        disableOnInteraction: false
+                    },
+                    pagination: {
+                        el: '.hero-swiper-container .swiper-pagination',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.hero-swiper-container .swiper-button-next',
+                        prevEl: '.hero-swiper-container .swiper-button-prev'
+                    }
+                });
+
+                // Initialize Facilities Swiper
+                const facilitiesSwiper = new Swiper('.facilities-swiper', {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                    loop: true,
+                    speed: 800,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    },
+                    pagination: {
+                        el: '.facilities-swiper .swiper-pagination',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.facilities-swiper .swiper-button-next',
+                        prevEl: '.facilities-swiper .swiper-button-prev'
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 16
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 24
+                        }
+                    }
+                });
+
+                // Initialize Leaders Swiper
+                const leadersSwiper = new Swiper('.leaders-swiper', {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                    loop: true,
+                    speed: 800,
+                    autoplay: {
+                        delay: 6000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    },
+                    pagination: {
+                        el: '.leaders-swiper .swiper-pagination',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.leaders-swiper .swiper-button-next',
+                        prevEl: '.leaders-swiper .swiper-button-prev'
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 16
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 24
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
