@@ -36,7 +36,7 @@
       <h2 class="text-white h1 mb-3" data-aos="fade-up">About Our School</h2>
       <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="100">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ route('index') }}" class="text-white">Home</a></li>
           <li class="breadcrumb-item active text-white opacity-75" aria-current="page">About Us</li>
         </ol>
       </nav>
@@ -332,7 +332,7 @@
         </div>
         <div class="col-lg-5 text-lg-end text-center" data-aos="fade-left" data-aos-duration="1000">
           <div class="cta-btn-group d-flex flex-column flex-sm-row justify-content-lg-end gap-3 align-items-center">
-            <a href="contact-us.html" class="btn btn-apply-now rounded-pill px-5 py-3 fw-bold">
+            <a href="{{ route('contact') }}" class="btn btn-apply-now rounded-pill px-5 py-3 fw-bold">
               Apply For Admission <i class="ph-bold ph-arrow-right ms-2"></i>
             </a>
             <a href="tel:+919442399777"

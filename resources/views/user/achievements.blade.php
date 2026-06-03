@@ -8,148 +8,183 @@
     <meta content="Templatemanja" name="author">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Educone Is Online Courses HTML5 Template.">
-    <meta name="keywords"
-        content="academy, course, education, elearning, learning, education html template, university template, college template, school template, online education template, tution center template">
+    <meta name="keywords" content="academy, course, education, elearning, learning, CBSE">
 
     <!-- SITE TITLE -->
-    <title>Maruthi Senior Secondary School Puducherry | CBSE Affiliated | Pre-KG to Class 12</title>
+    <title>Achievements | Maruthi Senior Secondary School Puducherry</title>
+    @include('user.layouts(')
     @include('user.layouts.links')
-   
 </head>
 
 <body class="body-fullpage">
 
-{{-- Starts --}}
-<!--==================== Preloader Start ====================-->
-  <div class="loader-mask">
-    <div class="loader">
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <!--==================== Preloader End ====================-->
+    {{-- preloader starts --}}
+    @include('user.layouts.loader')
+    {{-- preloader ends --}}
 
-
-
-
-  <!--==================== Overlay Start ====================-->
-  <div class="overlay"></div>
-  <!--==================== Overlay End ====================-->
-
-  <!--==================== Sidebar Overlay End ====================-->
-  <div class="side-overlay"></div>
-  <!--==================== Sidebar Overlay End ====================-->
-
-  <!-- Custom Toast Message start -->
-  <div id="toast-container"></div>
-  <!-- Custom Toast Message End -->
-
-  <!-- ==================== Scroll to Top End Here ==================== -->
-  <div class="progress-wrap cursor-big">
-    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-    </svg>
-  </div>
-  <!-- ==================== Scroll to Top End Here ==================== -->
-
-  <!-- Custom Cursor Start -->
-  <div class="cursor"></div>
-  <span class="dot"></span>
-  <!-- Custom Cursor End -->
-
-
-
-  {{-- =============================== --}}
     <!-- START HEADER -->
-        @include('user.layouts.header')
+    @include('user.layouts.header')
     <!-- END HEADER -->
-  {{-- =============================== --}}
 
+    <!-- Main Content Subpage Container -->
+    <div class="subpage-container bg-neutral-50">
+        <div class="container max-w-1360-px">
+            <div class="row gy-4">
+                
+                <!-- Left Sidebar -->
+                <div class="col-lg-3">
+                    <div class="subpage-sidebar">
+                        <div class="academics-sidebar-category"><i class="ph ph-caret-double-right me-1"></i> Academics</div>
+                        <ul class="subpage-sidebar-menu">
+                            <li class="sidebar-item">
+                                <a href="{{ route('curriculum') }}" class="sidebar-link">
+                                    <i class="ph ph-book-open"></i> Curriculum
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="{{ route('calendar') }}" class="sidebar-link">
+                                    <i class="ph ph-calendar"></i> Year Calendar
+                                </a>
+                            </li>
+                            <li class="sidebar-item active">
+                                <a href="{{ route('achievements') }}" class="sidebar-link">
+                                    <i class="ph ph-trophy"></i> Achievements
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="{{ route('gallery') }}" class="sidebar-link">
+                                    <i class="ph ph-image"></i> Gallery
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="{{ route('event_page') }}" class="sidebar-link">
+                                    <i class="ph ph-calendar-blank"></i> Event Calendar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-   <!-- Breadcrumb -->
-  <section class="breadcrumb-section py-80 bg-main-600">
-    <div class="container text-center">
-      <h2 class="text-white h1 mb-3">Our Achievements</h2>
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb justify-content-center">
-          <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-          <li class="breadcrumb-item active text-white" aria-current="page">Achievements</li>
-        </ol>
-      </nav>
-    </div>
-  </section>
+                <!-- Right Content Area -->
+                <div class="col-lg-9">
+                    <div class="subpage-content-card">
+                        
+                        <!-- Breadcrumbs & Heading -->
+                        <div class="subpage-breadcrumbs">
+                            <a href="{{ route('index') }}">Home</a>
+                            <span class="separator">/</span>
+                            <span>Academics</span>
+                            <span class="separator">/</span>
+                            <span class="text-neutral-500">Achievements</span>
+                        </div>
 
-  <!-- Achievements Section -->
-  <section class="py-100">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-md-6">
-          <div class="p-5 border tw-rounded-xl bg-main-10">
-            <h4 class="text-main-600 mb-3">100% Board Results</h4>
-            <p class="text-neutral-500">Maruthi School has consistently achieved 100% results in CBSE Class 10 and 12
-              Board examinations for the last 15 years.</p>
-          </div>
+                        <h2 class="subpage-highlight-heading">Student Achievements</h2>
+                        <p class="text-neutral-500 fw-bold mb-4">OUR HONORS & RECOGNITIONS</p>
+                        
+                        <!-- Achievements Grid -->
+                        <div class="row gy-4 mt-2">
+                            <div class="col-md-6">
+                                <div class="p-4 border rounded-3 bg-neutral-10 tw-duration-300 hover-shadow-sm h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <span class="tw-w-12 tw-h-12 bg-main-50 text-main-600 rounded-circle d-flex align-items-center justify-content-center fs-4">
+                                            <i class="ph ph-chalkboard-teacher"></i>
+                                        </span>
+                                        <h4 class="text-neutral-950 fs-5 fw-bold mb-0">100% Board Results</h4>
+                                    </div>
+                                    <p class="text-neutral-500 mb-0">
+                                        Maruthi Senior Secondary School has consistently achieved a flawless 100% pass percentage in the CBSE Class X and Class XII board evaluations for the past 15 consecutive years.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4 border rounded-3 bg-neutral-10 tw-duration-300 hover-shadow-sm h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <span class="tw-w-12 tw-h-12 bg-main-50 text-main-600 rounded-circle d-flex align-items-center justify-content-center fs-4">
+                                            <i class="ph ph-trophy"></i>
+                                        </span>
+                                        <h4 class="text-neutral-950 fs-5 fw-bold mb-0">State-Level Sports Honors</h4>
+                                    </div>
+                                    <p class="text-neutral-500 mb-0">
+                                        Our student athletes secured multiple gold medals in state-level events including Cricket, Athletics, Volleyball tournaments, and Chess championships.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4 border rounded-3 bg-neutral-10 tw-duration-300 hover-shadow-sm h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <span class="tw-w-12 tw-h-12 bg-main-50 text-main-600 rounded-circle d-flex align-items-center justify-content-center fs-4">
+                                            <i class="ph ph-palette"></i>
+                                        </span>
+                                        <h4 class="text-neutral-950 fs-5 fw-bold mb-0">Cultural & Art Champions</h4>
+                                    </div>
+                                    <p class="text-neutral-500 mb-0">
+                                        Proud winners of the Inter-School Cultural Meet trophy, excelling in painting, debating, music recitals, and theater competitions.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4 border rounded-3 bg-neutral-10 tw-duration-300 hover-shadow-sm h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <span class="tw-w-12 tw-h-12 bg-main-50 text-main-600 rounded-circle d-flex align-items-center justify-content-center fs-4">
+                                            <i class="ph ph-atom"></i>
+                                        </span>
+                                        <h4 class="text-neutral-950 fs-5 fw-bold mb-0">Science & Robotics Exhibition</h4>
+                                    </div>
+                                    <p class="text-neutral-500 mb-0">
+                                        Winner of the Young Scientists Innovation Award for our solar-powered smart irrigation model in the regional Science and Technology Expo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="col-md-6">
-          <div class="p-5 border tw-rounded-xl bg-main-10">
-            <h4 class="text-main-600 mb-3">State Level Sports Awards</h4>
-            <p class="text-neutral-500">Our students have secured multiple gold medals in state-level athletics,
-              volleyball, and chess tournaments.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================= courses section start =========================== -->
-  <section class="admissions-cta-redesign position-relative overflow-hidden">
-    <!-- Floating Decorative Icons -->
-    <div class="cta-decor-icons" aria-hidden="true">
-      <div class="cta-icon-item ci-1"><i class="ph-fill ph-graduation-cap"></i></div>
-      <div class="cta-icon-item ci-2"><i class="ph-fill ph-book-open"></i></div>
-      <div class="cta-icon-item ci-3"><i class="ph-fill ph-pencil-simple"></i></div>
-      <div class="cta-icon-item ci-4"><i class="ph-fill ph-trophy"></i></div>
     </div>
 
-    <div class="container position-relative z-1">
-      <div class="row align-items-center gy-4">
-        <div class="col-lg-7 text-lg-start text-center" data-aos="fade-right" data-aos-duration="1000">
-          <div class="cta-pill-badge mb-3 d-inline-flex align-items-center gap-2">
-            <span class="cta-pulse-dot"></span>
-            <span class="text-white fw-medium">Admissions Open 2026-27</span>
-          </div>
-          <h2 class="cta-title text-white fw-bold mb-4">
-            Start Your Child's Journey <br class="d-none d-md-block"> to <span class="text-highlight">Excellence</span>
-            Today
-          </h2>
-          <p class="cta-description text-white opacity-90 mb-0">
-            Join Puducherry's leading CBSE school. We provide a nurturing environment, <br class="d-none d-lg-block">
-            state-of-the-art facilities, and a legacy of academic success.
-          </p>
+    <!-- START ADMISSIONS CTA -->
+    <section class="admissions-cta-redesign position-relative overflow-hidden">
+        <div class="cta-decor-icons" aria-hidden="true">
+            <div class="cta-icon-item ci-1"><i class="ph-fill ph-graduation-cap"></i></div>
+            <div class="cta-icon-item ci-2"><i class="ph-fill ph-book-open"></i></div>
+            <div class="cta-icon-item ci-3"><i class="ph-fill ph-pencil-simple"></i></div>
+            <div class="cta-icon-item ci-4"><i class="ph-fill ph-trophy"></i></div>
         </div>
-        <div class="col-lg-5 text-lg-end text-center" data-aos="fade-left" data-aos-duration="1000">
-          <div class="cta-btn-group d-flex flex-column flex-sm-row justify-content-lg-end gap-3 align-items-center">
-            <a href="contact-us.html" class="btn btn-apply-now rounded-pill px-5 py-3 fw-bold">
-              Apply For Admission <i class="ph-bold ph-arrow-right ms-2"></i>
-            </a>
-            <a href="tel:+919442399777"
-              class="btn btn-call-us rounded-pill px-4 py-3 fw-bold border-white text-white border-2">
-              <i class="ph-fill ph-phone me-2"></i> Inquiry
-            </a>
-          </div>
+        <div class="container position-relative z-1">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-7 text-lg-start text-center">
+                    <div class="cta-pill-badge mb-3 d-inline-flex align-items-center gap-2">
+                        <span class="cta-pulse-dot"></span>
+                        <span class="text-white fw-medium">Admissions Open 2026-27</span>
+                    </div>
+                    <h2 class="cta-title text-white fw-bold mb-4">
+                        Start Your Child's Journey <br class="d-none d-md-block"> to <span class="text-highlight">Excellence</span> Today
+                    </h2>
+                    <p class="cta-description text-white opacity-90 mb-0">
+                        Join Puducherry's leading CBSE school. We provide a nurturing environment, state-of-the-art facilities, and a legacy of academic success.
+                    </p>
+                </div>
+                <div class="col-lg-5 text-lg-end text-center">
+                    <div class="cta-btn-group d-flex flex-column flex-sm-row justify-content-lg-end gap-3 align-items-center">
+                        <a href="{{ route('contact') }}" class="btn btn-apply-now rounded-pill px-5 py-3 fw-bold">
+                            Apply For Admission <i class="ph-bold ph-arrow-right ms-2"></i>
+                        </a>
+                        <a href="tel:+919442399777" class="btn btn-call-us rounded-pill px-4 py-3 fw-bold border-white text-white border-2">
+                            <i class="ph-fill ph-phone me-2"></i> Inquiry
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+        <div class="cta-accent-circle"></div>
+    </section>
+    <!-- END ADMISSIONS CTA -->
 
-    <!-- Background Accents -->
-    <div class="cta-accent-circle"></div>
-  </section>
-  <!-- ========================= courses section end =========================== -->
-  {{-- =============================== --}}
-    <!-- START HEADER -->
-        @include('user.layouts.footer')
-    <!-- END HEADER -->
-  {{-- =============================== --}}
+    <!-- START FOOTER -->
+    @include('user.layouts.footer')
+    <!-- END FOOTER -->
 
     @include('user.layouts.script')
 

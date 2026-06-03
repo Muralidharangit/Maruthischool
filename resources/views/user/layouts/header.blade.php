@@ -112,15 +112,29 @@
             <a href="{{ route('event_page') }}" class="nav-menu__link tw-pe-5 text-heading tw-py-9 fw-medium w-100">Events</a>
           
           </li>
+          <li class="nav-menu__item has-submenu position-relative {{ Request::is('curriculum') || Request::is('year-calendar') || Request::is('achievements') ? 'active' : '' }}">
+            <a href="javascript:void(0)" class="nav-menu__link tw-pe-5 text-heading tw-py-9 fw-medium w-100 d-flex justify-content-between align-items-center">Academics <i class="ph ph-caret-down"></i></a>
+            <ul class="nav-submenu scroll-sm position-absolute start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-hidden tw-p-2 tw-duration-200 tw-z-99">
+              <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
+                <a href="{{ route('curriculum') }}" class="nav-submenu__link hover-bg-gray-200 text-heading fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded">Curriculum</a>
+              </li>
+              <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
+                <a href="{{ route('calendar') }}" class="nav-submenu__link hover-bg-gray-200 text-heading fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded">Year Calendar</a>
+              </li>
+              <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
+                <a href="{{ route('achievements') }}" class="nav-submenu__link hover-bg-gray-200 text-heading fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded">Achievements</a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-menu__item has-submenu position-relative {{ Request::is('gallery') ? 'active' : '' }}">
             <a href="{{ route('gallery') }}" class="nav-menu__link tw-pe-5 text-heading tw-py-9 fw-medium w-100">Gallery</a>
           
           </li>
           
-          <li class="nav-menu__item has-submenu position-relative {{ Request::is('achievements') ? 'active' : '' }}">
+          <!-- <li class="nav-menu__item has-submenu position-relative {{ Request::is('achievements') ? 'active' : '' }}">
             <a href="{{ route('achievements') }}" class="nav-menu__link tw-pe-5 text-heading tw-py-9 fw-medium w-100">Achievements</a>
             
-          </li>
+          </li> -->
           <li class="nav-menu__item {{ Request::is('contact') ? 'active' : '' }}">
             <a href="{{ route('contact') }}" class="nav-menu__link text-heading tw-py-9 fw-medium w-100">Contact</a>
           </li>
@@ -190,7 +204,7 @@
           </div>
           <div class="py-2">
             <span class="fw-bold text-neutral-950 tw-text-4">
-              Aff No. 2930027
+             Call No. +91 94423 99777
             </span>
           </div>
         </div>
@@ -200,16 +214,15 @@
   <!-- ====================== Top header new end ====================== -->
 
   <!-- ==================== Header Start Here ==================== -->
-  <header class="header tw-transition-all tw-z-99 bg-main-600 tw-shadow-sm sticky-top bg-main-600">
+  <header class="header tw-transition-all tw-z-99 tw-shadow-sm sticky-top">
     <div class="container max-w-1360-px">
-      <nav class="d-flex align-items-center justify-content-between position-relative tw-py-3">
+      <nav class="d-flex align-items-center justify-content-between position-relative ">
 
         <!-- Logo Start -->
         <a href="{{ route('index') }}" class="logo d-flex align-items-center tw-gap-3">
          <img src="{{ asset('user/assets/images/logo/maruthi-logo-seal.png') }}" 
 alt="Maruthi School Logo"
-class="tw-h-16 tw-p-1 rounded-circle bg-white"
-style="height:68px;width:68px;object-fit:contain;">
+class="logo-img-header tw-p-1 rounded-circle bg-white">
           <div class="d-xl-block d-none">
             <h1 class="logo-school-name fw-bold text-main-600 tw-mb-0 tw-leading-none ">MARUTHI</h1>
             <span class="logo-school-sub text-uppercase tracking-wider">Senior Secondary School</span>
@@ -219,49 +232,64 @@ style="height:68px;width:68px;object-fit:contain;">
 
         <!-- Menu Start  -->
         <div class="header-menu d-lg-block d-none">
-          <ul class="nav-menu d-lg-flex align-items-center tw-gap-8">
+          <ul class="nav-menu d-lg-flex align-items-center tw-gap-0">
             <li class="nav-menu__item {{ Request::is('/') ? 'active' : '' }}">
-              <a href="{{ route('index') }}" class=" nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600 text-white">Home</a>
+              <a href="{{ route('index') }}" class=" nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600">Home</a>
             </li>
             <li class="nav-menu__item {{ Request::is('about') ? 'active' : '' }}">
-              <a href="{{ route('about') }}" class=" nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600 text-white">About</a>
+              <a href="{{ route('about') }}" class=" nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600">About</a>
             </li>
             <li class="nav-menu__item {{ Request::is('events') ? 'active' : '' }}">
               <a href="{{ route('event_page') }}"
-                class=" nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600 text-white">Events</a>
+                class=" nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600">Events</a>
             </li>
+             <li class="nav-menu__item has-submenu position-relative {{ Request::is('curriculum') || Request::is('year-calendar') || Request::is('achievements') ? 'active' : '' }}">
+    <a href="javascript:void(0)" class="nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600 d-inline-flex align-items-center">Academics <i class="ph ph-caret-down dropdown-arrow-icon ms-1"></i></a>
+    <ul
+      class="nav-submenu scroll-sm position-absolute start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-hidden tw-p-2 tw-duration-200 tw-z-99">
+      <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
+        <a href="{{ route('curriculum') }}"
+          class="nav-submenu__link hover-bg-gray-200 text-heading fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+          Curriculum
+        </a>
+      </li>
+      <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
+        <a href="{{ route('calendar') }}"
+          class="nav-submenu__link hover-bg-gray-200 text-heading fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+          Year Calendar
+        </a>
+      </li>
+      <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
+        <a href="{{ route('achievements') }}"
+          class="nav-submenu__link hover-bg-gray-200 text-heading fw-medium w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+          Achievements
+        </a>
+      </li>
+    </ul>
+  </li>
             <li class="nav-menu__item {{ Request::is('gallery') ? 'active' : '' }}">
-              <a href="{{ route('gallery') }}" class=" nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600 text-white">Gallery</a>
+              <a href="{{ route('gallery') }}" class=" nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600">Gallery</a>
             </li>
             <li class="nav-menu__item {{ Request::is('achievements') ? 'active' : '' }}">
               <a href="{{ route('achievements') }}"
-                class=" nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600 text-white">Achievements</a>
+                class=" nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600">Achievements</a>
             </li> 
             <li class="nav-menu__item {{ Request::is('contact') ? 'active' : '' }}">
               <a href="{{ route('contact') }}"
-                class=" nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600 text-white">Contact</a>
+                class=" nav-menu__link text-heading tw-py-4 fw-bold hover-text-main-600">Contact</a>
             </li>
           </ul>
         </div>
         <!-- Menu End  -->
 
         <!-- Header Right start -->
-        <div class="d-flex align-items-center tw-gap-4">
-          <div class="d-sm-flex d-none align-items-center tw-gap-3  tw-py-2 tw-px-4 rounded-pill">
-            <span
-              class="tw-w-10 tw-h-10 bg-main-600 text-white rounded-circle d-flex justify-content-center align-items-center tw-text-xl">
-              <i class="ph ph-phone"></i>
-            </span>
-            <div class="">
-              <span class="text-neutral-500 tw-text-xs fw-bold d-block text-white">Call Us</span>
-              <a href="tel:+919442399777" class="text-white hover-text-main-600 fw-bold d-block">+91 94423 99777</a>
-            </div>
-          </div>
+       
+         
 
-          <button type="button" class="toggle-mobileMenu d-lg-none ms-3 tw-text-3xl text-white">
+          <button type="button" class="toggle-mobileMenu d-lg-none ms-3 tw-text-3xl text-dark">
             <i class="ph ph-list"></i>
           </button>
-        </div>
+        
         <!-- Header Right End  -->
       </nav>
     </div>

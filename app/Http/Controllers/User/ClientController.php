@@ -78,6 +78,18 @@ class ClientController extends Controller
         return view('user.achievements');
     }
 
+    public function curriculum()
+    {
+
+        return view('user.curriculum');
+    }
+
+    public function calendar()
+    {
+
+        return view('user.calendar');
+    }
+
     public function services()
     {
 
