@@ -93,12 +93,12 @@
 
    ================================== Css table of contents End======================================== */
 /* Font Family*/
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap");
 /* ========================= Variable Css Start ======================== */
 :root {
   /* Font Family Variable */
-    --heading-font: "Playfair Display", Georgia, serif;
-    --body-font: "Nunito", "Segoe UI", sans-serif;
+    --heading-font: "Cardo", Georgia, serif;
+    --body-font: "Inter", "Segoe UI", sans-serif;
   /* Font Size Variable Start */
     --heading-one: clamp(2.125rem, -0.1076rem + 4.6512vw, 4.25rem);
     --heading-two: clamp(1.75rem, -0.3512rem + 4.3776vw, 3.75rem);

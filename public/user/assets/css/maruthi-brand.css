@@ -2,8 +2,8 @@
    Maruthi School – Brand Enhancement CSS
    Logo Color: #128e4b | Version 2.0
    ============================================= */
-/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"); */
 
 /* ─── ROOT VARIABLES ─── */
 :root {
@@ -18,10 +18,10 @@
   --shadow-sm: 0 4px 16px rgba(18, 142, 75, .12);
   --shadow-card: 0 4px 24px rgba(0, 0, 0, .08);
   --ease: all .35s cubic-bezier(.4, 0, .2, 1);
-  /* --font-heading: "Playfair Display", Georgia, serif; */
-  /* --font-body: "Nunito", "Segoe UI", sans-serif; */
-  --font-heading: "Quicksand", sans-serif;
-  --font-body: "Quicksand", sans-serif;
+  --font-heading: "Cardo", Georgia, serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  /* --font-heading: "Quicksand", sans-serif;
+  --font-body: "Quicksand", sans-serif; */
 }
 
 /* ─── BASE ─── */
@@ -112,58 +112,97 @@ h6 {
 
 /* ─── HEADER ─── */
 .header {
-  box-shadow: 0 2px 20px rgba(18, 142, 75, .1) !important;
-  /* background: rgba(255, 255, 255, .97) !important; */
-  border-bottom:  2px solid rgb(255 255 255 / 43%);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, .05) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-bottom: 2px solid rgba(18, 142, 75, .08);
+  backdrop-filter: blur(12px);
+  padding: 8px 0;
+  transition: var(--ease);
+}
+
+.logo-img-header {
+  height: 75px !important;
+  width: 75px !important;
+  object-fit: contain;
+  box-shadow: 0 4px 12px rgba(18, 142, 75, 0.12);
+  border: 3px solid #ffffff;
+  background-color: #ffffff;
+  transition: var(--ease);
+}
+
+@media (max-width: 991px) {
+  .logo-img-header {
+    height: 60px !important;
+    width: 60px !important;
+    border-width: 2px;
+  }
 }
 
 /* ─── LOGO ─── */
 .logo-school-name {
   font-family: var(--font-heading) !important;
-  font-size: 1.5rem !important;
+  font-size: 1.8rem !important;
   font-weight: 900 !important;
-  letter-spacing: .06em;
-  color: #fff !important;
+  letter-spacing: .04em;
+  color: var(--brand-dark) !important;
   line-height: 1 !important;
 }
 
 .logo-school-sub {
   font-family: var(--font-body) !important;
-  font-size: .6rem !important;
-  font-weight: 600;
-  color: #f0f0f0 !important;
-  letter-spacing: .14em;
+  font-size: .65rem !important;
+  font-weight: 700 !important;
+  color: #4a5568 !important;
+  letter-spacing: .12em;
   display: block;
   margin-top: 2px;
 }
 
 /* ─── NAV ─── */
-.nav-menu__link {
+.header .nav-menu__link {
   font-family: var(--font-body) !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  color: #1e293b !important;
   transition: var(--ease);
   position: relative;
 }
 
-.nav-menu__link::after {
+.header .nav-menu__link::after {
   content: '';
   position: absolute;
   bottom: -4px;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
   background: var(--brand);
   border-radius: 2px;
   transition: width .3s ease;
 }
 
-.nav-menu__link:hover::after {
+.header .nav-menu__link:hover::after {
   width: 100%;
 }
 
-.nav-menu__link:hover {
-  color: #000 !important;
+.header .nav-menu__link:hover,
+.header .nav-menu__item.active .nav-menu__link {
+  color: var(--brand) !important;
+}
+
+.header span.text-neutral-500.text-white {
+  color: #4a5568 !important;
+}
+
+.header a.text-white {
+  color: var(--brand-dark) !important;
+}
+
+.header a.text-white:hover {
+  color: var(--brand-light) !important;
+}
+
+.header .toggle-mobileMenu {
+  color: var(--brand) !important;
 }
 
 /* ─── BUTTONS ─── */
@@ -1574,6 +1613,7 @@ body::before {
 .banner-slider .aos-animate {
   opacity: 1;
 }
+
 /* --- PREMIUM LOADER --- */
 .loader-mask {
   position: fixed;
@@ -1629,13 +1669,27 @@ body::before {
 }
 
 @keyframes loaderRotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes logoPulse {
-  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(18, 142, 75, 0)); }
-  50% { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(18, 142, 75, 0.2)); }
+
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(18, 142, 75, 0));
+  }
+
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px rgba(18, 142, 75, 0.2));
+  }
 }
 
 .loader-text {
@@ -1651,6 +1705,25 @@ body::before {
 }
 
 @keyframes textFade {
-  from { opacity: 0.4; transform: translateY(0); }
-  to { opacity: 1; transform: translateY(-2px); }
+  from {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+
+.has-submenu>a::before {
+  position: absolute;
+  content: "\e136";
+  inset-inline-end: 0;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+  font-family: "Phosphor";
+  font-weight: 900;
+  color: #ffffff;
+  transition: 0.2s linear;
 }

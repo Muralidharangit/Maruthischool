@@ -34,183 +34,143 @@
 
   <!-- ================== Banner section start =================== -->
   <section class="p-0 z-2 overflow-hidden position-relative" id="hero-section">
-    <!-- Animated floating educational icons - kept outside to persist across slides -->
-
-    
-    <div class="floating-icons-bg" aria-hidden="true" style="z-index: 10;">
-      <span class="float-icon float-icon-1"><i class="ph-fill ph-book-open"></i></span>
-      <span class="float-icon float-icon-2"><i class="ph-fill ph-pencil-simple"></i></span>
-      <span class="float-icon float-icon-3"><i class="ph-fill ph-graduation-cap"></i></span>
-      <span class="float-icon float-icon-4"><i class="ph-fill ph-atom"></i></span>
-      <span class="float-icon float-icon-5"><i class="ph-fill ph-calculator"></i></span>
-      <span class="float-icon float-icon-6"><i class="ph-fill ph-globe-hemisphere-east"></i></span>
-      <span class="float-icon float-icon-7"><i class="ph-fill ph-flask"></i></span>
-      <span class="float-icon float-icon-8"><i class="ph-fill ph-music-notes"></i></span>
-      <span class="float-icon float-icon-9"><i class="ph-fill ph-trophy"></i></span>
-      <span class="float-icon float-icon-10"><i class="ph-fill ph-chalkboard-teacher"></i></span>
-    </div>
-
     <div class="swiper banner-slider">
-      
       <div class="swiper-wrapper">
-        <!-- Slide 1 -->
+
+        <!-- Slide 1: Campus / General -->
         <div class="swiper-slide">
-          <div class="py-80 gradient-bg-one">
-            <div class="container max-w-1360-px">
-              <div class="row gy-4 align-items-center">
-                <div class="col-lg-6">
-                  <div class="position-relative">
-                    <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-white rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-4" data-aos="fade-up" data-aos-duration="600">
-                      <span class="tw-w-6 tw-h-6 border-main-100 border bg-main-50 rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
-                        <i class="ph-fill ph-star-four"></i>
-                      </span>
-                      <span class="fw-normal tw-text-4 text-main-600">
-                        CBSE Affiliated · Aff No. 2930027
-                      </span>
-                    </div>
-                    <h2 class="h1 fw-semibold text-neutral-950 tw-line-height-77-px tw-mb-7" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
-                      Excellence in CBSE Education Since 1997
-                    </h2>
-                    <p class="fw-normal tw-text-405 text-neutral-500 tw-mb-8" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-                      Maruthi Senior Secondary School is a premier CBSE-affiliated institution in Puducherry, committed to
-                      holistic development and academic excellence from Pre-KG to Class 12.
-                    </p>
-                    <div class="d-flex align-items-center gap-3 flex-wrap" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">
-                      <a href="contact-us.html" class="btn btn-main hover-style-three button--stroke active-scale-094 tw-duration-100 tw-py-5 tw-px-6 group active--translate-y-2 tw-p-1 rounded-pill border-main-600 border" data-block="button">
-                        <span class="button__flair"></span>
-                        <span class="button__label fw-bold tw-text-4">Admissions Open Apply Now</span>
-                      </a>
-                    </div>
-                  </div>
+          <div class="banner-fullbg-slide">
+            <div class="banner-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/banner-campus.png') }}');"></div>
+            <div class="banner-overlay"></div>
+            <div class="banner-float-icons" aria-hidden="true">
+              <span class="bfi bfi-1"><i class="ph-fill ph-book-open"></i></span>
+              <span class="bfi bfi-2"><i class="ph-fill ph-graduation-cap"></i></span>
+              <span class="bfi bfi-3"><i class="ph-fill ph-certificate"></i></span>
+              <span class="bfi bfi-4"><i class="ph-fill ph-pencil-simple"></i></span>
+            </div>
+            <div class="container max-w-1360-px position-relative banner-content-container">
+              <div class="banner-content-wrap">
+                <div class="banner-badge-pill" data-aos="fade-down" data-aos-duration="700">
+                  <span class="banner-badge-icon-circle"><i class="ph-fill ph-star-four"></i></span>
+                  <span class="banner-badge-text">CBSE Affiliated &middot; Aff No. 2930027</span>
                 </div>
-                <div class="col-lg-6">
-                  <div class="position-relative hero-img-wrap">
-                    <span class="d-flex align-items-center justify-content-center">
-                      <img src="user/assets/images/thumbs/school-hero-banner.jpg" alt="Maruthi Senior Secondary School Campus" class="w-100 hero-main-img" style="object-fit:cover; border-radius:24px; box-shadow: 0 24px 64px rgba(18,142,75,0.18);">
-                    </span>
-                    <div class="hero-badge hero-badge-cbse" data-aos="fade-left" data-aos-duration="600" data-aos-delay="600">
-                      <span class="hero-badge-icon"><i class="ph-fill ph-certificate"></i></span>
-                      <div>
-                        <span class="hero-badge-title">CBSE Affiliated</span>
-                        <span class="hero-badge-sub">Aff No. 2930027</span>
-                      </div>
-                    </div>
-                    <div class="hero-badge hero-badge-year" data-aos="fade-right" data-aos-duration="600" data-aos-delay="800">
-                      <span class="hero-badge-icon"><i class="ph-fill ph-calendar-star"></i></span>
-                      <div>
-                        <span class="hero-badge-title">Est. 1997</span>
-                        <span class="hero-badge-sub">25+ Years</span>
-                      </div>
-                    </div>
-                  </div>
+                <h1 class="banner-hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+                  Excellence in <span class="banner-title-highlight">CBSE Education</span><br>Since 1997
+                </h1>
+                <p class="banner-hero-desc" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                  Maruthi Senior Secondary School is a premier CBSE-affiliated institution in Puducherry, committed to holistic development and academic excellence from Pre-KG to Class 12.
+                </p>
+                <div class="banner-stats-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="420">
+                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-users-three"></i></span><span class="bsc-text">20K+ Alumni</span></div>
+                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-chalkboard-teacher"></i></span><span class="bsc-text">50+ Faculty</span></div>
+                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-trophy"></i></span><span class="bsc-text">25+ Years</span></div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="540">
+                  <a href="{{ route('contact') }}" class="banner-custom-pill-btn">
+                    <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
+                    <span class="btn-text">Apply Now</span>
+                  </a>
+                  <a href="{{ route('about') }}" class="banner-custom-pill-btn banner-custom-pill-btn-outline">
+                    <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
+                    <span class="btn-text">About Us</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Slide 2 -->
+        <!-- Slide 2: Sports -->
         <div class="swiper-slide">
-          <div class="py-80" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);">
-            <div class="container max-w-1360-px">
-              <div class="row gy-4 align-items-center">
-                <div class="col-lg-6">
-                  <div class="position-relative">
-                    <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-white rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-4" data-aos="fade-up" data-aos-duration="600">
-                      <span class="tw-w-6 tw-h-6 border-main-three-100 border bg-main-three-50 rounded-circle text-main-three-600 d-flex align-items-center justify-content-center tw-text-305">
-                        <i class="ph-fill ph-chalkboard"></i>
-                      </span>
-                      <span class="fw-normal tw-text-4 text-main-three-600">
-                        Modern Infrastructure
-                      </span>
-                    </div>
-                    <h2 class="h1 fw-semibold text-neutral-950 tw-line-height-77-px tw-mb-7" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
-                      State-of-the-Art Smart Classrooms
-                    </h2>
-                    <p class="fw-normal tw-text-405 text-neutral-500 tw-mb-8" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-                      We provide interactive learning environments equipped with modern technology to ensure our students 
-                      stay ahead in a rapidly evolving digital world.
-                    </p>
-                    <div class="d-flex align-items-center gap-3 flex-wrap" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">
-                      <a href="about-us.html" class="btn btn-main hover-style-three button--stroke active-scale-094 tw-duration-100 tw-py-5 tw-px-6 group active--translate-y-2 tw-p-1 rounded-pill border-main-600 border" data-block="button">
-                        <span class="button__flair"></span>
-                        <span class="button__label fw-bold tw-text-4">Explore Facilities</span>
-                      </a>
-                    </div>
-                  </div>
+          <div class="banner-fullbg-slide">
+            <div class="banner-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/banner-sports.png') }}');"></div>
+            <div class="banner-overlay banner-overlay-gold"></div>
+            <div class="banner-float-icons" aria-hidden="true">
+              <span class="bfi bfi-1"><i class="ph-fill ph-soccer-ball"></i></span>
+              <span class="bfi bfi-2"><i class="ph-fill ph-trophy"></i></span>
+              <span class="bfi bfi-3"><i class="ph-fill ph-music-notes"></i></span>
+              <span class="bfi bfi-4"><i class="ph-fill ph-medal"></i></span>
+            </div>
+            <div class="container max-w-1360-px position-relative banner-content-container">
+              <div class="banner-content-wrap">
+                <div class="banner-badge-pill" data-aos="fade-down" data-aos-duration="700">
+                  <span class="banner-badge-icon-circle"><i class="ph-fill ph-trophy"></i></span>
+                  <span class="banner-badge-text">Holistic Development</span>
                 </div>
-                <div class="col-lg-6">
-                  <div class="position-relative hero-img-wrap" data-aos="zoom-in" data-aos-duration="1000">
-                    <span class="d-flex align-items-center justify-content-center">
-                      <img src="user/assets/images/thumbs/school-classroom.jpg" alt="Modern Classroom at Maruthi School" class="w-100 hero-main-img" style="object-fit:cover; border-radius:24px; box-shadow: 0 24px 64px rgba(18,142,75,0.18);">
-                    </span>
-                    <div class="hero-badge hero-badge-cbse" style="" data-aos="fade-left" data-aos-duration="600" data-aos-delay="600">
-                      <span class="hero-badge-icon"><i class="ph-fill ph-desktop"></i></span>
-                      <div>
-                        <span class="hero-badge-title">Smart Learning</span>
-                        <span class="hero-badge-sub">Interactive Tools</span>
-                      </div>
-                    </div>
-                  </div>
+                <h1 class="banner-hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+                  Nurturing Talent <span class="banner-title-highlight">Beyond Academics</span>
+                </h1>
+                <p class="banner-hero-desc" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                  From sports arenas to cultural stages, we encourage students to discover their passions and excel in every field of their choice.
+                </p>
+                <div class="banner-stats-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="420">
+                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-soccer-ball"></i></span><span class="bsc-text">Sports Arena</span></div>
+                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-music-notes"></i></span><span class="bsc-text">Cultural Events</span></div>
+                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-medal"></i></span><span class="bsc-text">State Champions</span></div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="540">
+                  <a href="{{ route('contact') }}" class="banner-custom-pill-btn">
+                    <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
+                    <span class="btn-text">Apply Now</span>
+                  </a>
+                  <a href="{{ route('about') }}" class="banner-custom-pill-btn banner-custom-pill-btn-outline">
+                    <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
+                    <span class="btn-text">About Us</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Slide 3 -->
+        <!-- Slide 3: Smart Classrooms -->
         <div class="swiper-slide">
-          <div class="py-80" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);">
-            <div class="container max-w-1360-px">
-              <div class="row gy-4 align-items-center">
-                <div class="col-lg-6">
-                  <div class="position-relative">
-                    <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-white rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-4" data-aos="fade-up" data-aos-duration="600">
-                      <span class="tw-w-6 tw-h-6 border-warning-100 border bg-warning-50 rounded-circle text-warning-600 d-flex align-items-center justify-content-center tw-text-305">
-                        <i class="ph-fill ph-trophy"></i>
-                      </span>
-                      <span class="fw-normal tw-text-4 text-warning-600">
-                        Holistic Development
-                      </span>
-                    </div>
-                    <h2 class="h1 fw-semibold text-neutral-950 tw-line-height-77-px tw-mb-7" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
-                      Nurturing Talent Beyond Academics
-                    </h2>
-                    <p class="fw-normal tw-text-405 text-neutral-500 tw-mb-8" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-                      From sports arenas to cultural stages, we encourage students to discover their passions and excel 
-                      in every field of their choice.
-                    </p>
-                    <div class="d-flex align-items-center gap-3 flex-wrap" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">
-                      <a href="about-us.html" class="btn btn-main hover-style-three button--stroke active-scale-094 tw-duration-100 tw-py-5 tw-px-6 group active--translate-y-2 tw-p-1 rounded-pill border-main-600 border" data-block="button">
-                        <span class="button__flair"></span>
-                        <span class="button__label fw-bold tw-text-4">Our Achievements</span>
-                      </a>
-                    </div>
-                  </div>
+          <div class="banner-fullbg-slide">
+            <div class="banner-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/banner-classroom.png') }}');"></div>
+            <div class="banner-overlay banner-overlay-teal"></div>
+            <div class="banner-float-icons" aria-hidden="true">
+              <span class="bfi bfi-1"><i class="ph-fill ph-desktop"></i></span>
+              <span class="bfi bfi-2"><i class="ph-fill ph-chalkboard"></i></span>
+              <span class="bfi bfi-3"><i class="ph-fill ph-flask"></i></span>
+              <span class="bfi bfi-4"><i class="ph-fill ph-atom"></i></span>
+            </div>
+            <div class="container max-w-1360-px position-relative banner-content-container">
+              <div class="banner-content-wrap">
+                <div class="banner-badge-pill" data-aos="fade-down" data-aos-duration="700">
+                  <span class="banner-badge-icon-circle"><i class="ph-fill ph-chalkboard"></i></span>
+                  <span class="banner-badge-text">Modern Infrastructure</span>
                 </div>
-                <div class="col-lg-6">
-                  <div class="position-relative hero-img-wrap" data-aos="zoom-in" data-aos-duration="1000">
-                    <span class="d-flex align-items-center justify-content-center">
-                      <img src="user/assets/images/thumbs/school-sports-ground.png" alt="Sports Facilities at Maruthi School" class="w-100 hero-main-img" style="object-fit:cover; border-radius:24px; box-shadow: 0 24px 64px rgba(18,142,75,0.18);">
-                    </span>
-                    <div class="hero-badge hero-badge-cbse"  data-aos="fade-left" data-aos-duration="600" data-aos-delay="600">
-                      <span class="hero-badge-icon"><i class="ph-fill ph-soccer-ball"></i></span>
-                      <div>
-                        <span class="hero-badge-title">Sports Arena</span>
-                        <span class="hero-badge-sub">Excellence in Sports</span>
-                      </div>
-                    </div>
-                  </div>
+                <h1 class="banner-hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+                  State-of-the-Art <span class="banner-title-highlight">Smart Classrooms</span>
+                </h1>
+                <p class="banner-hero-desc" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                  We provide interactive learning environments equipped with modern technology to ensure our students stay ahead in a rapidly evolving digital world.
+                </p>
+                <div class="banner-stats-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="420">
+                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-desktop"></i></span><span class="bsc-text">Smart Boards</span></div>
+                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-wifi-high"></i></span><span class="bsc-text">Digital Labs</span></div>
+                  <div class="banner-stat-chip"><span class="bsc-icon"><i class="ph-fill ph-flask"></i></span><span class="bsc-text">Science Labs</span></div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="540">
+                  <a href="{{ route('contact') }}" class="banner-custom-pill-btn">
+                    <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
+                    <span class="btn-text">Apply Now</span>
+                  </a>
+                  <a href="{{ route('about') }}" class="banner-custom-pill-btn banner-custom-pill-btn-outline">
+                    <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
+                    <span class="btn-text">About Us</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
-      
+
       <!-- Pagination -->
       <div class="banner-pagination swiper-pagination"></div>
-      
+
       <!-- Navigation -->
       <div class="swiper-button-prev banner-button-prev"></div>
       <div class="swiper-button-next banner-button-next"></div>
@@ -246,9 +206,8 @@
 
                 <div class="position-relative hero-img-wrap">
             <span class="d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-duration="1500">
-              <img src="user/assets/images/thumbs/school-classroom.jpg"
-                alt="Maruthi Senior Secondary School Campus €“ Students in Garden" class="w-100 hero-main-img"
-                style="object-fit:cover; border-radius:24px; box-shadow: 0 24px 64px rgba(18,142,75,0.18);">
+              <img src="{{ asset('user/assets/images/thumbs/school-classroom.jpg') }}"
+                alt="Maruthi Senior Secondary School Campus - Students in Garden" class="w-100 hero-main-img">
             </span>
             <!-- Floating badge cards on hero image -->
             <div class="hero-badge hero-badge-cbse" data-aos="fade-left" data-aos-duration="800" data-aos-delay="600">
@@ -339,15 +298,8 @@
                   </div>
                 </div>
               </div>
-              <a href="about-us.html"
-                class="btn btn-main hover-style-one button--stroke active-scale-094 tw-duration-100 d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-p-1 tw-pe-8 rounded-pill aos-init aos-animate"
-                data-block="button" data-aos="fade-up" data-aos-duration="1200">
-                <span class="button__flair" style="translate: none; rotate: none; scale: none;"></span>
-                <span
-                  class="tw-w-12 tw-h-12 bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-5 z-1 position-relative group-hover-bg-white tw-duration-500 group-hover-text-main-600">
-                  <i class="ph ph-caret-right"></i>
-                </span>
-                <span class="button__label fw-medium">More About us</span>
+              <a href="{{ route('about') }}" class="btn btn-main" data-aos="fade-up" data-aos-duration="1200">
+                More About Us <i class="ph-bold ph-arrow-right ms-2"></i>
               </a>
             </div>
            
@@ -364,18 +316,7 @@
     
   <!-- icons -->
 
-   <div class="floating-icons-bg" aria-hidden="true">
-      <span class="float-icon float-icon-1"><i class="ph-fill ph-book-open"></i></span>
-      <span class="float-icon float-icon-2"><i class="ph-fill ph-pencil-simple"></i></span>
-      <span class="float-icon float-icon-4"><i class="ph-fill ph-graduation-cap"></i></span>
-      <!-- <span class="float-icon float-icon-4"><i class="ph-fill ph-atom"></i></span> -->
-      <span class="float-icon float-icon-7"><i class="ph-fill ph-calculator"></i></span>
-      <span class="float-icon float-icon-6"><i class="ph-fill ph-globe-hemisphere-east"></i></span>
-      <span class="float-icon float-icon-5"><i class="ph-fill ph-flask"></i></span>
-      <!-- <span class="float-icon float-icon-8"><i class="ph-fill ph-music-notes"></i></span> -->
-      <span class="float-icon float-icon-9"><i class="ph-fill ph-trophy"></i></span>
-      <span class="float-icon float-icon-10"><i class="ph-fill ph-chalkboard-teacher"></i></span>
-    </div>
+  
 
     <div class="container">
       <div class="text-center tw-mb-10">
@@ -538,17 +479,10 @@
                   Admissions Open
                 </span>
               </div>
-              <h2 class="text-white h4 max-w-330-px">Enroll Now for Pre-KG to Class 12 €“ CBSE Curriculum</h2>
+              <h2 class="text-white h4 max-w-330-px">Enroll Now for Pre-KG to Class 12 - CBSE Curriculum</h2>
               <div class="tw-mt-7">
-                <a href="about-us.html"
-                  class="btn btn-main hover-style-one button--stroke active-scale-094 tw-duration-100 d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-p-1 tw-pe-8 rounded-pill aos-init aos-animate"
-                  data-block="button" data-aos="fade-up" data-aos-duration="1200">
-                  <span class="button__flair" style="translate: none; rotate: none; scale: none;"></span>
-                  <span
-                    class="tw-w-12 tw-h-12 bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-5 z-1 position-relative group-hover-bg-white tw-duration-500 group-hover-text-main-600">
-                    <i class="ph ph-caret-right"></i>
-                  </span>
-                  <span class="button__label fw-medium">More About us</span>
+                <a href="{{ route('about') }}" class="btn btn-main" data-aos="fade-up" data-aos-duration="1200">
+                  More About Us <i class="ph-bold ph-arrow-right ms-2"></i>
                 </a>
               </div>
             </div>
@@ -574,15 +508,8 @@
               </div>
               <h2 class="h4 max-w-330-px text-white">Celebrating 25+ Years of Shaping Future Leaders</h2>
               <div class="tw-mt-7">
-                <a href="about-us.html"
-                  class="btn btn-main hover-style-one button--stroke active-scale-094 tw-duration-100 d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-p-1 tw-pe-8 rounded-pill aos-init aos-animate"
-                  data-block="button" data-aos="fade-up" data-aos-duration="1200">
-                  <span class="button__flair" style="translate: none; rotate: none; scale: none;"></span>
-                  <span
-                    class="tw-w-12 tw-h-12 bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-5 z-1 position-relative group-hover-bg-white tw-duration-500 group-hover-text-main-600">
-                    <i class="ph ph-caret-right"></i>
-                  </span>
-                  <span class="button__label fw-medium">More About us</span>
+                <a href="{{ route('about') }}" class="btn btn-main" data-aos="fade-up" data-aos-duration="1200">
+                  More About Us <i class="ph-bold ph-arrow-right ms-2"></i>
                 </a>
               </div>
             </div>
@@ -730,12 +657,8 @@
                   <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> State Award Recipient</div>
                   <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> CBSE Resource Person</div>
                 </div>
-                <a href="contact-us.html" class="btn btn-main hover-style-one button--stroke active-scale-094 tw-duration-100 d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-p-1 tw-pe-8 rounded-pill" data-block="button">
-                  <span class="button__flair"></span>
-                  <span class="tw-w-12 tw-h-12 bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-5 z-1 position-relative group-hover-bg-white tw-duration-500">
-                    <i class="ph ph-caret-right"></i>
-                  </span>
-                  <span class="button__label fw-medium">Contact Principal</span>
+                <a href="{{ route('contact') }}" class="btn btn-main">
+                  Contact Principal <i class="ph-bold ph-arrow-right ms-2"></i>
                 </a>
               </div>
             </div>
@@ -770,12 +693,8 @@
                   <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> Academic Excellence Award</div>
                   <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> Child Development Expert</div>
                 </div>
-                <a href="contact-us.html" class="btn btn-main hover-style-one button--stroke active-scale-094 tw-duration-100 d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-p-1 tw-pe-8 rounded-pill" data-block="button">
-                  <span class="button__flair"></span>
-                  <span class="tw-w-12 tw-h-12 bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-5 z-1 position-relative group-hover-bg-white tw-duration-500">
-                    <i class="ph ph-caret-right"></i>
-                  </span>
-                  <span class="button__label fw-medium">Contact Vice Principal</span>
+                <a href="{{ route('contact') }}" class="btn btn-main">
+                  Contact Vice Principal <i class="ph-bold ph-arrow-right ms-2"></i>
                 </a>
               </div>
             </div>
@@ -810,12 +729,8 @@
                   <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> Community Champion</div>
                   <div class="leader-highlight-chip"><i class="ph-fill ph-check-fat"></i> Educational Philanthropist</div>
                 </div>
-                <a href="about-us.html" class="btn btn-main hover-style-one button--stroke active-scale-094 tw-duration-100 d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-p-1 tw-pe-8 rounded-pill" data-block="button">
-                  <span class="button__flair"></span>
-                  <span class="tw-w-12 tw-h-12 bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-5 z-1 position-relative group-hover-bg-white tw-duration-500">
-                    <i class="ph ph-caret-right"></i>
-                  </span>
-                  <span class="button__label fw-medium">Our Story</span>
+                <a href="{{ route('about') }}" class="btn btn-main">
+                  Our Story <i class="ph-bold ph-arrow-right ms-2"></i>
                 </a>
               </div>
             </div>
@@ -1179,12 +1094,7 @@
   <!-- ========================= courses section start =========================== -->
   <section class="admissions-cta-redesign position-relative overflow-hidden">
     <!-- Floating Decorative Icons -->
-    <div class="cta-decor-icons" aria-hidden="true">
-      <div class="cta-icon-item ci-1"><i class="ph-fill ph-graduation-cap"></i></div>
-      <div class="cta-icon-item ci-2"><i class="ph-fill ph-book-open"></i></div>
-      <div class="cta-icon-item ci-3"><i class="ph-fill ph-pencil-simple"></i></div>
-      <div class="cta-icon-item ci-4"><i class="ph-fill ph-trophy"></i></div>
-    </div>
+    
 
     <div class="container position-relative z-1">
       <div class="row align-items-center gy-4">
