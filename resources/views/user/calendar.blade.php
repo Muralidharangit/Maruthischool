@@ -25,8 +25,33 @@
     @include('user.layouts.header')
     <!-- END HEADER -->
 
+    <!-- Professional Page Header -->
+    <div class="subpage-page-header">
+        <div class="container position-relative z-1">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="header-icon-bg">
+                        <i class="ph-fill ph-calendar"></i>
+                    </div>
+                    <div class="header-badge">
+                        <i class="ph-fill ph-star-four"></i> Academics
+                    </div>
+                    <h1>Academic Year Calendar</h1>
+                    <p>Year planner & full academic schedule for the session 2026 – 2027.</p>
+                    <div class="subpage-breadcrumb-bar">
+                        <a href="{{ route('index') }}">Home</a>
+                        <span class="bc-sep">/</span>
+                        <span>Academics</span>
+                        <span class="bc-sep">/</span>
+                        <span class="bc-current">Year Calendar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content Subpage Container -->
-    <div class="subpage-container bg-neutral-50">
+    <div class="subpage-container bg-dot-grid">
         <div class="container max-w-1360-px">
             <div class="row gy-4">
                 
@@ -68,17 +93,14 @@
                 <div class="col-lg-9">
                     <div class="subpage-content-card">
                         
-                        <!-- Breadcrumbs & Heading -->
-                        <div class="subpage-breadcrumbs">
-                            <a href="{{ route('index') }}">Home</a>
-                            <span class="separator">/</span>
-                            <span>Academics</span>
-                            <span class="separator">/</span>
-                            <span class="text-neutral-500">Year Calendar</span>
+                        <!-- Hero Banner -->
+                        <div class="subpage-hero-banner mb-5">
+                            <img src="{{ asset('assets/images/calendar-hero.jpg') }}" alt="Academic Calendar Hero">
                         </div>
 
-                        <h2 class="subpage-highlight-heading">Academic Year Calendar</h2>
-                        <p class="text-neutral-500 fw-bold mb-4">YEAR PLANNER & ACADEMIC SCHEDULE 2026 - 2027</p>
+                        <!-- Breadcrumbs & Heading -->
+                        <h2 class="subpage-highlight-heading">Year Planner 2026–2027</h2>
+                        <p class="text-neutral-500 fw-bold mb-4">Academic Schedule & Key Events</p>
                         
                         <!-- Calendar Table -->
                         <div class="academics-table-wrapper">
@@ -94,47 +116,47 @@
                                     <tr>
                                         <td class="class-cell">June 2026</td>
                                         <td>School Reopens for new Academic Year 2026-27 &middot; Term I Commencement</td>
-                                        <td>Academic</td>
+                                        <td><span class="cal-badge cal-badge-academic">Academic</span></td>
                                     </tr>
                                     <tr>
                                         <td class="class-cell">August 2026</td>
                                         <td>Independence Day Celebrations &middot; Unit Test I Examinations</td>
-                                        <td>Events / Exams</td>
+                                        <td><span class="cal-badge cal-badge-event">Events / Exams</span></td>
                                     </tr>
                                     <tr>
                                         <td class="class-cell">September 2026</td>
                                         <td>Teachers Day &middot; Quarterly / Mid-Term Examinations</td>
-                                        <td>Examinations</td>
+                                        <td><span class="cal-badge cal-badge-exam">Examinations</span></td>
                                     </tr>
                                     <tr>
                                         <td class="class-cell">October 2026</td>
                                         <td>Vijayadashami / Dussehra Holidays &middot; Annual Science Exhibition</td>
-                                        <td>Holidays / Expo</td>
+                                        <td><span class="cal-badge cal-badge-holiday">Holidays / Expo</span></td>
                                     </tr>
                                     <tr>
                                         <td class="class-cell">November 2026</td>
                                         <td>Childrens Day Celebration &middot; Sports Day Competitions</td>
-                                        <td>Sports & Co</td>
+                                        <td><span class="cal-badge cal-badge-sports">Sports &amp; Co</span></td>
                                     </tr>
                                     <tr>
                                         <td class="class-cell">December 2026</td>
                                         <td>Christmas Celebrations &middot; Half Yearly Exams &middot; Winter Vacations</td>
-                                        <td>Exams / Holidays</td>
+                                        <td><span class="cal-badge cal-badge-exam">Exams / Holidays</span></td>
                                     </tr>
                                     <tr>
                                         <td class="class-cell">January 2027</td>
                                         <td>Pongal Harvest Festival Holidays &middot; Republic Day Parade</td>
-                                        <td>Cultural / Holidays</td>
+                                        <td><span class="cal-badge cal-badge-cultural">Cultural / Holidays</span></td>
                                     </tr>
                                     <tr>
                                         <td class="class-cell">March 2027</td>
-                                        <td>CBSE Board Practical & Written Examinations &middot; Final Term Evaluations</td>
-                                        <td>Assessments</td>
+                                        <td>CBSE Board Practical &amp; Written Examinations &middot; Final Term Evaluations</td>
+                                        <td><span class="cal-badge cal-badge-exam">Assessments</span></td>
                                     </tr>
                                     <tr>
                                         <td class="class-cell">April 2027</td>
                                         <td>Annual Results Declaration &middot; Summer Vacation Commencement</td>
-                                        <td>Results</td>
+                                        <td><span class="cal-badge cal-badge-result">Results</span></td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -12,7 +12,6 @@
 
     <!-- SITE TITLE -->
     <title>Achievements | Maruthi Senior Secondary School Puducherry</title>
-    @include('user.layouts(')
     @include('user.layouts.links')
 </head>
 
@@ -26,8 +25,33 @@
     @include('user.layouts.header')
     <!-- END HEADER -->
 
+    <!-- Professional Page Header -->
+    <div class="subpage-page-header">
+        <div class="container position-relative z-1">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="header-icon-bg">
+                        <i class="ph-fill ph-trophy"></i>
+                    </div>
+                    <div class="header-badge">
+                        <i class="ph-fill ph-star-four"></i> Academics
+                    </div>
+                    <h1>Student Achievements</h1>
+                    <p>Celebrating excellence in academics, sports, arts, science, and beyond.</p>
+                    <div class="subpage-breadcrumb-bar">
+                        <a href="{{ route('index') }}">Home</a>
+                        <span class="bc-sep">/</span>
+                        <span>Academics</span>
+                        <span class="bc-sep">/</span>
+                        <span class="bc-current">Achievements</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content Subpage Container -->
-    <div class="subpage-container bg-neutral-50">
+    <div class="subpage-container bg-dot-grid">
         <div class="container max-w-1360-px">
             <div class="row gy-4">
                 
@@ -70,21 +94,13 @@
                     <div class="subpage-content-card">
                         
                         <!-- Breadcrumbs & Heading -->
-                        <div class="subpage-breadcrumbs">
-                            <a href="{{ route('index') }}">Home</a>
-                            <span class="separator">/</span>
-                            <span>Academics</span>
-                            <span class="separator">/</span>
-                            <span class="text-neutral-500">Achievements</span>
-                        </div>
-
-                        <h2 class="subpage-highlight-heading">Student Achievements</h2>
-                        <p class="text-neutral-500 fw-bold mb-4">OUR HONORS & RECOGNITIONS</p>
+                        <h2 class="subpage-highlight-heading">Our Honors & Recognitions</h2>
+                        <p class="text-neutral-500 fw-bold mb-4">Awards, medals, and milestones our students have achieved</p>
                         
                         <!-- Achievements Grid -->
                         <div class="row gy-4 mt-2">
                             <div class="col-md-6">
-                                <div class="p-4 border rounded-3 bg-neutral-10 tw-duration-300 hover-shadow-sm h-100">
+                                <div class="achievement-card h-100">
                                     <div class="d-flex align-items-center gap-3 mb-3">
                                         <span class="tw-w-12 tw-h-12 bg-main-50 text-main-600 rounded-circle d-flex align-items-center justify-content-center fs-4">
                                             <i class="ph ph-chalkboard-teacher"></i>
@@ -97,7 +113,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="p-4 border rounded-3 bg-neutral-10 tw-duration-300 hover-shadow-sm h-100">
+                                <div class="achievement-card h-100">
                                     <div class="d-flex align-items-center gap-3 mb-3">
                                         <span class="tw-w-12 tw-h-12 bg-main-50 text-main-600 rounded-circle d-flex align-items-center justify-content-center fs-4">
                                             <i class="ph ph-trophy"></i>
@@ -110,7 +126,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="p-4 border rounded-3 bg-neutral-10 tw-duration-300 hover-shadow-sm h-100">
+                                <div class="achievement-card h-100">
                                     <div class="d-flex align-items-center gap-3 mb-3">
                                         <span class="tw-w-12 tw-h-12 bg-main-50 text-main-600 rounded-circle d-flex align-items-center justify-content-center fs-4">
                                             <i class="ph ph-palette"></i>
@@ -123,7 +139,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="p-4 border rounded-3 bg-neutral-10 tw-duration-300 hover-shadow-sm h-100">
+                                <div class="achievement-card h-100">
                                     <div class="d-flex align-items-center gap-3 mb-3">
                                         <span class="tw-w-12 tw-h-12 bg-main-50 text-main-600 rounded-circle d-flex align-items-center justify-content-center fs-4">
                                             <i class="ph ph-atom"></i>

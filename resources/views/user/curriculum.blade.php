@@ -25,8 +25,33 @@
     @include('user.layouts.header')
     <!-- END HEADER -->
 
+    <!-- Professional Page Header -->
+    <div class="subpage-page-header">
+        <div class="container position-relative z-1">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="header-icon-bg">
+                        <i class="ph-fill ph-book-open"></i>
+                    </div>
+                    <div class="header-badge">
+                        <i class="ph-fill ph-star-four"></i> Academics
+                    </div>
+                    <h1>CBSE Curriculum</h1>
+                    <p>Comprehensive academic structure from Pre-KG to Class XII under the CBSE framework.</p>
+                    <div class="subpage-breadcrumb-bar">
+                        <a href="{{ route('index') }}">Home</a>
+                        <span class="bc-sep">/</span>
+                        <span>Academics</span>
+                        <span class="bc-sep">/</span>
+                        <span class="bc-current">Curriculum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content Subpage Container -->
-    <div class="subpage-container bg-neutral-50">
+    <div class="subpage-container bg-dot-grid">
         <div class="container max-w-1360-px">
             <div class="row gy-4">
                 
@@ -69,16 +94,8 @@
                     <div class="subpage-content-card">
                         
                         <!-- Breadcrumbs & Heading -->
-                        <div class="subpage-breadcrumbs">
-                            <a href="{{ route('index') }}">Home</a>
-                            <span class="separator">/</span>
-                            <span>Academics</span>
-                            <span class="separator">/</span>
-                            <span class="text-neutral-500">Curriculum</span>
-                        </div>
-
-                        <h2 class="subpage-highlight-heading">Maruthi Senior Secondary School</h2>
-                        <p class="text-neutral-500 fw-bold mb-4">CURRICULUM FOR THE SENIOR SECONDARY SCHOOL</p>
+                        <h2 class="subpage-highlight-heading">Curriculum Overview</h2>
+                        <p class="text-neutral-500 fw-bold mb-4">Curriculum for the Senior Secondary School</p>
                         
                         <!-- Curriculum Table -->
                         <div class="academics-table-wrapper">
