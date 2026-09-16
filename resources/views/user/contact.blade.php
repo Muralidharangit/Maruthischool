@@ -172,28 +172,23 @@
   </section>
 
 
+
   <!-- ========================= courses section start =========================== -->
-  <section class="admissions-cta-redesign position-relative overflow-hidden">
+  <section class="admissions-cta-redesign position-relative overflow-hidden bg-lightgreen">
     <!-- Floating Decorative Icons -->
-    <div class="cta-decor-icons" aria-hidden="true">
-      <div class="cta-icon-item ci-1"><i class="ph-fill ph-graduation-cap"></i></div>
-      <div class="cta-icon-item ci-2"><i class="ph-fill ph-book-open"></i></div>
-      <div class="cta-icon-item ci-3"><i class="ph-fill ph-pencil-simple"></i></div>
-      <div class="cta-icon-item ci-4"><i class="ph-fill ph-trophy"></i></div>
-    </div>
+    
 
     <div class="container position-relative z-1">
       <div class="row align-items-center gy-4">
         <div class="col-lg-7 text-lg-start text-center" data-aos="fade-right" data-aos-duration="1000">
           <div class="cta-pill-badge mb-3 d-inline-flex align-items-center gap-2">
             <span class="cta-pulse-dot"></span>
-            <span class="text-white fw-medium">Admissions Open 2026-27</span>
+            <span class=" fw-medium">Admissions Open 2026-27</span>
           </div>
-          <h2 class="cta-title text-white fw-bold mb-4">
-            Start Your Child's Journey <br class="d-none d-md-block"> to <span class="text-highlight">Excellence</span>
-            Today
+          <h2 class="cta-title  fw-bold mb-4">
+            Start Your Child's Journey <br class="d-none d-md-block"> to <span class="text-highlight">Excellence</span> Today
           </h2>
-          <p class="cta-description text-white opacity-90 mb-0">
+          <p class="cta-description opacity-90 mb-0">
             Join Puducherry's leading CBSE school. We provide a nurturing environment, <br class="d-none d-lg-block">
             state-of-the-art facilities, and a legacy of academic success.
           </p>
@@ -203,15 +198,14 @@
             <a href="contact-us.html" class="btn btn-apply-now rounded-pill px-5 py-3 fw-bold">
               Apply For Admission <i class="ph-bold ph-arrow-right ms-2"></i>
             </a>
-            <a href="tel:+919442399777"
-              class="btn btn-call-us rounded-pill px-4 py-3 fw-bold border-white text-white border-2">
+            <a href="tel:+919442399777" class="btn btn-call-us rounded-pill px-4 py-3 fw-bold border-black  border-2">
               <i class="ph-fill ph-phone me-2"></i> Inquiry
             </a>
           </div>
         </div>
       </div>
     </div>
-
+    
     <!-- Background Accents -->
     <div class="cta-accent-circle"></div>
   </section>
