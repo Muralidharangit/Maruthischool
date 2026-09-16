@@ -70,6 +70,11 @@
                                     <i class="ph ph-calendar"></i> Year Calendar
                                 </a>
                             </li>
+                            <li class="sidebar-item">
+                                <a href="{{ route('circular') }}" class="sidebar-link">
+                                    <i class="ph ph-file-text"></i> Circular
+                                </a>
+                            </li>
                             <li class="sidebar-item active">
                                 <a href="{{ route('achievements') }}" class="sidebar-link">
                                     <i class="ph ph-trophy"></i> Achievements

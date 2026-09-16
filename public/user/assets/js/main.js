@@ -195,6 +195,41 @@
         clickable: true,
       },
     });
+
+    var teachersSlider = new Swiper(".teachers-slider", {
+      spaceBetween: 30,
+      loop: true,
+      speed: 1000,
+      grabCursor: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      slidesPerView: 1,
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 3,
+        },
+      },
+      pagination: {
+        el: ".teachers-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: "#teachers-button-next",
+        prevEl: "#teachers-button-prev",
+      },
+    });
     // ==================== teacher js end =======================
 
     // ============================ student js start =======================

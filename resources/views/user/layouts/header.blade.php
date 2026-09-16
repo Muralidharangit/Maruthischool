@@ -364,13 +364,13 @@
     <div class="hdr-drawer-divider"></div>
 
     <!-- Academics submenu toggle -->
-    <a href="javascript:void(0)" class="hdr-drawer-toggle-btn {{ Request::is('curriculum') || Request::is('year-calendar') || Request::is('achievements') ? 'active-link open' : '' }}" id="acadToggle">
+    <a href="javascript:void(0)" class="hdr-drawer-toggle-btn {{ Request::is('curriculum') || Request::is('year-calendar') || Request::is('achievements') || Request::is('circular') ? 'active-link open' : '' }}" id="acadToggle">
       <span class="d-flex align-items-center gap-3">
         <i class="ph-fill ph-graduation-cap"></i> Academics
       </span>
       <i class="ph ph-caret-down sub-caret"></i>
     </a>
-    <div class="hdr-drawer-submenu {{ Request::is('curriculum') || Request::is('year-calendar') || Request::is('achievements') ? 'open' : '' }}" id="acadSubmenu">
+    <div class="hdr-drawer-submenu {{ Request::is('curriculum') || Request::is('year-calendar') || Request::is('achievements') || Request::is('circular') ? 'open' : '' }}" id="acadSubmenu">
       <a href="{{ route('curriculum') }}" class="{{ Request::is('curriculum') ? 'active-link' : '' }}">
         <i class="ph-fill ph-book-open"></i> Curriculum
       </a>
@@ -379,6 +379,9 @@
       </a>
       <a href="{{ route('achievements') }}" class="{{ Request::is('achievements') ? 'active-link' : '' }}">
         <i class="ph-fill ph-trophy"></i> Achievements
+      </a>
+      <a href="{{ route('circular') }}" class="{{ Request::is('circular') ? 'active-link' : '' }}">
+        <i class="ph-fill ph-file-text"></i> Circular
       </a>
     </div>
 
@@ -471,7 +474,7 @@
         </li>
 
         <!-- Academics Dropdown -->
-        <li class="hdr-nav-item {{ Request::is('curriculum') || Request::is('year-calendar') || Request::is('achievements') ? 'active' : '' }}">
+        <li class="hdr-nav-item {{ Request::is('curriculum') || Request::is('year-calendar') || Request::is('achievements') || Request::is('circular') ? 'active' : '' }}">
           <a href="javascript:void(0)" class="hdr-nav-link">
             Academics <i class="ph ph-caret-down caret"></i>
           </a>
@@ -489,6 +492,11 @@
             <li>
               <a href="{{ route('achievements') }}">
                 <i class="ph-fill ph-trophy"></i> Achievements
+              </a>
+            </li>
+            <li>
+              <a href="{{ route('circular') }}">
+                <i class="ph-fill ph-file-text"></i> Circular
               </a>
             </li>
           </ul>
