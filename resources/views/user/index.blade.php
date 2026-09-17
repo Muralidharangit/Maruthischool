@@ -1366,146 +1366,205 @@
 
 
 
-    <!-- ===================== popular categories section start ========================= -->
+    <!-- ===================== leadership / teachers section start ========================= -->
   <section class="leadership-section bg-light py-100 position-relative z-2 overflow-hidden bg-dot-grid">
     <div class="container position-relative z-1">
       <!-- Section Header -->
-      <div class="text-center tw-mb-15">
-        <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-white rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-4"
-          data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-          <span class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
-            <i class="ph-fill ph-star-four"></i>
-          </span>
-          <span class="fw-bold text-main-600" style="font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase;">Our Leadership</span>
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-4 tw-mb-12">
+        <div>
+          <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-white rounded-pill d-inline-flex align-items-center tw-gap-3 tw-mb-4"
+            data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <span class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
+              <i class="ph-fill ph-star-four"></i>
+            </span>
+            <span class="fw-bold text-main-600" style="font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase;">Our Leadership & Faculty</span>
+          </div>
+          <h3 class="fw-semibold text-neutral-950 mb-2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            Meet the Visionaries Behind Maruthi
+          </h3>
+          <p class="text-neutral-400 mb-0" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="font-size: 1.02rem; max-width: 620px;">
+            Our dedicated leadership team brings decades of academic excellence, administrative experience, and strategic vision to guide Maruthi School.
+          </p>
         </div>
-        <h3 class="fw-semibold text-neutral-950" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-          Meet the Visionaries Behind Maruthi
-        </h3>
-        <p class="text-neutral-400 max-w-600-px mx-auto mt-2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="font-size: 1.05rem;">
-          Our dedicated leadership team brings decades of academic excellence, administrative experience, and strategic vision to guide Maruthi School.
-        </p>
+
+        <!-- Slider Navigation Controls -->
+        <div class="d-flex align-items-center gap-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <button type="button" id="teachers-button-prev"
+            class="tw-w-12 tw-h-12 bg-white tw-student-two-shadow d-flex align-items-center justify-content-center text-main-600 tw-text-505 rounded-circle hover-bg-main-600 hover-text-white tw-duration-300 flex-shrink-0" aria-label="Previous Slide">
+            <i class="ph-bold ph-arrow-left"></i>
+          </button>
+          <button type="button" id="teachers-button-next"
+            class="tw-w-12 tw-h-12 bg-white tw-student-two-shadow d-flex align-items-center justify-content-center text-main-600 tw-text-505 rounded-circle hover-bg-main-600 hover-text-white tw-duration-300 flex-shrink-0" aria-label="Next Slide">
+            <i class="ph-bold ph-arrow-right"></i>
+          </button>
+        </div>
       </div>
 
-      <!-- Visionary Cards Grid -->
-      <div class="row g-4 justify-content-center">
-        <!-- Visionary 1: Principal -->
-        <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-          <div class="visionary-card">
-            <div class="visionary-photo-wrap">
-              <div class="visionary-role-badge">
-                <i class="ph-fill ph-graduation-cap"></i> Principal
-              </div>
-              <img src="{{ asset('user/assets/images/thumbs/principal.png') }}" alt="Dr. S. Murugesan" class="visionary-photo">
-            </div>
-            
-            <div class="visionary-info-panel">
-              <h4 class="visionary-name">Dr. S. Murugesan</h4>
-              <p class="visionary-designation">Principal</p>
-            </div>
+      <!-- Visionary / Teachers Automatic Swiper Slider -->
+      <div class="swiper teachers-slider tw-pb-6">
+        <div class="swiper-wrapper">
 
-            <!-- Sliding Bio Overlay on Hover -->
-            <div class="visionary-bio-overlay">
-              <div>
-                <h4 class="text-white fw-bold mb-2">Dr. S. Murugesan</h4>
-                <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">Principal, M.Ed., Ph.D. in Education</p>
-                <p class="visionary-bio-text">
-                  With over 28 years of dedicated service in education, Dr. S. Murugesan has been the guiding force of Maruthi Senior Secondary School, transforming it into one of Puducherry's most respected CBSE institutions.
-                </p>
-                
-                <div class="visionary-bio-highlights">
-                  <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> 28+ Years Experience</div>
-                  <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> State Award Recipient</div>
-                  <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> CBSE Resource Person</div>
+          <!-- Slide 1: Chairman - Dr. S. Ramadasse -->
+          <div class="swiper-slide">
+            <div class="visionary-card">
+              <div class="visionary-photo-wrap">
+                <div class="visionary-role-badge">
+                  <i class="ph-fill ph-crown"></i> Chairman
                 </div>
+                <img src="{{ asset('user/assets/images/Teachers/chairman-dr-s-ramadasse.png') }}" alt="Dr. S. Ramadasse - Chairman" class="visionary-photo">
               </div>
               
-              <a href="{{ route('contact') }}" class="btn-visionary-contact">
-                Contact Principal <i class="ph-bold ph-arrow-right"></i>
-              </a>
+              <div class="visionary-info-panel">
+                <h4 class="visionary-name">Dr. S. Ramadasse</h4>
+                <p class="visionary-designation">Chairman</p>
+              </div>
+
+              <!-- Sliding Bio Overlay on Hover -->
+              <div class="visionary-bio-overlay">
+                <div>
+                  <h4 class="text-white fw-bold mb-2">Dr. S. Ramadasse</h4>
+                  <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">Chairman & Founder</p>
+                  <p class="visionary-bio-text">
+                    Guiding Maruthi Senior Secondary School with an enduring vision for holistic education, ethical values, and world-class infrastructure for every student.
+                  </p>
+                  
+                  <div class="visionary-bio-highlights">
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Visionary Leadership</div>
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Academic Excellence</div>
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Community Empowerment</div>
+                  </div>
+                </div>
+                
+                <a href="{{ route('about') }}" class="btn-visionary-contact">
+                  Know More <i class="ph-bold ph-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Visionary 2: Vice Principal -->
-        <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-          <div class="visionary-card">
-            <div class="visionary-photo-wrap">
-              <div class="visionary-role-badge">
-                <i class="ph-fill ph-book-open"></i> Vice Principal
-              </div>
-              <img src="{{ asset('user/assets/images/thumbs/vice-principal.png') }}" alt="Mrs. R. Kavitha" class="visionary-photo">
-            </div>
-            
-            <div class="visionary-info-panel">
-              <h4 class="visionary-name">Mrs. R. Kavitha</h4>
-              <p class="visionary-designation">Vice Principal</p>
-            </div>
-
-            <!-- Sliding Bio Overlay on Hover -->
-            <div class="visionary-bio-overlay">
-              <div>
-                <h4 class="text-white fw-bold mb-2">Mrs. R. Kavitha</h4>
-                <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">Vice Principal, M.Sc., B.Ed.</p>
-                <p class="visionary-bio-text">
-                  Mrs. R. Kavitha brings 20 years of administrative excellence to Maruthi School. She passionately oversees academic planning, student welfare programs, and faculty development.
-                </p>
-                
-                <div class="visionary-bio-highlights">
-                  <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> 20+ Years Experience</div>
-                  <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Academic Excellence Award</div>
-                  <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Child Development Expert</div>
+          <!-- Slide 2: Secretary - Mr. Sridhar -->
+          <div class="swiper-slide">
+            <div class="visionary-card">
+              <div class="visionary-photo-wrap">
+                <div class="visionary-role-badge">
+                  <i class="ph-fill ph-briefcase"></i> Secretary
                 </div>
+                <img src="{{ asset('user/assets/images/Teachers/secretary-mr-sridhar.png') }}" alt="Mr. Sridhar - Secretary" class="visionary-photo">
               </div>
               
-              <a href="{{ route('contact') }}" class="btn-visionary-contact">
-                Contact Vice Principal <i class="ph-bold ph-arrow-right"></i>
-              </a>
+              <div class="visionary-info-panel">
+                <h4 class="visionary-name">Mr. Sridhar</h4>
+                <p class="visionary-designation">Secretary</p>
+              </div>
+
+              <!-- Sliding Bio Overlay on Hover -->
+              <div class="visionary-bio-overlay">
+                <div>
+                  <h4 class="text-white fw-bold mb-2">Mr. Sridhar</h4>
+                  <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">Secretary & Administrator</p>
+                  <p class="visionary-bio-text">
+                    Overseeing administrative governance, institutional development, and campus operations with dedication to educational excellence.
+                  </p>
+                  
+                  <div class="visionary-bio-highlights">
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Institutional Governance</div>
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Campus Development</div>
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Student Welfare</div>
+                  </div>
+                </div>
+                
+                <a href="{{ route('about') }}" class="btn-visionary-contact">
+                  Know More <i class="ph-bold ph-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Visionary 3: Co-Founder -->
-        <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-          <div class="visionary-card">
-            <div class="visionary-photo-wrap">
-              <div class="visionary-role-badge">
-                <i class="ph-fill ph-crown"></i> Co-Founder
-              </div>
-              <img src="{{ asset('user/assets/images/thumbs/co-founder.png') }}" alt="Shri. V. Annamalai" class="visionary-photo">
-            </div>
-            
-            <div class="visionary-info-panel">
-              <h4 class="visionary-name">Shri. V. Annamalai</h4>
-              <p class="visionary-designation">Co-Founder</p>
-            </div>
-
-            <!-- Sliding Bio Overlay on Hover -->
-            <div class="visionary-bio-overlay">
-              <div>
-                <h4 class="text-white fw-bold mb-2">Shri. V. Annamalai</h4>
-                <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">Co-Founder & Correspondent</p>
-                <p class="visionary-bio-text">
-                  Shri. V. Annamalai co-founded Maruthi School in 1997 with a singular vision: to bring world-class CBSE education to the families of Puducherry and guide community welfare programs.
-                </p>
-                
-                <div class="visionary-bio-highlights">
-                  <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Co-Founded in 1997</div>
-                  <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> 25+ Years Leadership</div>
-                  <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Educational Philanthropist</div>
+          <!-- Slide 3: Treasurer - Dr. S. Sattianandame -->
+          <div class="swiper-slide">
+            <div class="visionary-card">
+              <div class="visionary-photo-wrap">
+                <div class="visionary-role-badge">
+                  <i class="ph-fill ph-coins"></i> Treasurer
                 </div>
+                <img src="{{ asset('user/assets/images/Teachers/treasurer-dr-s-sattianandame.png') }}" alt="Dr. S. Sattianandame - Treasurer" class="visionary-photo">
               </div>
               
-              <a href="{{ route('about') }}" class="btn-visionary-contact">
-                Our Story <i class="ph-bold ph-arrow-right"></i>
-              </a>
+              <div class="visionary-info-panel">
+                <h4 class="visionary-name">Dr. S. Sattianandame</h4>
+                <p class="visionary-designation">Treasurer</p>
+              </div>
+
+              <!-- Sliding Bio Overlay on Hover -->
+              <div class="visionary-bio-overlay">
+                <div>
+                  <h4 class="text-white fw-bold mb-2">Dr. S. Sattianandame</h4>
+                  <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">Treasurer</p>
+                  <p class="visionary-bio-text">
+                    Managing strategic financial stewardship, resource allocation, and sustained investments in top-tier educational facilities and technology.
+                  </p>
+                  
+                  <div class="visionary-bio-highlights">
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Strategic Planning</div>
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Resource Allocation</div>
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Academic Stewardship</div>
+                  </div>
+                </div>
+                
+                <a href="{{ route('about') }}" class="btn-visionary-contact">
+                  Know More <i class="ph-bold ph-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
+
+          <!-- Slide 4: Principal - Mrs. Mahalakshmi K. -->
+          <div class="swiper-slide">
+            <div class="visionary-card">
+              <div class="visionary-photo-wrap">
+                <div class="visionary-role-badge">
+                  <i class="ph-fill ph-graduation-cap"></i> Principal
+                </div>
+                <img src="{{ asset('user/assets/images/Teachers/principal-mrs-mahalakshmi-k.png') }}" alt="Mrs. Mahalakshmi K. - Principal" class="visionary-photo">
+              </div>
+              
+              <div class="visionary-info-panel">
+                <h4 class="visionary-name">Mrs. Mahalakshmi K.</h4>
+                <p class="visionary-designation">Principal</p>
+              </div>
+
+              <!-- Sliding Bio Overlay on Hover -->
+              <div class="visionary-bio-overlay">
+                <div>
+                  <h4 class="text-white fw-bold mb-2">Mrs. Mahalakshmi K.</h4>
+                  <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">Principal</p>
+                  <p class="visionary-bio-text">
+                    Leading academic curriculum, faculty mentorship, and student development to foster leadership, curiosity, and high scholastic achievement.
+                  </p>
+                  
+                  <div class="visionary-bio-highlights">
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> CBSE Curriculum Leader</div>
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Faculty Mentorship</div>
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Student Development</div>
+                  </div>
+                </div>
+                
+                <a href="{{ route('contact') }}" class="btn-visionary-contact">
+                  Contact Principal <i class="ph-bold ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
+
+        <!-- Swiper Pagination -->
+        <div class="teachers-pagination swiper-pagination position-relative tw-mt-8"></div>
       </div>
 
     </div>
   </section>
-  <!-- ===================== popular categories section end ========================= -->
+  <!-- ===================== leadership / teachers section end ========================= -->
 
 
 
@@ -1971,5 +2030,46 @@
 
 
     @include('user.layouts.script')
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if (typeof Swiper !== 'undefined' && document.querySelector('.teachers-slider')) {
+          new Swiper('.teachers-slider', {
+            spaceBetween: 30,
+            loop: true,
+            speed: 1000,
+            grabCursor: true,
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            },
+            slidesPerView: 1,
+            breakpoints: {
+              576: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              992: {
+                slidesPerView: 3,
+              },
+              1200: {
+                slidesPerView: 3,
+              },
+            },
+            pagination: {
+              el: '.teachers-pagination',
+              clickable: true,
+            },
+            navigation: {
+              nextEl: '#teachers-button-next',
+              prevEl: '#teachers-button-prev',
+            },
+          });
+        }
+      });
+    </script>
 </body>
 </html>

@@ -90,6 +90,12 @@ class ClientController extends Controller
         return view('user.calendar');
     }
 
+    public function circular()
+    {
+
+        return view('user.circular');
+    }
+
     public function services()
     {
 

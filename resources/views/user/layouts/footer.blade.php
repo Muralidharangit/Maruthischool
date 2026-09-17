@@ -109,39 +109,39 @@
             <span class="tw-w-13 tw-h-05 bg-main-600 tw-mt-3 tw-mb-5"></span>
             <ul class="d-flex flex-column tw-gap-6">
               <li>
-                  <a href="{{ route('event_page') }}"
+                  <a href="{{ route('circular') }}"
                   class="fw-medium tw-text-4 text-blackfoot d-flex align-items-center tw-gap-2 hover-underline">
                   <span>
                     <i class="ph-bold ph-arrow-right"></i>
                   </span>
-                  Events
+                  Circulars
                 </a>
               </li>
               <li>
-                 <a href="{{ route('contact') }}"
+                  <a href="{{ route('calendar') }}"
+                  class="fw-medium tw-text-4 text-blackfoot d-flex align-items-center tw-gap-2 hover-underline">
+                  <span>
+                    <i class="ph-bold ph-arrow-right"></i>
+                  </span>
+                  Academic Calendar
+                </a>
+              </li>
+              <li>
+                  <a href="{{ route('curriculum') }}"
+                  class="fw-medium tw-text-4 text-blackfoot d-flex align-items-center tw-gap-2 hover-underline">
+                  <span>
+                    <i class="ph-bold ph-arrow-right"></i>
+                  </span>
+                  Curriculum
+                </a>
+              </li>
+              <li>
+                  <a href="{{ route('contact') }}"
                   class="fw-medium tw-text-4 text-blackfoot d-flex align-items-center tw-gap-2 hover-underline">
                   <span>
                     <i class="ph-bold ph-arrow-right"></i>
                   </span>
                   Admission
-                </a>
-              </li>
-              <li>
-              <a href="{{ route('contact') }}"
-                  class="fw-medium tw-text-4 text-blackfoot d-flex align-items-center tw-gap-2 hover-underline">
-                  <span>
-                    <i class="ph-bold ph-arrow-right"></i>
-                  </span>
-                  Our Mission
-                </a>
-              </li>
-              <li>
-               <a href="{{ route('about') }}"
-                  class="fw-medium tw-text-4 text-blackfoot d-flex align-items-center tw-gap-2 hover-underline">
-                  <span>
-                    <i class="ph-bold ph-arrow-right"></i>
-                  </span>
-                  Our Vision
                 </a>
               </li>
 

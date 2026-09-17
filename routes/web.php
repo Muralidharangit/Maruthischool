@@ -22,6 +22,7 @@ Route::get('gallery', [ClientController::class, 'gallery'])->name('gallery');
 Route::get('achievements', [ClientController::class, 'achievements'])->name('achievements');
 Route::get('curriculum', [ClientController::class, 'curriculum'])->name('curriculum');
 Route::get('year-calendar', [ClientController::class, 'calendar'])->name('calendar');
+Route::get('circular', [ClientController::class, 'circular'])->name('circular');
 
 Route::get('services', [ClientController::class, 'services'])->name('services');
 Route::get('projects', [ClientController::class, 'projects'])->name('projects');
