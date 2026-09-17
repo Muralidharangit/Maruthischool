@@ -75,7 +75,7 @@
       <h2 class="text-white h1 mb-3">Contact Us</h2>
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ route('index') }}" class="text-white">Home</a></li>
           <li class="breadcrumb-item active text-white opacity-75" aria-current="page">Contact</li>
         </ol>
       </nav>
@@ -174,40 +174,36 @@
 
 
   <!-- ========================= courses section start =========================== -->
-  <section class="admissions-cta-redesign position-relative overflow-hidden bg-lightgreen">
-    <!-- Floating Decorative Icons -->
-    
-
+  <section class="admissions-cta-redesign position-relative overflow-hidden">
     <div class="container position-relative z-1">
       <div class="row align-items-center gy-4">
         <div class="col-lg-7 text-lg-start text-center" data-aos="fade-right" data-aos-duration="1000">
           <div class="cta-pill-badge mb-3 d-inline-flex align-items-center gap-2">
             <span class="cta-pulse-dot"></span>
-            <span class=" fw-medium">Admissions Open 2026-27</span>
+            <span class="fw-semibold">Admissions Open 2026-27</span>
           </div>
-          <h2 class="cta-title  fw-bold mb-4">
+          <h2 class="cta-title fw-bold mb-3">
             Start Your Child's Journey <br class="d-none d-md-block"> to <span class="text-highlight">Excellence</span> Today
           </h2>
-          <p class="cta-description opacity-90 mb-0">
-            Join Puducherry's leading CBSE school. We provide a nurturing environment, <br class="d-none d-lg-block">
-            state-of-the-art facilities, and a legacy of academic success.
+          <p class="cta-description mb-3">
+            Join Puducherry's leading CBSE school with a legacy of 25+ years. Guided by <strong>“Wisdom Wins”</strong> — developing wisdom to think, courage to question, discipline to act, and compassion to contribute.
           </p>
+          <div class="cta-tamil-quote-badge mb-2">
+            <span class="small fw-semibold">"கல்வியின் நோக்கம் அறிவு மட்டுமல்ல; ஞானமும் நற்பண்பும் வளர்ப்பதே."</span>
+          </div>
         </div>
         <div class="col-lg-5 text-lg-end text-center" data-aos="fade-left" data-aos-duration="1000">
           <div class="cta-btn-group d-flex flex-column flex-sm-row justify-content-lg-end gap-3 align-items-center">
-            <a href="contact-us.html" class="btn btn-apply-now rounded-pill px-5 py-3 fw-bold">
+            <a href="{{ route('contact') }}" class="btn btn-apply-now rounded-pill px-5 py-3 fw-bold text-decoration-none">
               Apply For Admission <i class="ph-bold ph-arrow-right ms-2"></i>
             </a>
-            <a href="tel:+919442399777" class="btn btn-call-us rounded-pill px-4 py-3 fw-bold border-black  border-2">
-              <i class="ph-fill ph-phone me-2"></i> Inquiry
+            <a href="tel:+919442399777" class="btn btn-call-us rounded-pill px-4 py-3 fw-bold text-decoration-none">
+              <i class="ph-fill ph-phone-call me-2"></i> Inquire Now
             </a>
           </div>
         </div>
       </div>
     </div>
-    
-    <!-- Background Accents -->
-    <div class="cta-accent-circle"></div>
   </section>
   <!-- ========================= courses section end =========================== -->
 
@@ -236,7 +232,18 @@
                     title: "Success!",
                     text: "{{ session('success') }}",
                     icon: "success",
-                    confirmButtonText: "OK"
+                    confirmButtonText: "OK",
+                    confirmButtonColor: "#047857"
+                });
+            @endif
+
+            @if (session('error'))
+                Swal.fire({
+                    title: "Notice",
+                    text: "{{ session('error') }}",
+                    icon: "error",
+                    confirmButtonText: "OK",
+                    confirmButtonColor: "#dc2626"
                 });
             @endif
         });

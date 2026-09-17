@@ -13,672 +13,6 @@
 
     <title>Maruthi Senior Secondary School Puducherry | CBSE Affiliated | Pre-KG to Class 12</title>
     @include('user.layouts.links')
-
-    <!-- Redesign Overrides: Mastery Theme Visuals with Maruthi Branding -->
-    <style>
-        /* Feature Overlapping Cards */
-        .features-overlap-row {
-            margin-top: 0;
-            position: relative;
-            z-index: 10;
-            padding-bottom: 0;
-        }
-
-        .feature-overlap-card {
-            border-radius: 16px;
-            padding: 40px 35px;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            border: none;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .feature-overlap-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
-        }
-
-        .feature-icon-circle {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            margin-bottom: 25px;
-            transition: all 0.3s ease;
-        }
-
-        /* Card 2: Gray Background with Black Text & Green Accents */
-        .feature-overlap-card.card-gray {
-            background: #f1f5f9;
-            color: #111111;
-            border: 1px solid rgba(18, 142, 75, 0.08);
-        }
-        .feature-overlap-card.card-gray h4 {
-            color: #111111 !important;
-        }
-        .feature-overlap-card.card-gray p {
-            color: #555555 !important;
-        }
-        .feature-overlap-card.card-gray .feature-icon-circle {
-            background-color: #ffffff;
-            color: var(--brand);
-            box-shadow: 0 8px 20px rgba(18, 142, 75, 0.08);
-        }
-        .feature-overlap-card.card-gray .feature-card-btn {
-            color: var(--brand) !important;
-        }
-
-        /* Card 2: White Background with Black Text & Green Accents */
-        .feature-overlap-card.card-white {
-            background: #ffffff;
-            color: #111111;
-            border: 1px solid rgba(18, 142, 75, 0.12);
-        }
-        .feature-overlap-card.card-white h4 {
-            color: #111111 !important;
-        }
-        .feature-overlap-card.card-white p {
-            color: #555555 !important;
-        }
-        .feature-overlap-card.card-white .feature-icon-circle {
-            background-color: var(--brand-pale, #e8f8ef);
-            color: var(--brand);
-            box-shadow: 0 8px 20px rgba(18, 142, 75, 0.08);
-        }
-        .feature-overlap-card.card-white .feature-card-btn {
-            color: var(--brand) !important;
-        }
-
-        /* Card 3: Black Background with White Text & Green Accents */
-        .feature-overlap-card.card-black {
-            background: linear-gradient(135deg, #111111, #1e1e1e);
-            color: #ffffff;
-        }
-        .feature-overlap-card.card-black h4 {
-            color: #ffffff !important;
-        }
-        .feature-overlap-card.card-black p {
-            color: rgba(255, 255, 255, 0.8) !important;
-        }
-        .feature-overlap-card.card-black .feature-icon-circle {
-            background-color: rgba(18, 142, 75, 0.15);
-            color: var(--brand-light, #1aad5d);
-        }
-        .feature-overlap-card.card-black .feature-card-btn {
-            color: var(--brand-light, #1aad5d) !important;
-        }
-
-        .feature-card-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 20px;
-            font-weight: 700;
-            font-size: 0.88rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .feature-card-btn:hover {
-            opacity: 0.85;
-            padding-left: 5px;
-        }
-
-        /* About Campus Overrides */
-        .about-section-styled {
-            padding: 120px 0 100px 0;
-            position: relative;
-            background-color: #f8fafc;
-        }
-
-        .about-main-img {
-            border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.15);
-            transition: all 0.4s ease;
-        }
-
-        .about-main-img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 35px 60px -15px rgba(18, 142, 75, 0.2);
-        }
-
-        .about-badge-floating {
-            position: absolute;
-            bottom: -20px;
-            right: -10px;
-            background: #ffffff;
-            border-left: 6px solid var(--brand);
-            border-radius: 16px;
-            padding: 20px 28px;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
-            z-index: 10;
-            transition: all 0.3s ease;
-        }
-
-        .about-badge-floating:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Admissions & Glassmorphic Inquiry Form Section */
-        .admission-banner-section {
-            background: linear-gradient(135deg, #111111, rgba(18, 142, 75, 0.9)), url('{{ asset("user/assets/images/thumbs/promo-banner-bg.png") }}');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 100px 0;
-            position: relative;
-            border-radius: 0 !important;
-            margin: 0 !important;
-            box-shadow: none !important;
-        }
-
-        .glass-inquiry-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 40px 35px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
-        }
-
-        .glass-inquiry-card h4 {
-            color: #ffffff !important;
-            font-weight: 800;
-            margin-bottom: 5px;
-            font-family: var(--font-heading) !important;
-        }
-
-        .glass-inquiry-card p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-            margin-bottom: 25px;
-        }
-
-        .glass-form-input {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 10px;
-            color: #ffffff !important;
-            padding: 12px 18px;
-            transition: all 0.3s ease;
-            font-size: 0.92rem;
-        }
-
-        .glass-form-input:focus {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: var(--brand) !important;
-            box-shadow: 0 0 15px rgba(18, 142, 75, 0.25) !important;
-            outline: none;
-        }
-
-        .glass-form-input::placeholder {
-            color: rgba(255, 255, 255, 0.55);
-        }
-
-        .glass-form-select {
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
-            background-repeat: no-repeat !important;
-            background-position: right 1rem center !important;
-            background-size: 16px 12px !important;
-        }
-
-        .glass-form-select option {
-            background-color: #111111;
-            color: #ffffff;
-        }
-
-        .btn-inquiry-submit {
-            background: var(--brand) !important;
-            color: #ffffff !important;
-            font-weight: 700;
-            border: none;
-            border-radius: 10px;
-            padding: 14px 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(18, 142, 75, 0.2);
-        }
-
-        .btn-inquiry-submit:hover {
-            background: #ffffff !important;
-            color: var(--brand) !important;
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.25);
-        }
-
-        /* Classes We Offer Grid */
-        .class-stage-card {
-            background: #ffffff;
-            border-radius: 16px;
-            border: 1px solid rgba(15, 23, 42, 0.05);
-            padding: 40px 30px;
-            height: 100%;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.02);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .class-stage-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(18, 142, 75, 0.08);
-            border-color: rgba(18, 142, 75, 0.18);
-        }
-
-        .class-stage-icon {
-            width: 65px;
-            height: 65px;
-            border-radius: 14px;
-            background-color: var(--brand-pale);
-            color: var(--brand);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            margin-bottom: 24px;
-            transition: all 0.3s ease;
-        }
-
-        .class-stage-card:hover .class-stage-icon {
-            background-color: var(--brand);
-            color: #ffffff;
-            box-shadow: 0 12px 24px rgba(18, 142, 75, 0.22);
-        }
-
-        .class-stage-title {
-            font-family: var(--font-heading) !important;
-            font-size: 1.25rem !important;
-            font-weight: 700 !important;
-            color: #111111 !important;
-            margin-bottom: 12px;
-        }
-
-        .class-stage-desc {
-            font-size: 0.95rem;
-            color: var(--slate-gray);
-            line-height: 1.6;
-        }
-
-        /* News & Events Overrides */
-        .event-card-modern {
-            border-radius: 18px !important;
-            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.05) !important;
-            border: 1px solid rgba(15, 23, 42, 0.04) !important;
-            overflow: hidden;
-            transition: all 0.4s ease;
-        }
-
-        .event-card-modern:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 25px 45px rgba(18, 142, 75, 0.12) !important;
-        }
-
-        .news-date-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: linear-gradient(135deg, var(--brand), var(--brand-light)) !important;
-            color: #ffffff !important;
-            padding: 12px 18px;
-            border-bottom-right-radius: 18px;
-            text-align: center;
-            z-index: 10;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .news-date-overlay h2 {
-            font-size: 1.6rem !important;
-            font-weight: 800 !important;
-            color: #ffffff !important;
-            margin: 0 !important;
-            line-height: 1 !important;
-        }
-
-        .news-date-overlay span {
-            font-size: 0.72rem !important;
-            font-weight: 700 !important;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* CTA Banner Gold/Orange text overrides */
-        .cta-title .text-highlight {
-            color: var(--brand-light, #1aad5d) !important;
-            background: none !important;
-            -webkit-text-fill-color: initial !important;
-        }
-
-        .btn-apply-now {
-            background: var(--brand) !important;
-            color: #ffffff !important;
-        }
-        
-        .btn-apply-now:hover {
-            background: #ffffff !important;
-            color: var(--brand) !important;
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2) !important;
-        }
-
-        /* Program Slider Card with Hover Image Transition */
-        .program-slider-card {
-            background-color: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            border-radius: 20px;
-            padding: 40px 30px;
-            height: 420px; /* fixed height for cards in slider */
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
-            z-index: 1;
-            text-align: left;
-        }
-
-        .program-slider-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 30px 60px rgba(4, 120, 87, 0.15);
-            border-color: rgba(4, 120, 87, 0.2);
-        }
-
-        /* Background Image that animates on hover */
-        .program-card-bg-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transform: scale(1.15);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            z-index: -2;
-        }
-
-        .program-slider-card:hover .program-card-bg-img {
-            opacity: 1;
-            transform: scale(1.02);
-        }
-
-        /* Dark Overlay that appears on hover for readability */
-        .program-card-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(15, 23, 42, 0.15), rgba(15, 23, 42, 0.85));
-            opacity: 0;
-            transition: all 0.4s ease;
-            z-index: -1;
-        }
-
-        .program-slider-card:hover .program-card-overlay {
-            opacity: 1;
-        }
-
-        /* Content Styling */
-        .program-card-content {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            z-index: 2;
-        }
-
-        .program-card-icon {
-            width: 65px;
-            height: 65px;
-            border-radius: 16px;
-            background-color: var(--brand-pale, #f1f5f9);
-            color: var(--brand);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            margin-bottom: 25px;
-            transition: all 0.4s ease;
-            flex-shrink: 0;
-        }
-
-        .program-slider-card:hover .program-card-icon {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #ffffff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .program-card-title {
-            font-family: var(--font-heading) !important;
-            font-size: 1.3rem !important;
-            font-weight: 700 !important;
-            color: #111111;
-            margin-bottom: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .program-slider-card:hover .program-card-title {
-            color: #ffffff !important;
-        }
-
-        .program-card-desc {
-            font-size: 0.95rem;
-            color: #555555;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            flex-grow: 1;
-            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-            opacity: 1;
-            visibility: visible;
-            max-height: 150px;
-            overflow: hidden;
-        }
-
-        .program-slider-card:hover .program-card-desc {
-            opacity: 0;
-            visibility: hidden;
-            max-height: 0;
-            margin-bottom: 0;
-            padding: 0;
-        }
-
-        .program-card-link {
-            font-weight: 700;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--brand) !important;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .program-slider-card:hover .program-card-link {
-            color: #ffffff !important;
-            gap: 10px;
-        }
-
-        /* Visionary Leadership Grid Overhaul */
-        .visionary-card {
-            background: #ffffff;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            height: 540px; /* fixed height for alignment */
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .visionary-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(4, 120, 87, 0.12);
-            border-color: rgba(4, 120, 87, 0.15);
-        }
-
-        .visionary-photo-wrap {
-            width: 100%;
-            height: 400px;
-            position: relative;
-            overflow: hidden;
-            background-color: #f8fafc;
-        }
-
-        .visionary-photo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .visionary-card:hover .visionary-photo {
-            transform: scale(1.08);
-        }
-
-        /* Float Role Badge */
-        .visionary-role-badge {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: var(--brand);
-            color: #ffffff;
-            font-size: 0.78rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 8px 16px;
-            border-radius: 30px;
-            z-index: 10;
-            box-shadow: 0 8px 20px rgba(4, 120, 87, 0.25);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        /* Default Info Panel at the bottom */
-        .visionary-info-panel {
-            padding: 25px 25px;
-            background: #ffffff;
-            border-top: 1px solid rgba(0, 0, 0, 0.03);
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            transition: all 0.4s ease;
-        }
-
-        .visionary-name {
-            font-family: var(--font-heading) !important;
-            font-size: 1.35rem !important;
-            font-weight: 800 !important;
-            color: #111111;
-            margin-bottom: 6px;
-        }
-
-        .visionary-designation {
-            font-size: 0.88rem;
-            color: var(--brand);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0;
-        }
-
-        /* Sliding Bio Overlay */
-        .visionary-bio-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, #090d16 100%);
-            padding: 40px 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            opacity: 0;
-            transform: translateY(100%);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            z-index: 20;
-            text-align: left;
-        }
-
-        .visionary-card:hover .visionary-bio-overlay {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .visionary-bio-text {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.92rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .visionary-bio-highlights {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 25px;
-        }
-
-        .visionary-highlight-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #ffffff;
-            font-size: 0.88rem;
-            font-weight: 500;
-        }
-
-        .visionary-highlight-item i {
-            color: var(--brand-light, #10b981);
-        }
-
-        .btn-visionary-contact {
-            background: var(--brand) !important;
-            color: #ffffff !important;
-            font-weight: 700;
-            border: none;
-            border-radius: 12px;
-            padding: 12px 20px;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 0.82rem;
-            letter-spacing: 0.05em;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        .btn-visionary-contact:hover {
-            background: #ffffff !important;
-            color: var(--brand) !important;
-        }
-    </style>
 </head>
 
 <body class="body-fullpage">
@@ -701,7 +35,7 @@
     <div class="swiper banner-slider">
       <div class="swiper-wrapper">
 
-        <!-- Slide 1: Campus / General -->
+        <!-- Slide 1: Welcome & Overview -->
         <div class="swiper-slide">
           <div class="banner-fullbg-slide">
             <div class="banner-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/banner-campus.png') }}');"></div>
@@ -709,14 +43,14 @@
             <div class="container max-w-1360-px position-relative banner-content-container">
               <div class="banner-content-wrap">
                 <div class="banner-badge-pill" data-aos="fade-down" data-aos-duration="700">
-                  <span class="banner-badge-icon-circle"><i class="ph-fill ph-star-four"></i></span>
+                  <span class="banner-badge-icon-circle"><i class="ph-fill ph-graduation-cap"></i></span>
                   <span class="banner-badge-text">CBSE Affiliated &middot; Aff No. 2930027</span>
                 </div>
                 <h1 class="banner-hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
-                  Excellence in <span class="banner-title-highlight">CBSE Education</span><br>Since 1997
+                  Welcome to <span class="banner-title-highlight">Maruthi Senior Secondary School</span>
                 </h1>
                 <p class="banner-hero-desc" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                  Maruthi Senior Secondary School is a premier CBSE-affiliated institution in Puducherry, committed to holistic development and academic excellence from Pre-KG to Class 12.
+                  A premier educational institution in Puducherry committed to nurturing young minds through academic excellence, character, discipline, creativity, and holistic development.
                 </p>
                 <div class="d-flex align-items-center justify-content-start gap-3 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="540">
                   <a href="{{ route('contact') }}" class="banner-custom-pill-btn">
@@ -733,7 +67,7 @@
           </div>
         </div>
 
-        <!-- Slide 2: Sports -->
+        <!-- Slide 2: Educational Philosophy "Wisdom Wins" -->
         <div class="swiper-slide">
           <div class="banner-fullbg-slide">
             <div class="banner-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/banner-sports.png') }}');"></div>
@@ -741,14 +75,14 @@
             <div class="container max-w-1360-px position-relative banner-content-container">
               <div class="banner-content-wrap">
                 <div class="banner-badge-pill" data-aos="fade-down" data-aos-duration="700">
-                  <span class="banner-badge-icon-circle"><i class="ph-fill ph-trophy"></i></span>
-                  <span class="banner-badge-text">Holistic Development</span>
+                  <span class="banner-badge-icon-circle"><i class="ph-fill ph-lightbulb"></i></span>
+                  <span class="banner-badge-text">Educational Philosophy</span>
                 </div>
                 <h1 class="banner-hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
-                  Nurturing Talent <span class="banner-title-highlight">Beyond Academics</span>
+                  Guided by Our Motto <span class="banner-title-highlight">“Wisdom Wins”</span>
                 </h1>
                 <p class="banner-hero-desc" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                  From sports arenas to cultural stages, we encourage students to discover their passions and excel in every field of their choice.
+                  True education develops the wisdom to think, the courage to question, the discipline to act, and the compassion to contribute meaningfully to society.
                 </p>
                 <div class="d-flex align-items-center justify-content-start gap-3 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="540">
                   <a href="{{ route('contact') }}" class="banner-custom-pill-btn">
@@ -757,7 +91,7 @@
                   </a>
                   <a href="{{ route('about') }}" class="banner-custom-pill-btn banner-custom-pill-btn-outline">
                     <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
-                    <span class="btn-text">About Us</span>
+                    <span class="btn-text">Discover More</span>
                   </a>
                 </div>
               </div>
@@ -765,7 +99,7 @@
           </div>
         </div>
 
-        <!-- Slide 3: Smart Classrooms -->
+        <!-- Slide 3: 25 Years Silver Jubilee -->
         <div class="swiper-slide">
           <div class="banner-fullbg-slide">
             <div class="banner-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/banner-classroom.png') }}');"></div>
@@ -773,14 +107,14 @@
             <div class="container max-w-1360-px position-relative banner-content-container">
               <div class="banner-content-wrap">
                 <div class="banner-badge-pill" data-aos="fade-down" data-aos-duration="700">
-                  <span class="banner-badge-icon-circle"><i class="ph-fill ph-chalkboard"></i></span>
-                  <span class="banner-badge-text">Modern Infrastructure</span>
+                  <span class="banner-badge-icon-circle"><i class="ph-fill ph-medal"></i></span>
+                  <span class="banner-badge-text">Silver Jubilee &middot; 25+ Years Legacy</span>
                 </div>
                 <h1 class="banner-hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
-                  State-of-the-Art <span class="banner-title-highlight">Smart Classrooms</span>
+                  25 Years of <span class="banner-title-highlight">Educational Excellence</span>
                 </h1>
                 <p class="banner-hero-desc" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                  We provide interactive learning environments equipped with modern technology to ensure our students stay ahead in a rapidly evolving digital world.
+                  Shaping responsible citizens and lifelong learners through core values: Discipline, Knowledge, Integrity, Responsibility, Respect, and Leadership.
                 </p>
                 <div class="d-flex align-items-center justify-content-start gap-3 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="540">
                   <a href="{{ route('contact') }}" class="banner-custom-pill-btn">
@@ -789,7 +123,7 @@
                   </a>
                   <a href="{{ route('about') }}" class="banner-custom-pill-btn banner-custom-pill-btn-outline">
                     <span class="btn-icon-circle"><i class="ph ph-caret-right"></i></span>
-                    <span class="btn-text">About Us</span>
+                    <span class="btn-text">Our Journey</span>
                   </a>
                 </div>
               </div>
@@ -813,61 +147,61 @@
   <section class="py-80 bg-white bg-dot-grid">
     <div class="container">
       <div class="row g-4 justify-content-center features-overlap-row">
-        <!-- Card 1: CBSE Curriculum -->
+        <!-- Card 1: Academic Excellence -->
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-          <div class="feature-overlap-card card-gray">
+          <div class="feature-overlap-card">
             <div>
               <div class="feature-icon-circle">
                 <i class="ph-fill ph-certificate"></i>
               </div>
               <h4 class="h5 fw-bold mb-3">Academic Excellence</h4>
-              <p class="mb-0" style="font-size: 0.95rem;">
-                Offering a robust CBSE-affiliated curriculum from Pre-KG to Class 12, focusing on conceptual clarity, creativity, and student success.
+              <p class="mb-0">
+                Following the CBSE curriculum with concept-based learning, strong foundations, continuous assessment, and individual academic mentoring.
               </p>
             </div>
             <div>
-              <a href="{{ route('curriculum') }}" class="feature-card-btn" style="color: var(--brand) !important;">
+              <a href="{{ route('curriculum') }}" class="feature-card-btn">
                 Explore Curriculum <i class="ph-bold ph-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Card 2: Holistic Growth -->
+        <!-- Card 2: Beyond The Classroom -->
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-          <div class="feature-overlap-card card-gray">
+          <div class="feature-overlap-card">
             <div>
               <div class="feature-icon-circle">
                 <i class="ph-fill ph-trophy"></i>
               </div>
-              <h4 class="h5 fw-bold mb-3">Beyond Academics</h4>
-              <p class="mb-0" style="font-size: 0.95rem;">
-                Nurturing multi-faceted talents in state-of-the-art sports arenas, music, dance, visual arts, and vibrant cultural activities.
+              <h4 class="h5 fw-bold mb-3">Beyond The Classroom</h4>
+              <p class="mb-0">
+                Learning beyond textbooks through Silambam, Karate, Taekwondo, Classical Dance, Yoga, Chess, Sports, Athletics, and student clubs.
               </p>
             </div>
             <div>
-              <a href="{{ route('gallery') }}" class="feature-card-btn" style="color: var(--brand) !important;">
-                View Student Life <i class="ph-bold ph-arrow-right"></i>
+              <a href="{{ route('gallery') }}" class="feature-card-btn">
+                View Activities <i class="ph-bold ph-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Card 3: Modern Labs & Facilities -->
+        <!-- Card 3: Holistic Development -->
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-          <div class="feature-overlap-card card-gray">
+          <div class="feature-overlap-card">
             <div>
               <div class="feature-icon-circle">
-                <i class="ph-fill ph-chalkboard"></i>
+                <i class="ph-fill ph-heartbeat"></i>
               </div>
-              <h4 class="h5 text-white fw-bold mb-3">Expert Guidance</h4>
-              <p class="text-white opacity-90 mb-0" style="font-size: 0.95rem;">
-                Highly qualified and dedicated teachers mentoring students in tech-enabled smart classrooms and advanced science/computer labs.
+              <h4 class="h5 fw-bold mb-3">Holistic Development</h4>
+              <p class="mb-0">
+                Mind. Body. Character. Fostering Intellectual, Physical, Emotional, Social, and Moral growth to build capable and compassionate leaders.
               </p>
             </div>
             <div>
-              <a href="{{ route('about') }}" class="feature-card-btn" style="color: var(--brand-light) !important;">
-                Meet Our Faculty <i class="ph-bold ph-arrow-right"></i>
+              <a href="{{ route('about') }}" class="feature-card-btn">
+                Our Philosophy <i class="ph-bold ph-arrow-right"></i>
               </a>
             </div>
           </div>
@@ -889,19 +223,19 @@
             <div class="tw-py-1 tw-ps-105 tw-pe-4 bg-main-50 rounded-pill d-inline-flex align-items-center tw-gap-3 mb-4"
               data-aos="fade-up" data-aos-duration="800">
               <span class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center">
-                <i class="ph-fill ph-star-four"></i>
+                <i class="ph-fill ph-medal"></i>
               </span>
               <span class="fw-bold text-main-600" style="font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase;">
-                Welcome to Our Campus
+                25 Years of Educational Excellence
               </span>
             </div>
             
             <h3 class="fw-semibold text-neutral-950 mb-4 display-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-              A School That Invests in Every Child's Future
+              Nurturing Young Minds with Character, Wisdom &amp; Excellence
             </h3>
             
-            <p class="text-neutral-400 mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" style="font-size: 1.05rem; line-height: 1.7;">
-              At Maruthi Senior Secondary School, we believe every student has unique potential. Our environment is designed to bring out the best in each child through quality education, modern facilities, and holistic development.
+            <p class="text-neutral-400 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" style="font-size: 1.05rem; line-height: 1.7;">
+              Welcome to <strong>Maruthi Senior Secondary School</strong>, a vibrant learning community where every child is encouraged to discover their potential, develop confidence, and pursue excellence under our guiding philosophy: <em>“Wisdom Wins.”</em>
             </p>
 
             <div class="row g-4 mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
@@ -911,41 +245,41 @@
                   <i class="ph-fill ph-certificate"></i>
                 </div>
                 <div>
-                  <h5 class="fw-bold text-neutral-900 mb-1" style="font-size: 1.05rem;">CBSE Curriculum</h5>
-                  <p class="text-muted mb-0" style="font-size: 0.88rem;">Robust and structured education model.</p>
+                  <h5 class="fw-bold text-neutral-900 mb-1" style="font-size: 1.05rem;">CBSE Pedagogy</h5>
+                  <p class="text-muted mb-0" style="font-size: 0.88rem;">Concept-based learning, problem-solving &amp; analytical inquiry.</p>
                 </div>
               </div>
 
               <!-- Feature 2 -->
               <div class="col-sm-6 d-flex align-items-start gap-3">
                 <div class="class-stage-icon m-0 flex-shrink-0" style="width: 48px; height: 48px; font-size: 20px; background-color: var(--brand-pale); color: var(--brand);">
-                  <i class="ph-fill ph-chalkboard"></i>
+                  <i class="ph-fill ph-flask"></i>
                 </div>
                 <div>
-                  <h5 class="fw-bold text-neutral-900 mb-1" style="font-size: 1.05rem;">Smart Classrooms</h5>
-                  <p class="text-muted mb-0" style="font-size: 0.88rem;">Interactive digital boards for quick learning.</p>
+                  <h5 class="fw-bold text-neutral-900 mb-1" style="font-size: 1.05rem;">Science &amp; Tech Labs</h5>
+                  <p class="text-muted mb-0" style="font-size: 0.88rem;">Advanced labs for Physics, Chemistry, Biology &amp; Digital computing.</p>
                 </div>
               </div>
 
               <!-- Feature 3 -->
               <div class="col-sm-6 d-flex align-items-start gap-3">
                 <div class="class-stage-icon m-0 flex-shrink-0" style="width: 48px; height: 48px; font-size: 20px;">
-                  <i class="ph-fill ph-flask"></i>
+                  <i class="ph-fill ph-books"></i>
                 </div>
                 <div>
-                  <h5 class="fw-bold text-neutral-900 mb-1" style="font-size: 1.05rem;">Modern Science Labs</h5>
-                  <p class="text-muted mb-0" style="font-size: 0.88rem;">Well-equipped Physics, Chemistry & Bio labs.</p>
+                  <h5 class="fw-bold text-neutral-900 mb-1" style="font-size: 1.05rem;">5,000+ Books Library</h5>
+                  <p class="text-muted mb-0" style="font-size: 0.88rem;">Gateway to knowledge building lifelong reading &amp; research habits.</p>
                 </div>
               </div>
 
               <!-- Feature 4 -->
               <div class="col-sm-6 d-flex align-items-start gap-3">
                 <div class="class-stage-icon m-0 flex-shrink-0" style="width: 48px; height: 48px; font-size: 20px;">
-                  <i class="ph-fill ph-soccer-ball"></i>
+                  <i class="ph-fill ph-globe-hemisphere-west"></i>
                 </div>
                 <div>
-                  <h5 class="fw-bold text-neutral-900 mb-1" style="font-size: 1.05rem;">Co-Curricular Activities</h5>
-                  <p class="text-muted mb-0" style="font-size: 0.88rem;">Encouraging sports, arts and coding.</p>
+                  <h5 class="fw-bold text-neutral-900 mb-1" style="font-size: 1.05rem;">International Exposure</h5>
+                  <p class="text-muted mb-0" style="font-size: 0.88rem;">Cultural exchange association with Institution Sainte Marie, France.</p>
                 </div>
               </div>
             </div>
@@ -972,7 +306,7 @@
                 </div>
                 <div>
                   <h4 class="fw-bold text-neutral-950 mb-0 h5">25+ Years</h4>
-                  <span class="text-muted text-uppercase fw-semibold" style="font-size: 0.72rem; letter-spacing: 0.05em;">Of Academic Excellence</span>
+                  <span class="text-muted text-uppercase fw-semibold" style="font-size: 0.72rem; letter-spacing: 0.05em;">Silver Jubilee of Excellence</span>
                 </div>
               </div>
             </div>
@@ -998,19 +332,19 @@
       </div>
 
       <div class="row g-4">
-        <div class="col-xl-3 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="600">
-          <div class="stat-card">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 d-flex" data-aos="fade-up" data-aos-duration="600">
+          <div class="stat-card w-100">
             <div class="stat-card-icon">
               <i class="ph-fill ph-trophy"></i>
             </div>
             <div class="stat-card-body">
               <h2 class="counter">25+</h2>
-              <p>Years of Academic Excellence</p>
+              <p>Years of Educational Excellence</p>
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="800">
-          <div class="stat-card">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 d-flex" data-aos="fade-up" data-aos-duration="800">
+          <div class="stat-card w-100">
             <div class="stat-card-icon">
               <i class="ph-fill ph-users-four"></i>
             </div>
@@ -1020,25 +354,25 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1000">
-          <div class="stat-card">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 d-flex" data-aos="fade-up" data-aos-duration="1000">
+          <div class="stat-card w-100">
             <div class="stat-card-icon">
-              <i class="ph-fill ph-chalkboard-teacher"></i>
+              <i class="ph-fill ph-books"></i>
             </div>
             <div class="stat-card-body">
-              <h2 class="counter">50+</h2>
-              <p>Dedicated & Experienced Faculty</p>
+              <h2 class="counter">5,000+</h2>
+              <p>Library Resources &amp; Books</p>
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="1200">
-          <div class="stat-card">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 d-flex" data-aos="fade-up" data-aos-duration="1200">
+          <div class="stat-card w-100">
             <div class="stat-card-icon">
               <i class="ph-fill ph-certificate"></i>
             </div>
             <div class="stat-card-body">
               <h2>Pre-KG–12</h2>
-              <p>Classes Offered Under CBSE Curriculum</p>
+              <p>CBSE Affiliated Comprehensive Education</p>
             </div>
           </div>
         </div>
@@ -1058,15 +392,15 @@
             <i class="ph-fill ph-star-four"></i>
           </span>
           <span class="fw-bold text-main-600" style="font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase;">
-            Our Programs & Facilities
+            Our Programs &amp; Facilities
           </span>
         </div>
         <h3 class="fw-semibold text-neutral-950 tw-mb-6" data-aos="fade-up" data-aos-duration="800"
           data-aos-delay="200">
-          Academic Programs & Facilities
+          Academic Programs &amp; Facilities
         </h3>
         <p class="fw-normal tw-text-4 text-neutral-400" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-          State-of-the-art facilities and comprehensive programs designed to<br> nurture academic excellence and
+          State-of-the-art facilities and comprehensive learning programs designed to<br> nurture academic excellence and
           holistic development in every student.
         </p>
       </div>
@@ -1083,9 +417,9 @@
                   <div class="program-card-icon">
                     <i class="ph-fill ph-flask"></i>
                   </div>
-                  <h4 class="program-card-title">Science Labs</h4>
+                  <h4 class="program-card-title">Science Laboratories</h4>
                   <p class="program-card-desc">
-                    State-of-the-art Physics, Chemistry, and Biology laboratories equipped with modern tools to foster scientific inquiry and learning.
+                    Well-equipped Physics, Chemistry, and Biology laboratories enabling practical, experiential, and inquiry-based scientific learning.
                   </p>
                 </div>
                 <div>
@@ -1107,9 +441,9 @@
                   <div class="program-card-icon">
                     <i class="ph-fill ph-desktop"></i>
                   </div>
-                  <h4 class="program-card-title">Computer Labs</h4>
+                  <h4 class="program-card-title">Computer &amp; Tech Labs</h4>
                   <p class="program-card-desc">
-                    High-speed computing systems and internet access, helping students develop advanced digital skills and tech concepts.
+                    Modern computing systems developing digital literacy, computational thinking, and technology skills for the future.
                   </p>
                 </div>
                 <div>
@@ -1133,7 +467,7 @@
                   </div>
                   <h4 class="program-card-title">Smart Classrooms</h4>
                   <p class="program-card-desc">
-                    Equipped with interactive whiteboards and digital projectors to make learning an engaging visual experience.
+                    Interactive digital pedagogy making concepts engaging, visual, and easy to understand for learners of all ages.
                   </p>
                 </div>
                 <div>
@@ -1145,7 +479,7 @@
             </div>
           </div>
 
-          <!-- Slide 4: Sports Arena -->
+          <!-- Slide 4: Sports Arena & Martial Arts -->
           <div class="swiper-slide">
             <div class="program-slider-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
               <div class="program-card-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/school-annual-day.png') }}');"></div>
@@ -1153,11 +487,11 @@
               <div class="program-card-content">
                 <div>
                   <div class="program-card-icon">
-                    <i class="ph-fill ph-soccer-ball"></i>
+                    <i class="ph-fill ph-sword"></i>
                   </div>
-                  <h4 class="program-card-title">Sports Arena</h4>
+                  <h4 class="program-card-title">Sports &amp; Martial Arts</h4>
                   <p class="program-card-desc">
-                    Expansive fields and facilities for athletics, soccer, basketball, and indoor gaming to build physical health and teamwork.
+                    Silambam, Karate, Taekwondo, Cricket, Badminton, and Athletics building physical fitness, discipline, and teamwork.
                   </p>
                 </div>
                 <div>
@@ -1169,7 +503,7 @@
             </div>
           </div>
 
-          <!-- Slide 5: Cultural Activities -->
+          <!-- Slide 5: Cultural Arts & Mind Sports -->
           <div class="swiper-slide">
             <div class="program-slider-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               <div class="program-card-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/school-hero-banner.png') }}');"></div>
@@ -1179,9 +513,9 @@
                   <div class="program-card-icon">
                     <i class="ph-fill ph-palette"></i>
                   </div>
-                  <h4 class="program-card-title">Cultural Arts</h4>
+                  <h4 class="program-card-title">Arts, Yoga &amp; Mind Sports</h4>
                   <p class="program-card-desc">
-                    Dedicated music, art, and dance programs to help students explore creative boundaries and perform at various events.
+                    Classical Dance, Yoga, Chess, Carrom, and cultural programmes nurturing creativity, emotional balance, and focus.
                   </p>
                 </div>
                 <div>
@@ -1196,16 +530,16 @@
           <!-- Slide 6: Modern Library -->
           <div class="swiper-slide">
             <div class="program-slider-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">
-              <div class="program-card-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/school-hero-banner.png') }}');"></div>
+              <div class="program-card-bg-img" style="background-image: url('{{ asset('user/assets/images/thumbs/school-library.png') }}');"></div>
               <div class="program-card-overlay"></div>
               <div class="program-card-content">
                 <div>
                   <div class="program-card-icon">
                     <i class="ph-fill ph-book-open"></i>
                   </div>
-                  <h4 class="program-card-title">Modern Library</h4>
+                  <h4 class="program-card-title">5,000+ Books Library</h4>
                   <p class="program-card-desc">
-                    A quiet space with a vast collection of books, references, and digital resources to inspire a love for reading.
+                    Rich collection of books, periodicals, and research materials inspiring curiosity and a lifelong love for reading.
                   </p>
                 </div>
                 <div>
@@ -1223,7 +557,6 @@
       </div>
     </div>
   </section>
-  <!-- ====================== features section end ======================= -->
   <!-- ====================== features section end ======================= -->
 
   <!-- ============================= popular categories section start ============================= -->
@@ -1260,7 +593,7 @@
             </div>
             <div class="csc-badge">Pre-KG · LKG · UKG</div>
             <h4 class="csc-title">Kindergarten</h4>
-            <p class="csc-desc">Activity-led play learning to build motor skills, creativity, and social confidence.</p>
+            <p class="csc-desc">Activity-based play learning to build motor skills, creativity, and foundational social confidence.</p>
             <a href="{{ route('curriculum') }}" class="csc-link">
               Learn More <i class="ph-bold ph-arrow-right"></i>
             </a>
@@ -1276,7 +609,7 @@
             </div>
             <div class="csc-badge">Class 1 – 5</div>
             <h4 class="csc-title">Primary</h4>
-            <p class="csc-desc">Foundational literacy, numeracy, environmental sciences, and holistic development.</p>
+            <p class="csc-desc">Foundational literacy, numeracy, environmental sciences, reading habits, and moral character.</p>
             <a href="{{ route('curriculum') }}" class="csc-link">
               Learn More <i class="ph-bold ph-arrow-right"></i>
             </a>
@@ -1292,7 +625,7 @@
             </div>
             <div class="csc-badge">Class 6 – 8</div>
             <h4 class="csc-title">Middle School</h4>
-            <p class="csc-desc">Advanced logic in sciences, maths, AI & Robotics with language depth and arts.</p>
+            <p class="csc-desc">Conceptual logic in sciences, maths, computational thinking, language depth, and creative arts.</p>
             <a href="{{ route('curriculum') }}" class="csc-link">
               Learn More <i class="ph-bold ph-arrow-right"></i>
             </a>
@@ -1308,7 +641,7 @@
             </div>
             <div class="csc-badge">Class 9 – 10</div>
             <h4 class="csc-title">Secondary</h4>
-            <p class="csc-desc">Intensive board exam prep with core stream choices, computer science & sports.</p>
+            <p class="csc-desc">Structured CBSE board exam preparation, diagnostic evaluations, problem-solving, and sports.</p>
             <a href="{{ route('curriculum') }}" class="csc-link">
               Learn More <i class="ph-bold ph-arrow-right"></i>
             </a>
@@ -1324,7 +657,7 @@
             </div>
             <div class="csc-badge">Class 11 – 12</div>
             <h4 class="csc-title">Sr. Secondary</h4>
-            <p class="csc-desc">Specialized Science, Commerce & Humanities streams with CBSE board excellence.</p>
+            <p class="csc-desc">Specialized Science, Commerce &amp; Humanities streams with competitive entrance guidance (NEET, JEE, CUET).</p>
             <a href="{{ route('curriculum') }}" class="csc-link">
               Learn More <i class="ph-bold ph-arrow-right"></i>
             </a>
@@ -1335,10 +668,6 @@
     </div>
   </section>
   <!-- ============================= popular categories section end ============================= -->
-
-
-
-
 
   <script>
     function prepareInquiryForm(form) {
@@ -1351,22 +680,7 @@
   </script>
   <!-- ======================== Redesigned Admissions & Inquiry Section End ====================== -->
 
-
-
-  <!-- ====================== online course section start ========================= -->
-
-
-
-
-
-
-  <!-- ====================== online course section end ========================= -->
-
-
-
-
-
-    <!-- ===================== leadership / teachers section start ========================= -->
+  <!-- ===================== leadership / teachers section start ========================= -->
   <section class="leadership-section bg-light py-100 position-relative z-2 overflow-hidden bg-dot-grid">
     <div class="container position-relative z-1">
       <!-- Section Header -->
@@ -1377,13 +691,13 @@
             <span class="tw-w-6 tw-h-6 border-main-100 border bg-white rounded-circle text-main-600 d-flex align-items-center justify-content-center tw-text-305">
               <i class="ph-fill ph-star-four"></i>
             </span>
-            <span class="fw-bold text-main-600" style="font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase;">Our Leadership & Faculty</span>
+            <span class="fw-bold text-main-600" style="font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase;">Our Leadership &amp; Faculty</span>
           </div>
           <h3 class="fw-semibold text-neutral-950 mb-2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
             Meet the Visionaries Behind Maruthi
           </h3>
           <p class="text-neutral-400 mb-0" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="font-size: 1.02rem; max-width: 620px;">
-            Our dedicated leadership team brings decades of academic excellence, administrative experience, and strategic vision to guide Maruthi School.
+            Guided by Experience and Vision. Spearheading Maruthi Senior Secondary School with high standards of discipline, academic quality, and holistic student growth.
           </p>
         </div>
 
@@ -1416,22 +730,22 @@
               
               <div class="visionary-info-panel">
                 <h4 class="visionary-name">Dr. S. Ramadasse</h4>
-                <p class="visionary-designation">Chairman</p>
+                <p class="visionary-designation">Chairman &amp; Founder</p>
               </div>
 
               <!-- Sliding Bio Overlay on Hover -->
               <div class="visionary-bio-overlay">
                 <div>
                   <h4 class="text-white fw-bold mb-2">Dr. S. Ramadasse</h4>
-                  <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">Chairman & Founder</p>
+                  <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">Correspondent &amp; Academician</p>
                   <p class="visionary-bio-text">
-                    Guiding Maruthi Senior Secondary School with an enduring vision for holistic education, ethical values, and world-class infrastructure for every student.
+                    A distinguished academician and Physics scholar, Dr. S. Ramdasse contributes to the academic vision of the institution, encouraging students towards scientific thinking, higher education, and excellence.
                   </p>
                   
                   <div class="visionary-bio-highlights">
                     <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Visionary Leadership</div>
                     <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Academic Excellence</div>
-                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Community Empowerment</div>
+                    <div class="visionary-highlight-item"><i class="ph-bold ph-check"></i> Scientific Inquiry</div>
                   </div>
                 </div>
                 
@@ -1461,9 +775,9 @@
               <div class="visionary-bio-overlay">
                 <div>
                   <h4 class="text-white fw-bold mb-2">Mr. Sridhar</h4>
-                  <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">Secretary & Administrator</p>
+                  <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">Secretary &amp; Administrator</p>
                   <p class="visionary-bio-text">
-                    Overseeing administrative governance, institutional development, and campus operations with dedication to educational excellence.
+                    Overseeing administrative governance, institutional development, campus operations, and student welfare with dedicated leadership.
                   </p>
                   
                   <div class="visionary-bio-highlights">
@@ -1537,9 +851,9 @@
               <div class="visionary-bio-overlay">
                 <div>
                   <h4 class="text-white fw-bold mb-2">Mrs. Mahalakshmi K.</h4>
-                  <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">Principal</p>
+                  <p class="text-success mb-3 fw-medium" style="font-size: 0.85rem; color: var(--brand-light, #10b981) !important;">M.Sc., M.Phil., B.Ed., DFL., PGDMLT</p>
                   <p class="visionary-bio-text">
-                    Leading academic curriculum, faculty mentorship, and student development to foster leadership, curiosity, and high scholastic achievement.
+                    Leading academic functioning and teacher development with extensive experience, focusing on quality, discipline, and holistic student growth.
                   </p>
                   
                   <div class="visionary-bio-highlights">
@@ -1830,7 +1144,7 @@
                 <div class="tw-p-205 bg-white tw-rounded-xl animation-item">
                   <div class="position-relative tw-mb-5">
                     <span class="w-100 tw-rounded-xl overflow-hidden">
-                      <img src="user/assets/images/thumbs/school-hero-banner.png" alt="Annual Day Event"
+                      <img src="{{ asset('user/assets/images/thumbs/school-hero-banner.png') }}" alt="Annual Day Event"
                         class="w-100 course-item__img tw-duration-300">
                     </span>
                     <div
@@ -1846,11 +1160,11 @@
                   <div class="tw-px-4 tw-pb-3">
 
                     <span class="w-100 tw-h-px bg-neutral-12-persent tw-mt-4 tw-mb-4"></span>
-                    <a href="javascript:void(0)"
+                    <a href="{{ route('event_page') }}"
                       class="fw-semibold tw-text-5 text-neutral-500 tw-mb-6 hover-text-main-600 tw-duration-300">
-                      Annual Day Celebrations €“ A Grand Cultural Extravaganza
+                      Annual Day Celebrations — A Grand Cultural Extravaganza
                     </a>
-                    <a href="course-details.html"
+                    <a href="{{ route('event_page') }}"
                       class="btn btn-main-two hover-style-four button--stroke active-scale-094 tw-duration-100 tw-py-305 tw-px-6 group active--translate-y-2 tw-p-1 rounded-pill border-main-600 border"
                       data-block="button">
                       <span class="button__flair"></span>
@@ -1865,7 +1179,7 @@
                 <div class="tw-p-205 bg-white tw-rounded-xl animation-item">
                   <div class="position-relative tw-mb-5">
                     <span class="w-100 tw-rounded-xl overflow-hidden">
-                      <img src="user/assets/images/thumbs/school-science-lab.png" alt="Science Day Competition"
+                      <img src="{{ asset('user/assets/images/thumbs/school-science-lab.png') }}" alt="Science Day Competition"
                         class="w-100 course-item__img tw-duration-300">
                     </span>
                     <div
@@ -1881,11 +1195,11 @@
                   <div class="tw-px-4 tw-pb-3">
 
                     <span class="w-100 tw-h-px bg-neutral-12-persent tw-mt-4 tw-mb-4"></span>
-                    <a href="javascript:void(0)"
+                    <a href="{{ route('event_page') }}"
                       class="fw-semibold tw-text-5 text-neutral-500 tw-mb-6 hover-text-main-600 tw-duration-300">
                       Students Excel at National Science Day Competition
                     </a>
-                    <a href="course-details.html"
+                    <a href="{{ route('event_page') }}"
                       class="btn btn-main-two hover-style-four button--stroke active-scale-094 tw-duration-100 tw-py-305 tw-px-6 group active--translate-y-2 tw-p-1 rounded-pill border-main-600 border"
                       data-block="button">
                       <span class="button__flair"></span>
@@ -1900,7 +1214,7 @@
                 <div class="tw-p-205 bg-white tw-rounded-xl animation-item">
                   <div class="position-relative tw-mb-5">
                     <span class="w-100 tw-rounded-xl overflow-hidden">
-                      <img src="user/assets/images/thumbs/school-annual-day.png" alt="Cultural Exchange Program"
+                      <img src="{{ asset('user/assets/images/thumbs/school-annual-day.png') }}" alt="Cultural Exchange Program"
                         class="w-100 course-item__img tw-duration-300">
                     </span>
                     <div
@@ -1916,11 +1230,11 @@
                   <div class="tw-px-4 tw-pb-3">
 
                     <span class="w-100 tw-h-px bg-neutral-12-persent tw-mt-4 tw-mb-4"></span>
-                    <a href="javascript:void(0)"
+                    <a href="{{ route('event_page') }}"
                       class="fw-semibold tw-text-5 text-neutral-500 tw-mb-6 hover-text-main-600 tw-duration-300">
-                      International Cultural Exchange €“ French School Visit
+                      International Cultural Exchange — French School Visit
                     </a>
-                    <a href="course-details.html"
+                    <a href="{{ route('event_page') }}"
                       class="btn btn-main-two hover-style-four button--stroke active-scale-094 tw-duration-100 tw-py-305 tw-px-6 group active--translate-y-2 tw-p-1 rounded-pill border-main-600 border"
                       data-block="button">
                       <span class="button__flair"></span>
@@ -1935,27 +1249,27 @@
                 <div class="tw-p-205 bg-white tw-rounded-xl animation-item">
                   <div class="position-relative tw-mb-5">
                     <span class="w-100 tw-rounded-xl overflow-hidden">
-                      <img src="user/assets/images/thumbs/blog-news-two-img2.png" alt="img"
+                      <img src="{{ asset('user/assets/images/thumbs/school-classroom.jpg') }}" alt="Classroom Innovations"
                         class="w-100 course-item__img tw-duration-300">
                     </span>
                     <div
                       class="tw-py-5 tw-px-6 bg-main-600 tw-rounded-top-bottom-12-px position-absolute top-0 tw-start-0">
                       <h2 class="h5 tw-text-details-two-32-px d-block fw-bold text-white tw-leading-none">
-                        08
+                        28
                       </h2>
                       <span class="fw-normal tw-text-4 text-white">
-                        JUN
+                        MAY
                       </span>
                     </div>
                   </div>
                   <div class="tw-px-4 tw-pb-3">
 
                     <span class="w-100 tw-h-px bg-neutral-12-persent tw-mt-4 tw-mb-4"></span>
-                    <a href="javascript:void(0)"
+                    <a href="{{ route('event_page') }}"
                       class="fw-semibold tw-text-5 text-neutral-500 tw-mb-6 hover-text-main-600 tw-duration-300">
-                      How to Avoid the Biggest College Admission Mistakes
+                      Smart Classrooms &amp; Pedagogical Innovations for 2026-27
                     </a>
-                    <a href="course-details.html"
+                    <a href="{{ route('event_page') }}"
                       class="btn btn-main-two hover-style-four button--stroke active-scale-094 tw-duration-100 tw-py-305 tw-px-6 group active--translate-y-2 tw-p-1 rounded-pill border-main-600 border"
                       data-block="button">
                       <span class="button__flair"></span>
@@ -1974,7 +1288,7 @@
       </div>
       <div class="tw-mt-9 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="800"
         data-aos-delay="300">
-        <a href="gallery.html"
+        <a href="{{ route('event_page') }}"
           class="btn btn-main-four hover-style-four button--stroke active-scale-094 tw-duration-100 tw-py-405 tw-px-10 group active--translate-y-2 tw-p-1 tw-pe-8 rounded-pill"
           data-block="button">
           <span class="button__flair"></span>
@@ -1986,40 +1300,36 @@
   <!-- =============================== blog section end ============================= -->
 
   <!-- ========================= courses section start =========================== -->
-  <section class="admissions-cta-redesign position-relative overflow-hidden bg-lightgreen">
-    <!-- Floating Decorative Icons -->
-    
-
+  <section class="admissions-cta-redesign position-relative overflow-hidden">
     <div class="container position-relative z-1">
       <div class="row align-items-center gy-4">
         <div class="col-lg-7 text-lg-start text-center" data-aos="fade-right" data-aos-duration="1000">
           <div class="cta-pill-badge mb-3 d-inline-flex align-items-center gap-2">
             <span class="cta-pulse-dot"></span>
-            <span class=" fw-medium">Admissions Open 2026-27</span>
+            <span class="fw-semibold">Admissions Open 2026-27</span>
           </div>
-          <h2 class="cta-title  fw-bold mb-4">
+          <h2 class="cta-title fw-bold mb-3">
             Start Your Child's Journey <br class="d-none d-md-block"> to <span class="text-highlight">Excellence</span> Today
           </h2>
-          <p class="cta-description opacity-90 mb-0">
-            Join Puducherry's leading CBSE school. We provide a nurturing environment, <br class="d-none d-lg-block">
-            state-of-the-art facilities, and a legacy of academic success.
+          <p class="cta-description mb-3">
+            Join Puducherry's leading CBSE school with a legacy of 25+ years. Guided by <strong>“Wisdom Wins”</strong> — developing wisdom to think, courage to question, discipline to act, and compassion to contribute.
           </p>
+          <div class="cta-tamil-quote-badge mb-2">
+            <span class="small fw-semibold">"கல்வியின் நோக்கம் அறிவு மட்டுமல்ல; ஞானமும் நற்பண்பும் வளர்ப்பதே."</span>
+          </div>
         </div>
         <div class="col-lg-5 text-lg-end text-center" data-aos="fade-left" data-aos-duration="1000">
           <div class="cta-btn-group d-flex flex-column flex-sm-row justify-content-lg-end gap-3 align-items-center">
-            <a href="contact-us.html" class="btn btn-apply-now rounded-pill px-5 py-3 fw-bold">
+            <a href="{{ route('contact') }}" class="btn btn-apply-now rounded-pill px-5 py-3 fw-bold text-decoration-none">
               Apply For Admission <i class="ph-bold ph-arrow-right ms-2"></i>
             </a>
-            <a href="tel:+919442399777" class="btn btn-call-us rounded-pill px-4 py-3 fw-bold border-black  border-2">
-              <i class="ph-fill ph-phone me-2"></i> Inquiry
+            <a href="tel:+919442399777" class="btn btn-call-us rounded-pill px-4 py-3 fw-bold text-decoration-none">
+              <i class="ph-fill ph-phone-call me-2"></i> Inquire Now
             </a>
           </div>
         </div>
       </div>
     </div>
-    
-    <!-- Background Accents -->
-    <div class="cta-accent-circle"></div>
   </section>
   <!-- ========================= courses section end =========================== -->
 
