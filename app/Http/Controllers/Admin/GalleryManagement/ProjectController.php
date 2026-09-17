@@ -107,40 +107,53 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'category_id' => 'required',
-
+            'category_id' => 'required|exists:categories,id',
             'name' => 'nullable|string|max:255',
-
             'description' => 'nullable|string',
-
-            // One Main Image
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:10240',
+            'gallery_images' => 'nullable|array',
+            'gallery_images.*' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:10240',
         ]);
 
         $project_image = new ProjectImage;
-
         $project_image->name = $request->name;
-
         $project_image->description = $request->description;
-
         $project_image->category_id = $request->category_id;
+        $project_image->status = $request->has('status') ? (int)$request->status : 1;
 
         // Store Main Image
         if ($request->hasFile('image')) {
-
             $imagePath = $request->file('image')->store(
                 'images/Project_Images',
                 'public'
             );
-
             $project_image->image = $imagePath;
         }
 
         $project_image->save();
 
+        // Store multiple gallery images if uploaded
+        if ($request->hasFile('gallery_images')) {
+            $files = $request->file('gallery_images');
+            $galleryPath = public_path('gallery_images');
+            if (!File::isDirectory($galleryPath)) {
+                File::makeDirectory($galleryPath, 0777, true, true);
+            }
+
+            foreach ($files as $file) {
+                $galleryImageName = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+                $file->move($galleryPath, $galleryImageName);
+
+                GalleryImage::create([
+                    'project_image_id' => $project_image->id,
+                    'image' => $galleryImageName,
+                ]);
+            }
+        }
+
         return redirect()
             ->route('project.index')
-            ->with('success', 'Project created successfully!');
+            ->with('success', 'Project image created successfully!');
     }
 
     public function edit($id)
@@ -151,9 +164,6 @@ class ProjectController extends Controller
         // Fetch related gallery images using `project_image_id`
         $project_related_images = GalleryImage::where('project_image_id', $id)->get();
 
-        // Debugging the data
-        // dd($project_image, $project_related_images);
-
         return view('admin.gallery_management.project_image.edit', compact('project_image', 'categories', 'project_related_images'));
     }
 
@@ -161,25 +171,26 @@ class ProjectController extends Controller
     {
         // Validate incoming request
         $request->validate([
-            'category_id' => 'required',
+            'category_id' => 'required|exists:categories,id',
             'name' => 'nullable|string|max:255',
-            'description' => 'nullable|string|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp',
+            'description' => 'nullable|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:10240',
             'gallery_images' => 'nullable|array',
-            'gallery_images.*' => 'image|mimes:jpeg,png,jpg,gif,svg,webp', // Multiple gallery images
+            'gallery_images.*' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:10240',
         ]);
 
         // Find the ProjectImage instance
         $project_image = ProjectImage::findOrFail($id);
         $project_image->name = $request->input('name');
         $project_image->category_id = $request->input('category_id');
-        $project_image->status = $request->input('status');
+        $project_image->status = $request->has('status') ? (int)$request->input('status') : 1;
         $project_image->description = $request->input('description');
+
         // Handle main project image update
         if ($request->hasFile('image')) {
-            // Delete the old image from storage if it exists
-            if (Storage::exists('public/'.$project_image->image)) {
-                Storage::delete('public/'.$project_image->image);
+            // Delete old image from storage if exists
+            if ($project_image->image && Storage::disk('public')->exists($project_image->image)) {
+                Storage::disk('public')->delete($project_image->image);
             }
 
             // Store the new image
@@ -187,24 +198,20 @@ class ProjectController extends Controller
             $project_image->image = $imagePath;
         }
 
-        // Save the project image record
         $project_image->save();
 
         // Handle gallery images
         if ($request->hasFile('gallery_images')) {
             $files = $request->file('gallery_images');
-
-            // Optionally, limit the number of gallery images (e.g., 15 images)
-            if (count($files) > 15) {
-                return redirect()->back()->withErrors(['gallery_images' => 'You can only upload up to 15 gallery images.'])->withInput();
+            $galleryPath = public_path('gallery_images');
+            if (!File::isDirectory($galleryPath)) {
+                File::makeDirectory($galleryPath, 0777, true, true);
             }
 
-            // Store each gallery image and associate it with the project image
             foreach ($files as $file) {
-                $galleryImageName = time().'_'.$file->getClientOriginalName();
-                $file->move(public_path('gallery_images'), $galleryImageName);
+                $galleryImageName = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+                $file->move($galleryPath, $galleryImageName);
 
-                // Save the gallery image to the database, linking it with the project image
                 GalleryImage::create([
                     'project_image_id' => $project_image->id,
                     'image' => $galleryImageName,
@@ -212,13 +219,27 @@ class ProjectController extends Controller
             }
         }
 
-        // Redirect with success message
         return redirect()->route('project.index')->with('success', 'Updated Successfully');
     }
 
     public function destroy($id)
     {
-        $project_image = ProjectImage::findorfail($id);
+        $project_image = ProjectImage::findOrFail($id);
+
+        // Delete main image file
+        if ($project_image->image && Storage::disk('public')->exists($project_image->image)) {
+            Storage::disk('public')->delete($project_image->image);
+        }
+
+        // Delete associated gallery images from disk
+        $galleryImages = GalleryImage::where('project_image_id', $project_image->id)->get();
+        foreach ($galleryImages as $gImg) {
+            $path = public_path('gallery_images/' . $gImg->image);
+            if (File::exists($path)) {
+                File::delete($path);
+            }
+        }
+
         $project_image->delete();
 
         return redirect()->route('project.index')->with('success', 'Deleted Successfully');
@@ -226,18 +247,16 @@ class ProjectController extends Controller
 
     public function destroy_gallery_image($id)
     {
-        // Find the gallery image by its ID
         $galleryImage = GalleryImage::findOrFail($id);
 
-        // Delete the image file from storage if it exists
-        if (Storage::exists('gallery_images/'.$galleryImage->image)) {
-            Storage::delete('gallery_images/'.$galleryImage->image);
+        // Delete file from public/gallery_images
+        $path = public_path('gallery_images/' . $galleryImage->image);
+        if (File::exists($path)) {
+            File::delete($path);
         }
 
-        // Delete the gallery image record from the database
         $galleryImage->delete();
 
-        // Return a response (redirect back or return a success message)
         return redirect()->back()->with('message', 'Gallery image removed successfully.');
     }
 }

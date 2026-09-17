@@ -65,54 +65,55 @@ class ClientController extends Controller
 
     public function gallery()
     {
+        try {
+            $categories = Category::with(['images' => function ($q) {
+                $q->where('status', 1);
+            }])->where('status', 1)->get();
 
-        // return view('user.gallery');
-        $categories = Category::with('images')->get();
+            if ($categories->isEmpty()) {
+                $categories = Category::with('images')->get();
+            }
+        } catch (\Exception $e) {
+            $categories = collect();
+        }
 
         return view('user.gallery', compact('categories'));
     }
 
     public function achievements()
     {
-
         return view('user.achievements');
     }
 
     public function curriculum()
     {
-
         return view('user.curriculum');
     }
 
     public function calendar()
     {
-
         return view('user.calendar');
     }
 
     public function circular()
     {
-
         return view('user.circular');
     }
 
     public function services()
     {
-
         return view('user.services');
     }
 
-    // public function gallery_view()
-    // {
-    //     $categories = Category::with('projectImages')->get();
-
-    //     return view('gallery', compact('categories'));
-    // }
-
     public function projects()
     {
-        $imagecategories = Category::where('status', 1)->get();
-        $galleries = ProjectImage::where('status', 1)->get();
+        try {
+            $imagecategories = Category::where('status', 1)->get();
+            $galleries = ProjectImage::where('status', 1)->get();
+        } catch (\Exception $e) {
+            $imagecategories = collect();
+            $galleries = collect();
+        }
 
         return view('user.projects', compact('imagecategories', 'galleries'));
     }
@@ -134,7 +135,6 @@ class ClientController extends Controller
 
     public function contactstore(Request $request)
     {
-
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email',
@@ -143,28 +143,30 @@ class ClientController extends Controller
             'enquiry' => 'required|string', // Minimum of 10 characters for enquiry
         ]);
 
-        // dd($request);
-        // Create a new contact entry
-        $contact_info = Contact::create([
-            'name' => $request->input('name'),
-            'email' => $request->input('email'),
-            'mobile_no' => $request->input('mobile_no'),
-            'subject' => $request->input('subject'),
-            'enquiry' => $request->input('enquiry'),
-        ]);
+        try {
+            // Create a new contact entry
+            $contact_info = Contact::create([
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'mobile_no' => $request->input('mobile_no'),
+                'subject' => $request->input('subject'),
+                'enquiry' => $request->input('enquiry'),
+            ]);
 
-        // $user_mail = $request->input('email');
-        // // Send "Thank You" email to the user
-        // Mail::to($user_mail)->send(new ContactFormReply($contact_info));
+            $adminEmail = env('MAIL_USERNAME', 'info@maruthischool.edu.in');
 
-        $adminEmail = env('MAIL_USERNAME', 'sangeethafullstackdeveloper@gmail.com'); // Fetch the admin email from the .env file
-        // $adminEmail = env('MAIL_USERNAME', 'info.fioarchitects@gmail.com'); // Fetch the admin email from the .env file
-        // dd( $adminEmail );
+            // Attempt to send email, ignore error if SMTP server is offline locally
+            try {
+                Mail::to($adminEmail)->send(new ContactFormSubmitted($contact_info));
+            } catch (\Exception $mailEx) {
+                // Ignore local SMTP sending exception
+            }
 
-        // Send email to admin or default email
-        Mail::to($adminEmail)->send(new ContactFormSubmitted($contact_info));
-
-        // Redirect or return a view after storing
-        return redirect()->back()->with('success', 'We will get back to you soon...');
+            return redirect()->back()->with('success', 'Thank you! Your message has been sent successfully. We will get back to you soon.');
+        } catch (\Illuminate\Database\QueryException $dbEx) {
+            return redirect()->back()->with('error', 'Database connection error. Please make sure MySQL is running in your XAMPP Control Panel on port 3306.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred: ' . $e->getMessage());
+        }
     }
 }

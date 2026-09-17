@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ClientController::class, 'index'])->name('index');
 Route::get('about', [ClientController::class, 'about'])->name('about');
 Route::get('events', [ClientController::class, 'event_page'])->name('event_page');
+Route::get('events-all', [ClientController::class, 'event_page'])->name('events');
 Route::get('event-details/{id}', [ClientController::class, 'event_details'])->name('event.details');
 
 Route::get('gallery', [ClientController::class, 'gallery'])->name('gallery');

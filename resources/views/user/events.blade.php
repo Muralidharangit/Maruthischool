@@ -33,7 +33,7 @@
             <h2 class="text-white h1 mb-3">News & Events</h2>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('index') }}" class="text-white">Home</a></li>
                     <li class="breadcrumb-item active text-white opacity-75" aria-current="page">Events</li>
                 </ol>
             </nav>

@@ -25,252 +25,234 @@
     <!-- END HEADER -->
   {{-- =============================== --}}
 
-  <!-- Gallery Section -->
-  {{-- <section class="py-100">
-    <div class="container">
-      
-      <!-- Gallery Filter Buttons -->
-      <div class="gallery-filter-wrap" data-aos="fade-up">
-        <button class="filter-btn active" data-filter="all">All Photos</button>
-        <button class="filter-btn" data-filter="campus">Campus Life</button>
-        <button class="filter-btn" data-filter="academic">Academics</button>
-        <button class="filter-btn" data-filter="events">School Events</button>
-      </div>
-
-      <!-- Swiper Gallery -->
-      <div class="swiper gallery-swiper" data-aos="fade-up" data-aos-delay="200">
-        <div class="swiper-wrapper" id="gallery-wrapper">
-          
-          <!-- Campus -->
-          <div class="swiper-slide gallery-slide" data-category="campus">
-            <div class="gallery-card">
-               <img src="user/assets/images/thumbs/school-hero-banner.png" alt="Campus View">
-              <div class="gallery-info">
-                <h4>Main Campus</h4>
-                <p>Modern architecture and lush green surroundings.</p>
-              </div>
-              <a href="user/assets/images/thumbs/school-hero-banner.png" class="stretched-link img-popup"></a>
+    <!-- ============================== BREADCRUMB BANNER ============================ -->
+    <section class="breadcrumb-section py-4 py-md-5 bg-main-600 position-relative overflow-hidden">
+        <img src="{{ asset('user/assets/images/shape/banner-shape-4.png') }}" alt="shape"
+            class="position-absolute top-0 opacity-25 d-none d-md-block">
+        <div class="container position-relative z-1 py-2 py-md-3">
+            <div class="text-center text-md-start">
+                <span class="badge bg-white text-main-600 px-3 py-2 rounded-pill fw-bold text-uppercase mb-2 shadow-sm">
+                    <i class="ph-fill ph-camera me-1"></i> Campus Life &amp; Activities
+                </span>
+                <h1 class="text-white fw-bold mb-2 h2" data-aos="fade-up">Photo Gallery</h1>
+                <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="{{ route('index') }}" class="text-white text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active text-white opacity-75" aria-current="page">Gallery</li>
+                    </ol>
+                </nav>
             </div>
-          </div>
-
-          <div class="swiper-slide gallery-slide" data-category="campus">
-            <div class="gallery-card">
-               <img src="user/assets/images/thumbs/school-sports-ground.png" alt="Sports Ground">
-              <div class="gallery-info">
-                <h4>Sports Complex</h4>
-                <p>World-class facilities for athletic excellence.</p>
-              </div>
-              <a href="user/assets/images/thumbs/school-sports-ground.png" class="stretched-link img-popup"></a>
-            </div>
-          </div>
-
-          <!-- Academic -->
-          <div class="swiper-slide gallery-slide" data-category="academic">
-            <div class="gallery-card">
-               <img src="user/assets/images/thumbs/school-classroom.png" alt="Classroom">
-              <div class="gallery-info">
-                <h4>Smart Classrooms</h4>
-                <p>Interactive learning with modern technology.</p>
-              </div>
-              <a href="user/assets/images/thumbs/school-classroom.png" class="stretched-link img-popup"></a>
-            </div>
-          </div>
-
-          <div class="swiper-slide gallery-slide" data-category="academic">
-            <div class="gallery-card">
-               <img src="user/assets/images/thumbs/school-science-lab.png" alt="Science Lab">
-              <div class="gallery-info">
-                <h4>Science Laboratories</h4>
-                <p>Fostering innovation through practical experiments.</p>
-              </div>
-              <a href="user/assets/images/thumbs/school-science-lab.png" class="stretched-link img-popup"></a>
-            </div>
-          </div>
-
-          <div class="swiper-slide gallery-slide" data-category="academic">
-            <div class="gallery-card">
-               <img src="user/assets/images/thumbs/school-library.png" alt="Library">
-              <div class="gallery-info">
-                <h4>Digital Library</h4>
-                <p>A vast collection of knowledge and resources.</p>
-              </div>
-              <a href="user/assets/images/thumbs/school-library.png" class="stretched-link img-popup"></a>
-            </div>
-          </div>
-
-          <!-- Events -->
-          <div class="swiper-slide gallery-slide" data-category="events">
-            <div class="gallery-card">
-               <img src="user/assets/images/thumbs/school-annual-day.png" alt="Annual Day">
-              <div class="gallery-info">
-                <h4>Annual Day Celebrations</h4>
-                <p>Showcasing the diverse talents of our students.</p>
-              </div>
-              <a href="user/assets/images/thumbs/school-annual-day.png" class="stretched-link img-popup"></a>
-            </div>
-          </div>
-
-          <div class="swiper-slide gallery-slide" data-category="events">
-            <div class="gallery-card">
-               <img src="user/assets/images/thumbs/school-students-group.png" alt="Students">
-              <div class="gallery-info">
-                <h4>Student Community</h4>
-                <p>Building friendships and lifelong memories.</p>
-              </div>
-              <a href="user/assets/images/thumbs/school-students-group.png" class="stretched-link img-popup"></a>
-            </div>
-          </div>
-
-          <div class="swiper-slide gallery-slide" data-category="events">
-            <div class="gallery-card">
-               <img src="user/assets/images/thumbs/school-students-sports.png" alt="Sports Event">
-              <div class="gallery-info">
-                <h4>Inter-School Sports</h4>
-                <p>Competitive spirit and teamwork in action.</p>
-              </div>
-              <a href="user/assets/images/thumbs/school-students-sports.png" class="stretched-link img-popup"></a>
-            </div>
-          </div>
-
         </div>
+    </section>
 
-        <!-- Navigation Buttons -->
-        <div class="swiper-button-next swiper-nav-btn"></div>
-        <div class="swiper-button-prev swiper-nav-btn"></div>
+    @php
+        use Illuminate\Support\Str;
+        // Check if we have active categories with images
+        $hasDynamicImages = false;
+        if (isset($categories) && $categories->count() > 0) {
+            foreach ($categories as $cat) {
+                if ($cat->images && $cat->images->count() > 0) {
+                    $hasDynamicImages = true;
+                    break;
+                }
+            }
+        }
+    @endphp
 
-        <!-- Pagination -->
-        <div class="swiper-pagination mt-4"></div>
-      </div>
-    </div>
-  </section> --}}
+    <!-- ============================== GALLERY SECTION ============================ -->
+    <section class="py-100 bg-dot-grid">
+        <div class="container">
 
+            @if ($hasDynamicImages)
+                <!-- Filter Buttons (Dynamic from DB) -->
+                <div class="gallery-filter-wrap mb-5" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="ph-fill ph-squares-four me-1"></i> All Photos
+                    </button>
+                    @foreach ($categories as $category)
+                        @if ($category->images && $category->images->count() > 0)
+                            <button class="filter-btn" data-filter="{{ Str::slug($category->name) }}">
+                                {{ $category->name }}
+                            </button>
+                        @endif
+                    @endforeach
+                </div>
 
-  @php
-    use Illuminate\Support\Str;
-@endphp
-
-<!-- Gallery Section -->
-<section class="py-100">
-
-    <div class="container">
-
-        <!-- Filter Buttons -->
-        <div class="gallery-filter-wrap" data-aos="fade-up">
-
-            <button class="filter-btn active" data-filter="all">
-                All Photos
-            </button>
-
-            @foreach ($categories as $category)
-
-                <button class="filter-btn"
-                        data-filter="{{ Str::slug($category->name) }}">
-
-                    {{ $category->name }}
-
-                </button>
-
-            @endforeach
-
-        </div>
-
-        <!-- Swiper Gallery -->
-        <div class="swiper gallery-swiper"
-             data-aos="fade-up"
-             data-aos-delay="200">
-
-            <div class="swiper-wrapper" id="gallery-wrapper">
-
-                @foreach ($categories as $category)
-
-                    @foreach ($category->images as $project)
-
-                        <div class="swiper-slide gallery-slide"
-                             data-category="{{ Str::slug($category->name) }}">
-
-                            <div class="gallery-card">
-
-                                <img src="{{ asset('storage/' . $project->image) }}"
-                                     alt="{{ $project->name }}">
-
-                                <div class="gallery-info">
-
-                                    <h4>
-                                        {{ $project->name ?? $category->name }}
-                                    </h4>
-
-                                    <p>
-                                        {{ $project->description ?? 'Gallery Image' }}
-                                    </p>
-
+                <!-- Swiper Gallery (Dynamic) -->
+                <div class="swiper gallery-swiper" data-aos="fade-up" data-aos-delay="150">
+                    <div class="swiper-wrapper" id="gallery-wrapper">
+                        @foreach ($categories as $category)
+                            @foreach ($category->images as $project)
+                                <div class="swiper-slide gallery-slide" data-category="{{ Str::slug($category->name) }}">
+                                    <div class="gallery-card">
+                                        <img src="{{ Str::startsWith($project->image, 'http') ? $project->image : asset('storage/' . $project->image) }}"
+                                             alt="{{ $project->name ?? $category->name }}"
+                                             onerror="this.onerror=null;this.src='{{ asset('user/assets/images/thumbs/school-hero-banner.png') }}';">
+                                        <div class="gallery-info">
+                                            <h4>{{ $project->name ?: $category->name }}</h4>
+                                            <p>{{ $project->description ?: 'Maruthi Senior Secondary School' }}</p>
+                                        </div>
+                                        <a href="{{ Str::startsWith($project->image, 'http') ? $project->image : asset('storage/' . $project->image) }}"
+                                           class="stretched-link img-popup"></a>
+                                    </div>
                                 </div>
+                            @endforeach
+                        @endforeach
+                    </div>
 
-                                <a href="{{ asset('storage/' . $project->image) }}"
-                                   class="stretched-link img-popup">
-                                </a>
+                    <!-- Navigation -->
+                    <div class="swiper-button-next swiper-nav-btn"></div>
+                    <div class="swiper-button-prev swiper-nav-btn"></div>
 
+                    <!-- Pagination -->
+                    <div class="swiper-pagination mt-4"></div>
+                </div>
+
+            @else
+                <!-- Filter Buttons (Curated Campus Categories) -->
+                <div class="gallery-filter-wrap mb-5" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all"><i class="ph-fill ph-squares-four me-1"></i> All Photos</button>
+                    <button class="filter-btn" data-filter="campus">Campus &amp; Facilities</button>
+                    <button class="filter-btn" data-filter="academic">Academics &amp; Labs</button>
+                    <button class="filter-btn" data-filter="sports">Sports &amp; Martial Arts</button>
+                    <button class="filter-btn" data-filter="events">Events &amp; Celebrations</button>
+                </div>
+
+                <!-- Swiper Gallery (Curated Campus Collection) -->
+                <div class="swiper gallery-swiper" data-aos="fade-up" data-aos-delay="150">
+                    <div class="swiper-wrapper" id="gallery-wrapper">
+
+                        <!-- Item 1: Main Campus -->
+                        <div class="swiper-slide gallery-slide" data-category="campus">
+                            <div class="gallery-card">
+                                <img src="{{ asset('user/assets/images/thumbs/school-hero-banner.png') }}" alt="Main Campus">
+                                <div class="gallery-info">
+                                    <h4>Main Campus Building</h4>
+                                    <p>Serene, green, modern infrastructure spanning Lawspet, Puducherry.</p>
+                                </div>
+                                <a href="{{ asset('user/assets/images/thumbs/school-hero-banner.png') }}" class="stretched-link img-popup"></a>
                             </div>
-
                         </div>
 
-                    @endforeach
+                        <!-- Item 2: Science Labs -->
+                        <div class="swiper-slide gallery-slide" data-category="academic">
+                            <div class="gallery-card">
+                                <img src="{{ asset('user/assets/images/thumbs/school-science-lab.png') }}" alt="Science Laboratories">
+                                <div class="gallery-info">
+                                    <h4>Advanced Science Labs</h4>
+                                    <p>Physics, Chemistry, and Biology laboratories for experiential learning.</p>
+                                </div>
+                                <a href="{{ asset('user/assets/images/thumbs/school-science-lab.png') }}" class="stretched-link img-popup"></a>
+                            </div>
+                        </div>
 
-                @endforeach
+                        <!-- Item 3: Classroom -->
+                        <div class="swiper-slide gallery-slide" data-category="academic">
+                            <div class="gallery-card">
+                                <img src="{{ asset('user/assets/images/thumbs/school-classroom.jpg') }}" alt="Smart Classrooms">
+                                <div class="gallery-info">
+                                    <h4>Interactive Smart Classrooms</h4>
+                                    <p>Digital smartboards and multimedia learning pedagogy.</p>
+                                </div>
+                                <a href="{{ asset('user/assets/images/thumbs/school-classroom.jpg') }}" class="stretched-link img-popup"></a>
+                            </div>
+                        </div>
 
+                        <!-- Item 4: Library -->
+                        <div class="swiper-slide gallery-slide" data-category="academic">
+                            <div class="gallery-card">
+                                <img src="{{ asset('user/assets/images/thumbs/school-library.png') }}" alt="School Library">
+                                <div class="gallery-info">
+                                    <h4>5,000+ Books Library</h4>
+                                    <p>Extensive repository of books, periodicals, and research journals.</p>
+                                </div>
+                                <a href="{{ asset('user/assets/images/thumbs/school-library.png') }}" class="stretched-link img-popup"></a>
+                            </div>
+                        </div>
+
+                        <!-- Item 5: Annual Day -->
+                        <div class="swiper-slide gallery-slide" data-category="events">
+                            <div class="gallery-card">
+                                <img src="{{ asset('user/assets/images/thumbs/school-annual-day.png') }}" alt="Annual Day Celebrations">
+                                <div class="gallery-info">
+                                    <h4>Annual Cultural Extravaganza</h4>
+                                    <p>Showcasing vibrant music, classical dance, drama, and student talents.</p>
+                                </div>
+                                <a href="{{ asset('user/assets/images/thumbs/school-annual-day.png') }}" class="stretched-link img-popup"></a>
+                            </div>
+                        </div>
+
+                        <!-- Item 6: Sports & Athletics -->
+                        <div class="swiper-slide gallery-slide" data-category="sports">
+                            <div class="gallery-card">
+                                <img src="{{ asset('user/assets/images/thumbs/banner-sports.png') }}" alt="Sports and Athletics">
+                                <div class="gallery-info">
+                                    <h4>Sports &amp; Martial Arts Arena</h4>
+                                    <p>Silambam, Karate, Taekwondo, Cricket, and Track Athletics.</p>
+                                </div>
+                                <a href="{{ asset('user/assets/images/thumbs/banner-sports.png') }}" class="stretched-link img-popup"></a>
+                            </div>
+                        </div>
+
+                        <!-- Item 7: Student Community -->
+                        <div class="swiper-slide gallery-slide" data-category="campus">
+                            <div class="gallery-card">
+                                <img src="{{ asset('user/assets/images/thumbs/school-students-group.png') }}" alt="Student Community">
+                                <div class="gallery-info">
+                                    <h4>Vibrant Student Community</h4>
+                                    <p>Cultivating friendships, teamwork, leadership, and lifelong values.</p>
+                                </div>
+                                <a href="{{ asset('user/assets/images/thumbs/school-students-group.png') }}" class="stretched-link img-popup"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="swiper-button-next swiper-nav-btn"></div>
+                    <div class="swiper-button-prev swiper-nav-btn"></div>
+
+                    <!-- Pagination -->
+                    <div class="swiper-pagination mt-4"></div>
+                </div>
+            @endif
+
+        </div>
+    </section>
+
+    <!-- ========================= courses section start =========================== -->
+    <section class="admissions-cta-redesign position-relative overflow-hidden">
+        <div class="container position-relative z-1">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-7 text-lg-start text-center" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="cta-pill-badge mb-3 d-inline-flex align-items-center gap-2">
+                        <span class="cta-pulse-dot"></span>
+                        <span class="fw-semibold">Admissions Open 2026-27</span>
+                    </div>
+                    <h2 class="cta-title fw-bold mb-3">
+                        Start Your Child's Journey <br class="d-none d-md-block"> to <span class="text-highlight">Excellence</span> Today
+                    </h2>
+                    <p class="cta-description mb-3">
+                        Join Puducherry's leading CBSE school with a legacy of 25+ years. Guided by <strong>“Wisdom Wins”</strong> — developing wisdom to think, courage to question, discipline to act, and compassion to contribute.
+                    </p>
+                    <div class="cta-tamil-quote-badge mb-2">
+                        <span class="small fw-semibold">"கல்வியின் நோக்கம் அறிவு மட்டுமல்ல; ஞானமும் நற்பண்பும் வளர்ப்பதே."</span>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-lg-end text-center" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="cta-btn-group d-flex flex-column flex-sm-row justify-content-lg-end gap-3 align-items-center">
+                        <a href="{{ route('contact') }}" class="btn btn-apply-now rounded-pill px-5 py-3 fw-bold text-decoration-none">
+                            Apply For Admission <i class="ph-bold ph-arrow-right ms-2"></i>
+                        </a>
+                        <a href="tel:+919442399777" class="btn btn-call-us rounded-pill px-4 py-3 fw-bold text-decoration-none">
+                            <i class="ph-fill ph-phone-call me-2"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
             </div>
-
-            <!-- Navigation -->
-            <div class="swiper-button-next swiper-nav-btn"></div>
-
-            <div class="swiper-button-prev swiper-nav-btn"></div>
-
-            <!-- Pagination -->
-            <div class="swiper-pagination mt-4"></div>
-
         </div>
-
-    </div>
-
-</section>
-
-
-  <!-- ========================= courses section start =========================== -->
-  <section class="admissions-cta-redesign position-relative overflow-hidden bg-lightgreen">
-    <!-- Floating Decorative Icons -->
-    
-
-    <div class="container position-relative z-1">
-      <div class="row align-items-center gy-4">
-        <div class="col-lg-7 text-lg-start text-center" data-aos="fade-right" data-aos-duration="1000">
-          <div class="cta-pill-badge mb-3 d-inline-flex align-items-center gap-2">
-            <span class="cta-pulse-dot"></span>
-            <span class=" fw-medium">Admissions Open 2026-27</span>
-          </div>
-          <h2 class="cta-title  fw-bold mb-4">
-            Start Your Child's Journey <br class="d-none d-md-block"> to <span class="text-highlight">Excellence</span> Today
-          </h2>
-          <p class="cta-description opacity-90 mb-0">
-            Join Puducherry's leading CBSE school. We provide a nurturing environment, <br class="d-none d-lg-block">
-            state-of-the-art facilities, and a legacy of academic success.
-          </p>
-        </div>
-        <div class="col-lg-5 text-lg-end text-center" data-aos="fade-left" data-aos-duration="1000">
-          <div class="cta-btn-group d-flex flex-column flex-sm-row justify-content-lg-end gap-3 align-items-center">
-            <a href="contact-us.html" class="btn btn-apply-now rounded-pill px-5 py-3 fw-bold">
-              Apply For Admission <i class="ph-bold ph-arrow-right ms-2"></i>
-            </a>
-            <a href="tel:+919442399777" class="btn btn-call-us rounded-pill px-4 py-3 fw-bold border-black  border-2">
-              <i class="ph-fill ph-phone me-2"></i> Inquiry
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Background Accents -->
-    <div class="cta-accent-circle"></div>
-  </section>
-  <!-- ========================= courses section end =========================== -->
+    </section>
+    <!-- ========================= courses section end =========================== -->
 
 
 {{-- Footer starts --}}
