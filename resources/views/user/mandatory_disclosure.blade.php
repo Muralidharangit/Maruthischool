@@ -503,7 +503,7 @@
                                             <td class="md-col-sno">2</td>
                                             <td class="md-col-info">ANNUAL ACADEMIC CALENDER</td>
                                             <td class="text-center">
-                                                <a href="{{ asset('user/assets/circular.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View Academic Calendar PDF">
+                                                <a href="{{ asset('user/assets/PDF-Documents And Information/academic calendar 2026-27.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View Academic Calendar PDF">
                                                     <span class="md-pdf-label">ACADEMIC CALANDER</span>
                                                     <i class="fa-solid fa-file-pdf md-pdf-icon"></i>
                                                 </a>
@@ -589,9 +589,16 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                            <td class="md-col-sno"></td>
+                                            <td class="md-col-info">VICE PRINCIPAL</td>
+                                            <td class="md-col-details fw-bold text-main-800">
+                                                Mr. Thangaraj <span class="fw-normal text-muted small"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <td class="md-col-sno" rowspan="4">2</td>
                                             <td class="md-col-info">TOTAL NO. OF TEACHERS</td>
-                                            <td class="md-col-details font-monospace fw-bold">92</td>
+                                            <td class="md-col-details font-monospace fw-bold">42</td>
                                         </tr>
                                         <tr>
                                             <td class="md-col-info ps-4">
@@ -599,7 +606,7 @@
                                                     <i class="fa-solid fa-play md-sub-icon"></i> PGT
                                                 </span>
                                             </td>
-                                            <td class="md-col-details font-monospace">13</td>
+                                            <td class="md-col-details font-monospace">26</td>
                                         </tr>
                                         <tr>
                                             <td class="md-col-info ps-4">
@@ -607,7 +614,7 @@
                                                     <i class="fa-solid fa-play md-sub-icon"></i> TGT
                                                 </span>
                                             </td>
-                                            <td class="md-col-details font-monospace">28</td>
+                                            <td class="md-col-details font-monospace">10</td>
                                         </tr>
                                         <tr>
                                             <td class="md-col-info ps-4">
@@ -615,19 +622,19 @@
                                                     <i class="fa-solid fa-play md-sub-icon"></i> PRT
                                                 </span>
                                             </td>
-                                            <td class="md-col-details font-monospace">32</td>
+                                            <td class="md-col-details font-monospace">6</td>
                                         </tr>
                                         <tr>
                                             <td class="md-col-sno">3</td>
                                             <td class="md-col-info">TEACHERS SECTION RATIO</td>
                                             <td class="md-col-details font-monospace fw-bold">1.5:1</td>
                                         </tr>
-                                        <tr>
+                                        <!-- <tr>
                                             <td class="md-col-sno">4</td>
                                             <td class="md-col-info">DETAILS OF SPECIAL EDUCATOR</td>
                                             <td class="md-col-details">Mrs. A. Eliswa, B.B.A, B.Ed (Special Education)</td>
-                                        </tr>
-                                        <tr>
+                                        </tr> -->
+                                        <!-- <tr>
                                             <td class="md-col-sno">5</td>
                                             <td class="md-col-info">DETAILS OF COUNSELLOR AND WELLNESS TEACHER</td>
                                             <td class="md-col-details">
@@ -640,7 +647,7 @@
                                                     <div>• Mr. Vimal Raj S. (PET)</div>
                                                 </div>
                                             </td>
-                                        </tr>
+                                        </tr> -->
                                     </tbody>
                                 </table>
                             </div>
