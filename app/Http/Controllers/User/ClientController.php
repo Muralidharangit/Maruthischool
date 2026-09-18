@@ -100,6 +100,11 @@ class ClientController extends Controller
         return view('user.circular');
     }
 
+    public function mandatory_disclosure()
+    {
+        return view('user.mandatory_disclosure');
+    }
+
     public function services()
     {
         return view('user.services');

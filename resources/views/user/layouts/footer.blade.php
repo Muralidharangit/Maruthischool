@@ -70,6 +70,12 @@
                 </a>
               </li>
               <li>
+                <a href="{{ route('mandatory_disclosure') }}" class="footer-nav-link">
+                  <i class="ph-bold ph-caret-right"></i>
+                  <span>Mandatory Disclosure</span>
+                </a>
+              </li>
+              <li>
                 <a href="{{ route('event_page') }}" class="footer-nav-link">
                   <i class="ph-bold ph-caret-right"></i>
                   <span>Events &amp; News</span>

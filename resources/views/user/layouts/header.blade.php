@@ -357,9 +357,9 @@
     <a href="{{ route('about') }}" class="{{ Request::is('about') ? 'active-link' : '' }}">
       <i class="ph-fill ph-info"></i> About
     </a>
-    <a href="{{ route('event_page') }}" class="{{ Request::is('events') ? 'active-link' : '' }}">
+    {{-- <a href="{{ route('event_page') }}" class="{{ Request::is('events') ? 'active-link' : '' }}">
       <i class="ph-fill ph-calendar-blank"></i> Events
-    </a>
+    </a> --}}
 
     <div class="hdr-drawer-divider"></div>
 
@@ -387,6 +387,9 @@
 
     <div class="hdr-drawer-divider"></div>
 
+    <a href="{{ route('mandatory_disclosure') }}" class="{{ Request::is('mandatory-disclosure') ? 'active-link' : '' }}">
+      <i class="ph-fill ph-file-text"></i> Mandatory Disclosure
+    </a>
     <a href="{{ route('gallery') }}" class="{{ Request::is('gallery') ? 'active-link' : '' }}">
       <i class="ph-fill ph-images"></i> Gallery
     </a>
@@ -469,9 +472,9 @@
         <li class="hdr-nav-item {{ Request::is('about') ? 'active' : '' }}">
           <a href="{{ route('about') }}" class="hdr-nav-link">About</a>
         </li>
-        <li class="hdr-nav-item {{ Request::is('events') ? 'active' : '' }}">
+        {{-- <li class="hdr-nav-item {{ Request::is('events') ? 'active' : '' }}">
           <a href="{{ route('event_page') }}" class="hdr-nav-link">Events</a>
-        </li>
+        </li> --}}
 
         <!-- Academics Dropdown -->
         <li class="hdr-nav-item {{ Request::is('curriculum') || Request::is('year-calendar') || Request::is('achievements') || Request::is('circular') ? 'active' : '' }}">
@@ -502,6 +505,9 @@
           </ul>
         </li>
 
+        <li class="hdr-nav-item {{ Request::is('mandatory-disclosure') ? 'active' : '' }}">
+          <a href="{{ route('mandatory_disclosure') }}" class="hdr-nav-link">Mandatory Disclosure</a>
+        </li>
         <li class="hdr-nav-item {{ Request::is('gallery') ? 'active' : '' }}">
           <a href="{{ route('gallery') }}" class="hdr-nav-link">Gallery</a>
         </li>
