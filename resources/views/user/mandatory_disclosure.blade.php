@@ -493,7 +493,7 @@
                                             <td class="md-col-sno">1</td>
                                             <td class="md-col-info">FEE STRUCTURE OF THE SCHOOL</td>
                                             <td class="text-center">
-                                                <a href="{{ asset('user/assets/circular.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View Fee Structure PDF">
+                                                <a href="{{ asset('user/assets/PDF-Documents And Information/1. Fee Structure.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View Fee Structure PDF">
                                                     <span class="md-pdf-label">FEE STRUCTURE</span>
                                                     <i class="fa-solid fa-file-pdf md-pdf-icon"></i>
                                                 </a>
@@ -501,10 +501,10 @@
                                         </tr>
                                         <tr>
                                             <td class="md-col-sno">2</td>
-                                            <td class="md-col-info">ANNUAL ACADEMIC CALENDER</td>
+                                            <td class="md-col-info">ANNUAL ACADEMIC CALENDAR</td>
                                             <td class="text-center">
                                                 <a href="{{ asset('user/assets/PDF-Documents And Information/academic calendar 2026-27.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View Academic Calendar PDF">
-                                                    <span class="md-pdf-label">ACADEMIC CALANDER</span>
+                                                    <span class="md-pdf-label">ANNUAL ACADEMIC CALENDAR</span>
                                                     <i class="fa-solid fa-file-pdf md-pdf-icon"></i>
                                                 </a>
                                             </td>
@@ -513,7 +513,7 @@
                                             <td class="md-col-sno">3</td>
                                             <td class="md-col-info">LIST OF SCHOOL MANAGEMENT COMMITTEE (SMC)</td>
                                             <td class="text-center">
-                                                <a href="{{ asset('user/assets/circular.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View SMC Members List PDF">
+                                                <a href="{{ asset('user/assets/PDF-Documents And Information/SMC Members.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View SMC Members List PDF">
                                                     <span class="md-pdf-label">SMC MEMBERS</span>
                                                     <i class="fa-solid fa-file-pdf md-pdf-icon"></i>
                                                 </a>
@@ -523,7 +523,7 @@
                                             <td class="md-col-sno">4</td>
                                             <td class="md-col-info">LIST OF PARENTS-TEACHERS-ASSOCIATION (PTA) MEMBERS</td>
                                             <td class="text-center">
-                                                <a href="{{ asset('user/assets/circular.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View PTA Members List PDF">
+                                                <a href="{{ asset('user/assets/PDF-Documents And Information/PTA Members.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View PTA Members List PDF">
                                                     <span class="md-pdf-label">PTA MEMBERS</span>
                                                     <i class="fa-solid fa-file-pdf md-pdf-icon"></i>
                                                 </a>
@@ -533,7 +533,7 @@
                                             <td class="md-col-sno">5</td>
                                             <td class="md-col-info">LAST THREE YEAR RESULT OF THE BOARD EXAMINATION AS PER APPLICABILITY</td>
                                             <td class="text-center">
-                                                <a href="{{ asset('user/assets/circular.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View Last Three Year Result PDF">
+                                                <a href="{{ asset('user/assets/PDF-Documents And Information/Last Three Year Result.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View Last Three Year Result PDF">
                                                     <span class="md-pdf-label">LAST THREE YEAR RESULT</span>
                                                     <i class="fa-solid fa-file-pdf md-pdf-icon"></i>
                                                 </a>
@@ -543,7 +543,7 @@
                                             <td class="md-col-sno">6</td>
                                             <td class="md-col-info">RESULT CLASS: X</td>
                                             <td class="text-center">
-                                                <a href="{{ asset('user/assets/circular.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View Class X Result PDF">
+                                                <a href="{{ asset('user/assets/PDF-Documents And Information/Result Class X.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View Class X Result PDF">
                                                     <span class="md-pdf-label">CLASS - X</span>
                                                     <i class="fa-solid fa-file-pdf md-pdf-icon"></i>
                                                 </a>
@@ -553,7 +553,7 @@
                                             <td class="md-col-sno">7</td>
                                             <td class="md-col-info">RESULT CLASS: XII</td>
                                             <td class="text-center">
-                                                <a href="{{ asset('user/assets/circular.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View Class XII Result PDF">
+                                                <a href="{{ asset('user/assets/PDF-Documents And Information/Result Class XII.pdf') }}" target="_blank" rel="noopener noreferrer" class="md-pdf-badge" title="View Class XII Result PDF">
                                                     <span class="md-pdf-label">CLASS - XII</span>
                                                     <i class="fa-solid fa-file-pdf md-pdf-icon"></i>
                                                 </a>
@@ -784,60 +784,71 @@
                                     <thead>
                                         <tr>
                                             <th class="md-col-sno">S.No</th>
-                                            <th style="width: 44%;">DOCUMENTS/INFORMATION</th>
+                                            <th style="width: 50%;">INFORMATION</th>
                                             <th>DETAILS</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td class="md-col-sno">1</td>
-                                            <td class="md-col-info">TOTAL CAMPUS AREA OF THE SCHOOL (IN SQUARE MTR)</td>
-                                            <td class="md-col-details font-monospace fw-bold text-main-800">6878 Sq.m</td>
+                                            <td class="md-col-info">TOTAL CAMPUS AREA OF THE SCHOOL (IN SQR MTR)</td>
+                                            <td class="md-col-details font-monospace fw-bold text-main-800">4397.00 sq.m</td>
                                         </tr>
                                         <tr>
                                             <td class="md-col-sno">2</td>
-                                            <td class="md-col-info">NO. AND SIZE OF THE CLASS ROOMS (IN SQ FT/MTR)</td>
-                                            <td class="md-col-details font-monospace">52 Classrooms and (20' x 25') 46.5 Sq.m each</td>
+                                            <td class="md-col-info">NO. AND SIZE OF THE CLASSROOM (IN SQR MTR)</td>
+                                            <td class="md-col-details font-monospace fw-bold">20 (46.5 Sq.m)</td>
                                         </tr>
                                         <tr>
                                             <td class="md-col-sno">3</td>
-                                            <td class="md-col-info">NO. AND SIZE OF LABORATORIES INCLUDING COMPUTER LABS (IN SQ MTR)</td>
+                                            <td class="md-col-info">NO. AND SIZE OF LABORATORIES INCLUDING COMPUTER LABS (IN SQR MTR)</td>
                                             <td class="md-col-details">
-                                                <div class="lh-base">
-                                                    <div>• Composite Science Lab – 1 (55.76 Sq.m)</div>
-                                                    <div>• Mathematics Lab – 1 (55.76 Sq.m)</div>
-                                                    <div>• Computer Labs – 2 (116.13 &amp; 46.47 Sq.m)</div>
-                                                    <div>• Physics Lab – 1 (100.39 Sq.m)</div>
-                                                    <div>• Chemistry Lab – 1 (116.18 Sq.m)</div>
-                                                    <div>• Biology Lab – 1 (55.76 Sq.m)</div>
+                                                <div class="fw-bold text-dark mb-1 font-monospace">5 Laboratories:</div>
+                                                <div class="lh-base font-monospace small">
+                                                    <div>• Comp. Lab - (1100) - 102.19 Sq.m</div>
+                                                    <div>• Bio Lab - (800) - 74.32 Sq.m</div>
+                                                    <div>• Phy Lab - (1859) - 172.71 Sq.m</div>
+                                                    <div>• Chem Lab - (1102) - 102.38 Sq.m</div>
+                                                    <div>• Math Lab - (800) - 74.32 Sq.m</div>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="md-col-sno">4</td>
-                                            <td class="md-col-info">INTERNET FACILITY (Y/N)</td>
+                                            <td class="md-col-info">NO. AND SIZE OF LIBRARY (IN SQR MTR)</td>
+                                            <td class="md-col-details font-monospace fw-bold">1 (127.74 Sq.m)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="md-col-sno">5</td>
+                                            <td class="md-col-info">INTERNET FACILITY (YES/NO)</td>
                                             <td class="md-col-details">
                                                 <span class="badge bg-success-subtle text-success border border-success-subtle px-2.5 py-1 fw-bold">
-                                                    <i class="ph-fill ph-wifi-high me-1"></i> Yes (High-Speed Fiber Wi-Fi)
+                                                    <i class="ph-fill ph-wifi-high me-1"></i> Yes
                                                 </span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="md-col-sno">5</td>
-                                            <td class="md-col-info">NO. OF GIRLS TOILETS</td>
-                                            <td class="md-col-details font-monospace">Toilets - 25, Urinals - 31</td>
-                                        </tr>
-                                        <tr>
                                             <td class="md-col-sno">6</td>
-                                            <td class="md-col-info">NO. OF BOYS TOILETS</td>
-                                            <td class="md-col-details font-monospace">Toilets - 22, Urinals - 40</td>
+                                            <td class="md-col-info">NO. OF GIRLS TOILETS</td>
+                                            <td class="md-col-details font-monospace fw-bold">50</td>
                                         </tr>
                                         <tr>
                                             <td class="md-col-sno">7</td>
+                                            <td class="md-col-info">NO. OF BOYS TOILETS</td>
+                                            <td class="md-col-details font-monospace fw-bold">50</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="md-col-sno">8</td>
+                                            <td class="md-col-info">NO. OF CWSN TOILETS</td>
+                                            <td class="md-col-details font-monospace fw-bold">2</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="md-col-sno">9</td>
                                             <td class="md-col-info">LINK OF YOUTUBE VIDEO OF THE INSPECTION OF SCHOOL COVERING THE INFRASTRUCTURE OF THE SCHOOL</td>
                                             <td class="md-col-details">
                                                 <a href="https://www.youtube.com/watch?v=g6B91ffunTc0" target="_blank" rel="noopener noreferrer" class="text-main-600 text-decoration-underline font-monospace small fw-bold" style="word-break: break-all;">
-                                                    https://www.youtube.com/watch?v=g6B91ffunTc0 <i class="ph-bold ph-arrow-square-out ms-1"></i>
+                                                    <!-- https://www.youtube.com/watch?v=g6B91ffunTc0 -->
+                                                     <!-- <i class="ph-bold ph-arrow-square-out ms-1"></i> -->
                                                 </a>
                                             </td>
                                         </tr>

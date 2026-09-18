@@ -361,6 +361,10 @@
       <i class="ph-fill ph-calendar-blank"></i> Events
     </a> --}}
 
+     <a href="{{ route('mandatory_disclosure') }}" class="{{ Request::is('mandatory-disclosure') ? 'active-link' : '' }}">
+      <i class="ph-fill ph-file-text"></i> Mandatory Disclosure
+    </a>
+
     <div class="hdr-drawer-divider"></div>
 
     <!-- Academics submenu toggle -->
@@ -387,9 +391,7 @@
 
     <div class="hdr-drawer-divider"></div>
 
-    <a href="{{ route('mandatory_disclosure') }}" class="{{ Request::is('mandatory-disclosure') ? 'active-link' : '' }}">
-      <i class="ph-fill ph-file-text"></i> Mandatory Disclosure
-    </a>
+   
     <a href="{{ route('gallery') }}" class="{{ Request::is('gallery') ? 'active-link' : '' }}">
       <i class="ph-fill ph-images"></i> Gallery
     </a>
@@ -476,6 +478,10 @@
           <a href="{{ route('event_page') }}" class="hdr-nav-link">Events</a>
         </li> --}}
 
+         <li class="hdr-nav-item {{ Request::is('mandatory-disclosure') ? 'active' : '' }}">
+          <a href="{{ route('mandatory_disclosure') }}" class="hdr-nav-link">Mandatory Disclosure</a>
+        </li>
+
         <!-- Academics Dropdown -->
         <li class="hdr-nav-item {{ Request::is('curriculum') || Request::is('year-calendar') || Request::is('achievements') || Request::is('circular') ? 'active' : '' }}">
           <a href="javascript:void(0)" class="hdr-nav-link">
@@ -505,9 +511,7 @@
           </ul>
         </li>
 
-        <li class="hdr-nav-item {{ Request::is('mandatory-disclosure') ? 'active' : '' }}">
-          <a href="{{ route('mandatory_disclosure') }}" class="hdr-nav-link">Mandatory Disclosure</a>
-        </li>
+       
         <li class="hdr-nav-item {{ Request::is('gallery') ? 'active' : '' }}">
           <a href="{{ route('gallery') }}" class="hdr-nav-link">Gallery</a>
         </li>
